@@ -1,0 +1,473 @@
+/*
+@media (min-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+.project {
+    width: 100vw;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+
+header {
+    width: 100%;
+    height: 4.39em;
+    background: #669885 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+}
+
+
+.logo {
+    display: flex;
+    width: 10em;
+    height: 33px;
+    background: transparent url('images/Group 1.png') 0 0 no-repeat padding-box;
+
+}
+
+.signIn {
+    width: 7em;
+    height: 34px;
+    border: 1px solid #FFFFFF;
+    border-radius: 17px;
+    background: #669885 0 0 no-repeat padding-box;
+}
+
+.signInText {
+    font-family: Medium, Montserrat, sans-serif;
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.signIn:hover {
+    background: #FFE18B 0 0 no-repeat padding-box;
+}
+
+main {
+    width: 100%;
+    height: 623px;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    opacity: 1;
+}
+
+
+.welcomeText {
+    display: block;
+    margin-left: 8vw ;
+    margin-top: 8vh;
+    font-family: Montserrat, Medium, sans-serif;
+    opacity: 1;
+}
+
+.line1, .line2, .line3 {
+    display: block;
+    text-align: left;
+    font-size: 3.8vw;
+    letter-spacing: 0;
+    color: #393939;
+}
+
+.line2 {
+    color: #84B6A3;
+}
+
+
+.image{
+    width: 485px;
+    height: 596px;
+    background: transparent url('images/Image 2.png') 0 0 no-repeat padding-box;
+    opacity: 1;
+}
+
+
+.lost_button, .found_button {
+    width: 544px;
+    height: 93px;
+    background: #FFE18B 0 0 no-repeat padding-box;
+    opacity: 1;
+    border-width: 0;
+    border-radius: 0 50px 50px 0;
+}
+
+.found_button {
+    width: 470px;
+    background: #84B6A3 0 0 no-repeat padding-box;
+}
+
+.lost_button :hover .firstText {
+    display: none;
+}
+
+.lost_button .secondText {
+    display: none;
+}
+
+.lost_button :hover .secondText {
+    display: inline;
+}
+
+.found_button :hover .firstText {
+    display: none;
+}
+
+.found_button .secondText {
+    display: none;
+}
+
+.found_button :hover .secondText {
+    display: inline;
+}
+
+.found_text, .lost_text {
+    top: 27px;
+    left: 151px;
+    width: 215px;
+    height: 39px;
+    text-align: left;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.lost_text {
+    width: 209px;
+    color: #393939;
+}
+
+.lost_logo {
+    top: 15px;
+    left: 463px;
+    width: 79px;
+    height: 80px;
+    background: transparent url('images/Group 11.png') 0 0 no-repeat padding-box;
+    border-width: 0;
+    opacity: 1;
+}
+*/
+rtrtrtrttttttttttttttttttt
+/*.textBox {*/
+/*    margin: 0;*/
+/*    top: 642px;*/
+/*    left: 151px;*/
+/*    width: 485px;*/
+/*    height: 22px;*/
+/*    letter-spacing: 0;*/
+/*    opacity: 1;*/
+/*    text-align: left;*/
+/*    font-family: Montserrat, sans-serif;*/
+/*    font-size: 16px;*/
+/*    color: #393939;*/
+/*    white-space: pre-wrap;*/
+
+/*}*/
+
+/*.textBox > p {*/
+/*    margin: 0;*/
+/*    height: 19px;*/
+/*}*/
+
+/*.text, .text1 {*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 176px;*/
+/*    height: 19px;*/
+/*    text-align: left;*/
+/*    font-family: Montserrat, sans-serif;*/
+/*    font-size: 16px;*/
+/*    letter-spacing: 0;*/
+/*    color: #393939;*/
+/*}*/
+
+/*.text1 {*/
+/*    left: 225px;*/
+/*    width: 219px;*/
+/*}*/
+
+
+/*.join {*/
+/*    top: 0;*/
+/*    left: 176px;*/
+/*    width: 50px;*/
+/*    height: 19px;*/
+/*    text-align: left;*/
+/*    text-decoration: underline;*/
+/*    font-family: Montserrat, Bold, sans-serif;*/
+/*    font-size: 16px;*/
+/*    letter-spacing: 0;*/
+/*    color: #84B6A3;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+/*.middleTextArea {*/
+/*    top: 693px;*/
+/*    left: 0;*/
+/*    width: 1366px;*/
+/*    height: 260px;*/
+/*    background: #669885 0 0 no-repeat padding-box;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.middleText {*/
+/*    line-height: 53px;*/
+/*    top: 777px;*/
+/*    left: 261px;*/
+/*    width: 750px;*/
+/*    height: 92px;*/
+/*    text-align: center;*/
+/*    font-family: Montserrat, sans-serif;*/
+/*    font-size: 32px;*/
+/*    letter-spacing: 0;*/
+/*    color: #FFFFFF;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.info {*/
+/*    top: 952px;*/
+/*    left: 0;*/
+/*    width: 1366px;*/
+/*    height: 450px;*/
+/*    background: #FFFFFF 0 0 no-repeat padding-box;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.imageInfo {*/
+/*    top: 1008px;*/
+/*    left: 113px;*/
+/*    width: 480px;*/
+/*    height: 322px;*/
+/*    background: transparent url('images/8347.png') 0 0 no-repeat padding-box;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.textInfo {*/
+/*    top: 1022px;*/
+/*    left: 599px;*/
+/*    width: 628px;*/
+/*    height: 360px;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.textInfo > h2 {*/
+/*    width: 602px;*/
+/*    height: 29px;*/
+/*    text-align: left;*/
+/*    font-family: Montserrat, SemiBold, sans-serif;*/
+/*    font-size: 22px;*/
+/*    letter-spacing: 0;*/
+/*    color: hsla(157, 19%, 49%, 1);*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.listText {*/
+/*    padding-left: 5px;*/
+/*    top: 43px;*/
+/*    left: 0;*/
+/*    width: 596px;*/
+/*    height: 288px;*/
+/*    text-align: left;*/
+/*    font-family: Montserrat, Medium, sans-serif;*/
+/*    font-size: 18px;*/
+/*    letter-spacing: 0;*/
+/*    color: #393939;*/
+/*    opacity: 1;*/
+/*    line-height: 220%;*/
+/*    list-style-type: none;*/
+/*}*/
+
+
+/*.listText > li::before {*/
+/*    margin-right: 15px;*/
+/*    content: '';*/
+/*    border-radius: 50%;*/
+/*    width: 14px;*/
+/*    height: 14px;*/
+/*    background: #84B6A3 0 0 no-repeat padding-box;*/
+/*    opacity: 1;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.footer1 {*/
+/*    top: 1402px;*/
+/*    left: 0;*/
+/*    width: 1366px;*/
+/*    height: 125px;*/
+/*    background: #FF6F61 0 0 no-repeat padding-box;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.footer1Text1, .footer1Text2 {*/
+/*    top: 1430px;*/
+/*    left: 154px;*/
+/*    width: 379px;*/
+/*    height: 68px;*/
+/*    text-align: left;*/
+/*    font-family: Montserrat, Medium, sans-serif;*/
+/*    font-size: 56px;*/
+/*    letter-spacing: 0;*/
+/*    color: #FFFFFF;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.footer1Text2 {*/
+/*    top: 1447px;*/
+/*    left: 636px;*/
+/*    width: 396px;*/
+/*    height: 57px;*/
+/*    font-family: Montserrat, SemiBold, sans-serif;*/
+/*    font-size: 16px;*/
+/*}*/
+
+/*.footer1Image {*/
+/*    top: 1413px;*/
+/*    left: 1064px;*/
+/*    width: 114px;*/
+/*    height: 106px;*/
+/*    background: transparent url('images/.png') 0 0 no-repeat padding-box;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.footer1Image > span {*/
+/*    top: 38px;*/
+/*    left: 37px;*/
+/*    width: 45px;*/
+/*    height: 19px;*/
+/*    text-align: left;*/
+/*    font-family: Montserrat, SemiBold, sans-serif;*/
+/*    font-size: 16px;*/
+/*    letter-spacing: 0;*/
+/*    color: #FFFFFF;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.footer2 {*/
+/*    top: 1527px;*/
+/*    left: 0;*/
+/*    width: 1366px;*/
+/*    height: 193px;*/
+/*    background: #669885 0 0 no-repeat padding-box;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*#proPetsLogo {*/
+/*    top: 1604px;*/
+/*    left: 151px;*/
+/*    width: 201px;*/
+/*    height: 47px;*/
+/*    background: transparent url('images/Group 87.png') 0 0 no-repeat padding-box;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*!*#facebookLogo {*!*/
+/*!*    position: absolute;*!*/
+/*!*    content: '';*!*/
+/*!*    top: 1588px;*!*/
+/*!*    left: 520px;*!*/
+/*!*    width: 29px;*!*/
+/*!*    height: 29px;*!*/
+/*!*    text-align: left;*!*/
+/*!*    letter-spacing: 2.58px;*!*/
+/*!*    color: #FFFFFF;*!*/
+/*!*    opacity: 1;*!*/
+/*!*}*!*/
+
+/*#addressInfo {*/
+/*    top: 1636px;*/
+/*    left: 520px;*/
+/*    width: 188px;*/
+/*    height: 30px;*/
+/*    text-align: left;*/
+/*    font-family: Montserrat, Medium, sans-serif;*/
+/*    font-size: 12px;*/
+/*    letter-spacing: 0;*/
+/*    color: #FFFFFF;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.lostIcon, .foundIcon, .vetIcon, .hotelsIcon, .walkingIcon, .fosteringIcon {*/
+/*    top: 1590px;*/
+/*    left: 919px;*/
+/*    width: 16px;*/
+/*    height: 16px;*/
+/*    background: transparent url('images/.png') 0 0 no-repeat padding-box;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.hotelsIcon {*/
+/*    left: 1055px;*/
+/*    width: 18px;*/
+/*    background: transparent url('images/.png') 0 0 no-repeat padding-box;*/
+/*}*/
+
+/*.walkingIcon {*/
+/*    top: 1618px;*/
+/*    left: 1057px;*/
+/*    width: 10px;*/
+/*    background: transparent url('images/.png') 0 0 no-repeat padding-box;*/
+/*}*/
+
+/*.fosteringIcon {*/
+/*    top: 1646px;*/
+/*    left: 1055px;*/
+/*    background: transparent url('images/.png') 0 0 no-repeat padding-box;*/
+/*}*/
+
+/*.foundIcon {*/
+/*    top: 1618px;*/
+/*    background: transparent url('images/.png') 0 0 no-repeat padding-box;*/
+/*}*/
+
+/*.vetIcon {*/
+/*    top: 1646px;*/
+/*    background: transparent url('images/.png') 0 0 no-repeat padding-box;*/
+
+/*}*/
+
+/*.lostText, .foundText, .vetText, .hotelsText, .walkingText, .fosteringText {*/
+/*    top: 1589px;*/
+/*    left: 950px;*/
+/*    width: 34px;*/
+/*    height: 19px;*/
+/*    text-align: left;*/
+/*    font-family: Montserrat, Medium, sans-serif;*/
+/*    font-size: 16px;*/
+/*    letter-spacing: 0;*/
+/*    color: #FFFFFF;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.hotelsText {*/
+/*    left: 1086px;*/
+/*    width: 52px;*/
+/*}*/
+
+/*.walkingText {*/
+/*    top: 1617px;*/
+/*    left: 1086px;*/
+/*    width: 67px;*/
+/*}*/
+
+/*.fosteringText {*/
+/*    top: 1645px;*/
+/*    left: 1086px;*/
+/*    width: 77px;*/
+/*}*/
+
+/*.foundText {*/
+/*    top: 1617px;*/
+/*    width: 53px;*/
+/*}*/
+
+/*.vetText {*/
+/*    top: 1646px;*/
+/*    width: 65px;*/
+/*}*/
+
+
