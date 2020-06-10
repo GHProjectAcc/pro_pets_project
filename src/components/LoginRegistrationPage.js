@@ -4,12 +4,25 @@ import '../LoginRegistration.css'
 class LoginRegistrationPage extends React.Component {
     render() {
         return (
-            <div className='loginPage'>
-                <div className='form'>
+            <div className='loginPage container'>
+                <div className='form '>
                     <div className='loginLogo'>
                     </div>
                     <div className='loginWelcome'>
-                        <p>Welcome! Please sign in / sign up to continue or</p>
+                        <span><b>Welcome!</b> Please sign in / sign up to continue </span>
+                    </div>
+                    <div className='registrationForm'>
+                        <div className='signUpButton'>
+                            <span>Sign up</span>
+                        </div>
+                        <div className='signInButton'>
+                            <span>Sign in</span>
+                        </div>
+                        <div className='name'><span>Name:</span><input placeholder=''/></div>
+                        <div className='email'><span>Email:</span></div>
+                        <div className='password'><span>Password:</span></div>
+                        <div className='passwordConfirm'><span>Password:</span></div>
+
                     </div>
 
                 </div>
