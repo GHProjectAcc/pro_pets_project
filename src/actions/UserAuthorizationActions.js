@@ -3,12 +3,10 @@ export const REGISTRATION_USER = 'REGISTRATION_USER';
 export const LOGOUT_USER = 'LOGOUT_USER';
 
 
-
-//
-// export const registrationUser = userObj => ({
-//     type: 'REGISTRATION_USER',
-//     payload: userObj
-// });
+export const registrationUser = userObj => ({
+    type: 'REGISTRATION_USER',
+    payload: userObj
+});
 
 export const logoutUser = () => ({
     type: 'LOGOUT_USER'
@@ -38,7 +36,7 @@ export const userLoginFetch = user => {
 
 export const userPostFetch = user => {
     return dispatch => {
-        return fetch("http://localhost:3000/api/v1/users", {
+        return fetch("http://localhost:8080/account/v1/sign_up", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -46,19 +44,25 @@ export const userPostFetch = user => {
             },
             body: JSON.stringify({user})
         })
-            .then(resp => resp.json())
-            .then(data => {
-                if (data.message) {
-                    //Тут прописываем логику
-                } else {
-                    localStorage.setItem("token", data);
-               return { type: LOGIN_USER, payload: data }
+            .then(function (response) {
+                if (!response.status) {
+                    console.log('Looks like there was a problem. Status Code: ' +
+                        response.status);
                 }
+                response.json().then(data => console.log(data))
             })
-    }
-};
+            /*.then(data => {
+                if (data.message) {
 
-export const loginUser = userObj => ({
+                } else {
+
+                    localStorage.setItem("token", data);
+                    dispatch(loginUser(data.user))
+                }*/
+    }
+}
+
+const loginUser = userObj => ({
     type: 'LOGIN_USER',
     payload: userObj
 });
@@ -83,7 +87,7 @@ export const getProfileFetch = () => {
                         //
                         localStorage.removeItem("token")
                     } else {
-                      return  { type: LOGIN_USER, payload: data };
+                        return {type: LOGIN_USER, payload: data};
                     }
                 })
         }

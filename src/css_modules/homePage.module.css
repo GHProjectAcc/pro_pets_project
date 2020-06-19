@@ -1,0 +1,171 @@
+.container {
+    max-width: 1366px;
+    max-height: 768px;
+}
+
+.header {
+    height: 4.38em;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: 1;
+
+}
+
+.headerLogo {
+    display: inline-block;
+    height: auto;
+    background: transparent url('../images/home_img/footerLogo.png') no-repeat center padding-box;
+    padding: 0;
+}
+
+.headerButton {
+    display: inline-block;
+    height: 2.5em;
+    background: #84B6A3 0 0 no-repeat padding-box;
+    border-radius: 1.3em;
+    border: none;
+    opacity: 1;
+}
+
+.header span {
+    text-align: left;
+    font-family: Medium, Montserrat, sans-serif;
+    font-size: 0.85em;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.mainNavigation {
+    height: 100vh;
+    background: #84B6A3 0 0 no-repeat padding-box;
+    opacity: 1;
+    padding-left: 0;
+}
+
+.navButtonHome, .navButtonOther {
+    text-align: left;
+    margin-top: 1.2em;
+    border-radius: 0 17px 17px 0;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    opacity: 1;
+    padding-right: 1.2em;
+}
+
+.navButtonOther {
+    background: #84B6A3 0 0 no-repeat padding-box;
+}
+
+.navButtonHome span, i, .navButtonOther span, i {
+    font-family: Medium, Montserrat, sans-serif;
+    font-size: 1em;
+    color: #84B6A3;
+    opacity: 1;
+}
+
+.navButtonHome i {
+    color: #84B6A3;
+}
+
+.navButtonOther span, i {
+    color: #FFFFFF;
+}
+
+.line {
+    border: 1px solid #FFFFFF;
+    opacity: 0.37;
+    margin-top: 6.45em;
+}
+
+.avatar {
+    height: 2.3em;
+    width: 2.3em;
+    border-radius: 100px;
+    border: 1px solid #FFFFFF;
+    opacity: 1;
+}
+
+.name {
+    text-align: left;
+    font-family: Bold, Montserrat, serif;
+    font-size: 0.8em;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+
+.targeting {
+    background: #84B6A3 0 0 no-repeat padding-box;
+    opacity: 1;
+}
+
+.post {
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: 1;
+    max-height: 23em;
+}
+
+
+.postAuthorName {
+    align-items: center;
+    justify-content: center;
+    height: 2.3em;
+    line-height: 1.1em;
+    text-align: left;
+    font-family: SemiBold, Montserrat, serif;
+    font-size: 1em;
+    letter-spacing: 0;
+    color: #84B6A3;
+    opacity: 1;
+}
+
+.postTime {
+    text-align: left;
+    font-family: Bold, Montserrat, serif;
+    font-size: 1em;
+    letter-spacing: 0;
+    color: #BABABA;
+    opacity: 1;
+}
+
+.postDropMenu {
+    text-align: right;
+    font-family: SemiBold, Montserrat, serif;
+    font-size: 1.5em;
+    letter-spacing: 0;
+    color: #BABABA;
+    opacity: 1;
+}
+
+.postText {
+    text-align: left;
+    font-family: Montserrat, serif;
+    font-size: 1em;
+    letter-spacing: 0;
+    opacity: 1;
+}
+
+.favorites {
+    text-align: left;
+    vertical-align: bottom;
+    letter-spacing: 0;
+    color: #BABABA;
+    opacity: 1;
+}
+
+.pic1, .pic2, .pic3{
+    background-image: url('../images/home_img/194578053061e534f7d685209f06144b.png');
+    background-size: contain;
+    opacity: 1;
+    height: 11em;
+}
+.pic2 {
+    background-image: url('../images/home_img/4aaf24a92b72b34f20406a424cc82de1.png');
+
+}
+.pic3 {
+    background-image: url('../images/home_img/3c736769edb2e030741403fbfcee33f4.png');
+    height: 5em;
+}

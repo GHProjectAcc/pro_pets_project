@@ -1,13 +1,13 @@
 import React from "react";
 import {connect} from 'react-redux';
 import {userPostFetch} from '../actions/UserAuthorizationActions';
+import history from "../history";
 
 class Signup extends React.Component {
     state = {
         username: "",
         password: "",
-        avatar: "",
-        bio: ""
+        email: "",
     };
 
     handleChange = event => {
@@ -18,7 +18,8 @@ class Signup extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        this.props.userPostFetch(this.state)
+        this.props.userPostFetch(this.state);
+        history.push('/home')
     };
 
     render() {
@@ -43,19 +44,11 @@ class Signup extends React.Component {
                     onChange={this.handleChange}
                 /><br/>
 
-                <label>Avatar</label>
+                <label>Em@il</label>
                 <input
-                    name='avatar'
-                    placeholder='Avatar (URL)'
-                    value={this.state.avatar}
-                    onChange={this.handleChange}
-                /><br/>
-
-                <label>Bio</label>
-                <textarea
-                    name='bio'
-                    placeholder='Bio'
-                    value={this.state.bio}
+                    name='email'
+                    placeholder='email'
+                    value={this.state.email}
                     onChange={this.handleChange}
                 /><br/>
 
