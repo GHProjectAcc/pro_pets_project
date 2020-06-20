@@ -28,7 +28,7 @@ class HomePage extends React.Component {
                 {/*end header row*/}
 
                 {/* main row start LEFT*/}
-                <div className='row '>
+                <div className='row'>
                     <div className={`col-lg-2 ${style.mainNavigation}`}>
 
                         {/* home button*/}
@@ -83,12 +83,13 @@ class HomePage extends React.Component {
                     {/* main Center*/}
                     <div className='col-lg-8 pt-lg-1'>
 
-                        {/* Post*/}
-                        <div className={`${style.post} pt-lg-2 pl-lg-2 `}>
-                            <div className='row pl-lg-2 pt-lg-2'>
+                        {/* Post1*/}
+                        <div className={`${style.post} pt-lg-2 pl-lg-2 mb-lg-2`}>
+
+                            <div className='pt-lg-2 row'>
                                 {/*AuthorAvatar*/}
                                 <div className='col-lg-1'>
-                                    <img className={`${style.avatar} `}
+                                    <img className={`${style.avatarAuthor} `}
                                          src={this.state.avatarAuthor}
                                          alt=''/>
                                 </div>
@@ -96,19 +97,113 @@ class HomePage extends React.Component {
                                 {/*AuthorName*/}
                                 <div className={`${style.postAuthorName} col-lg-2 `}>
                                     <span>{this.state.name}</span>
-                                    <span className={`${style.postTime} d-block`}>
-                                {this.state.time}
-                            </span>
+                                    <span className={`${style.postTime} d-block`}>{this.state.time}</span>
                                 </div>
 
                                 {/*   DropMenu*/}
-                                <div className='col-lg-1 offset-lg-8 dropdown-menu-right'>
-                                    <span className={`${style.postDropMenu} `}>...</span>
+                                <div className="dropdown  col-lg-1 offset-lg-8">
+                                    <span className={`${style.postDropMenu}`}
+                                          data-toggle="dropdown">
+                                       ...
+                                    </span>
+                                    <div className={`${style.downMenu} dropdown-menu dropdown-menu-right`}>
+
+                                        <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
+                                            <i className={`${style.faMenu} fa fa-eye-slash fa-fw mr-lg-1`}>
+                                            </i>
+                                            <span>Hide from feed</span>
+                                        </button>
+                                        <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
+                                            <i className={`${style.faMenu} fa fa fa-times fa-fw mr-lg-1`}>
+                                            </i>
+                                            <span>Unfollow</span>
+                                        </button>
+                                        <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
+                                            <i className={`${style.faMenu} fa fa-pencil fa-fw mr-lg-1`}>
+                                            </i>
+                                            <span>Edit</span>
+                                        </button>
+                                        <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
+                                            <i className={`${style.faMenu} fa fa-trash fa-fw mr-lg-1`}>
+                                            </i>
+                                            <span>Remove</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            {/*Content*/}
+                            <div className='row pt-lg-2'>
+                                <p className={`${style.postText} col-lg-10 offset-lg-1`}>Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing
+                                    elit.
+                                    Eum, iusto, labore. Eligendi iusto, labore magni rerum sunt veniam?
+                                    Aspernatur debitis delectus est labore molestias natus!
+                                    A assumenda debitis in saepe.
+                                </p>
+                                    <span className={`${style.favorites} fa fa-star-o col-lg-1 d-flex align-items-lg-end mb-lg-3`}>
+                                    </span>
+                            </div>
+                        </div>
+
+                        {/*Post2*/}
+                        <div className={`${style.post} pt-lg-2 pl-lg-2 mb-lg-2`}>
+
+                            <div className='pt-lg-2 row'>
+                                {/*AuthorAvatar*/}
+                                <div className='col-lg-1'>
+                                    <img className={`${style.avatarAuthor} `}
+                                         src={this.state.avatarAuthor}
+                                         alt=''/>
+                                </div>
+
+                                {/*AuthorName*/}
+                                <div className={`${style.postAuthorName} col-lg-2 `}>
+                                    <span>{this.state.name}</span>
+                                    <span className={`${style.postTime} d-block`}>{this.state.time}</span>
+                                </div>
+
+                                {/*   DropMenu*/}
+                                <div className="dropdown  col-lg-1 offset-lg-8">
+                                    <span className={`${style.postDropMenu}`}
+                                          data-toggle="dropdown">
+                                       ...
+                                    </span>
+                                    <div className={`${style.downMenu} dropdown-menu dropdown-menu-right`}>
+
+                                        <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
+                                            <i className={`${style.faMenu} fa fa-eye-slash fa-fw mr-lg-1`}>
+                                            </i>
+                                            <span>Hide from feed</span>
+                                        </button>
+                                        <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
+                                            <i className={`${style.faMenu} fa fa fa-times fa-fw mr-lg-1`}>
+                                            </i>
+                                            <span>Unfollow</span>
+                                        </button>
+                                        <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
+                                            <i className={`${style.faMenu} fa fa-pencil fa-fw mr-lg-1`}>
+                                            </i>
+                                            <span>Edit</span>
+                                        </button>
+                                        <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
+                                            <i className={`${style.faMenu} fa fa-trash fa-fw mr-lg-1`}>
+                                            </i>
+                                            <span>Remove</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Image*/}
+                            <div className='row mt-lg-3 pl-lg-3'>
+                                <div className={`${style.postImage} col-lg-10 offset-lg-1`}>
                                 </div>
                             </div>
 
                             {/*Content*/}
-                            <div className='row pl-lg-2 pt-lg-2'>
+                            <div className='pt-lg-2 row'>
                                 <p className={`${style.postText} col-lg-10 offset-lg-1`}>Lorem ipsum dolor sit amet,
                                     consectetur adipisicing
                                     elit.
@@ -117,23 +212,28 @@ class HomePage extends React.Component {
                                     A assumenda debitis in saepe.
                                 </p>
 
-                                <i className={`${style.favorites} fa fa-star-o col-lg-1 pt-lg-4 mt-lg-5`}>
-                                </i>
+
+                                    <span className={`${style.favorites}  fa fa-star-o col-lg-1 d-flex align-items-lg-end mb-lg-3`}>
+                                    </span>
+
+
                             </div>
                         </div>
                     </div>
 
                     {/* main Right*/}
                     <div className={`${style.targeting} col-lg-2`}>
-                        <div className={`${style.pic1} mt-lg-2`}>
+                        <div className={`${style.pic1} mt-lg-3 `}>
                         </div>
-                        <div className={`${style.pic2} mt-lg-2`}>
+                        <div className={`${style.pic2} mt-lg-3`}>
                         </div>
-                        <div className={`${style.pic3} mt-lg-2`}>
+                        <div className={`${style.pic3} mt-lg-3 mb-lg-3`}>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         );
     }
 
