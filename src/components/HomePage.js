@@ -17,59 +17,61 @@ class HomePage extends React.Component {
         return (
             <div className='container'>
                 {/*header row start*/}
-                <div className={`row pr-lg-1  ${style.header}`}>
-                    <div className={`col-lg-2 ${style.headerLogo}`}>
+                <div className={`${style.header} row pr-lg-1`}>
+                    <div className={`${style.headerLogo} col-md-3 offset-md-1 col-lg-2 offset-lg-0`}>
                     </div>
-                    <button className={`col-lg-2 offset-lg-8 mt-lg-3 ${style.headerButton}`}>
-                        <span className='pr-lg-4'>+</span>
-                        <span className=''>Add new</span>
+                    <button className={`col-md-3 offset-md-5 col-lg-2 offset-lg-8 text-left ${style.headerButton}`}>
+                        <i className="fa fa-plus fa-fw mr-lg-5">
+                        </i>
+                        <span className={`${style.addButtonText}`}>Add new</span>
                     </button>
                 </div>
                 {/*end header row*/}
 
                 {/* main row start LEFT*/}
                 <div className='row'>
-                    <div className={`col-lg-2 ${style.mainNavigation}`}>
+                    <div className={`col-lg-3 ${style.mainNavigation} pr-lg-5`}>
 
                         {/* home button*/}
-                        <div className={`${style.navButtonHome}`}>
-                            <i className="ml-lg-3 mr-lg-3 fa fa-home fa-fw">
+                        <div className={`${style.navButtonHome} d-flex align-items-center mt-lg-4`}>
+                            <i className="ml-lg-4 mr-lg-3 fa fa-home fa-fw">
                             </i>
                             <span>Home</span>
                         </div>
 
                         {/* lost button*/}
-                        <div className={`${style.navButtonOther}`}>
-                            <i className="ml-lg-3 mr-lg-3 fa fa-search fa-fw">
+                        <div className={`${style.navButtonOther} mt-lg-2`}>
+                            <i className="ml-lg-4 mr-lg-3 fa fa-search fa-fw">
                             </i>
                             <span>Lost</span>
                         </div>
 
                         {/*found button*/}
                         <div className={`${style.navButtonOther}`}>
-                            <i className="ml-lg-3 mr-lg-3 fa fa-paw fa-fw">
+                            <i className="ml-lg-4 mr-lg-3 fa fa-paw fa-fw">
                             </i>
                             <span>Found</span>
                         </div>
 
                         {/* services button*/}
-                        <div className={`${style.navButtonOther}`}>
-                            <i className="ml-lg-3 mr-lg-3 fa fa-bullhorn fa-fw">
+                        <div className={`${style.navButtonOther} `}>
+                            <i className="ml-lg-4 mr-lg-3 fa fa-bullhorn fa-fw">
                             </i>
                             <span>Services</span>
                         </div>
 
                         {/* favorites button*/}
                         <div className={`${style.navButtonOther}`}>
-                            <i className="ml-lg-3 mr-lg-3 fa fa fa-star fa-fw">
+                            <i className="ml-lg-4 mr-lg-3 fa fa fa-star fa-fw">
                             </i>
                             <span>Favorites</span>
                         </div>
-                        <div className={`${style.line} mt-lg-6 ml-lg-3`}>
+                        {/*Line_1*/}
+                        <div className={`${style.line} mt-lg-5 ml-lg-4`}>
                         </div>
 
                         {/*avatar*/}
-                        <div className='mt-lg-5 ml-lg-4 d-lg-inline-block'>
+                        <div className='mt-lg-4 ml-lg-4 d-lg-inline-block'>
                             <img className={`${style.avatar} `}
                                  src={this.state.avatar}
                                  alt=''/>
@@ -77,6 +79,17 @@ class HomePage extends React.Component {
                         <div className={`${style.name} ml-lg-3 mt-lg-4 d-lg-inline-block`}>
                             <span>{this.state.name}</span>
                         </div>
+
+                        <div className={`${style.name} mt-lg-5  ml-lg-5`}>
+                            <i className=" mr-lg-2 fa fa-sign-out fa-fw">
+                            </i>
+                            <span>Logout</span>
+                        </div>
+
+                        {/*Line_2*/}
+                        <div className={`${style.line} mt-3 ml-lg-4`}>
+                        </div>
+
                     </div>
 
 
@@ -135,14 +148,15 @@ class HomePage extends React.Component {
 
                             {/*Content*/}
                             <div className='row pt-lg-2'>
-                                <p className={`${style.postText} col-lg-10 offset-lg-1`}>Lorem ipsum dolor sit amet,
+                                <p className={`${style.postText} col-lg-9 offset-lg-1`}>Lorem ipsum dolor sit amet,
                                     consectetur adipisicing
                                     elit.
                                     Eum, iusto, labore. Eligendi iusto, labore magni rerum sunt veniam?
                                     Aspernatur debitis delectus est labore molestias natus!
                                     A assumenda debitis in saepe.
                                 </p>
-                                    <span className={`${style.favorites} fa fa-star-o col-lg-1 d-flex align-items-lg-end mb-lg-3`}>
+                                <span
+                                    className={`${style.favorites} fa fa-star-o col-lg-1 offset-lg-1 d-flex align-items-lg-end mb-lg-3`}>
                                     </span>
                             </div>
                         </div>
@@ -204,7 +218,7 @@ class HomePage extends React.Component {
 
                             {/*Content*/}
                             <div className='pt-lg-2 row'>
-                                <p className={`${style.postText} col-lg-10 offset-lg-1`}>Lorem ipsum dolor sit amet,
+                                <p className={`${style.postText} col-lg-9 offset-lg-1`}>Lorem ipsum dolor sit amet,
                                     consectetur adipisicing
                                     elit.
                                     Eum, iusto, labore. Eligendi iusto, labore magni rerum sunt veniam?
@@ -213,7 +227,8 @@ class HomePage extends React.Component {
                                 </p>
 
 
-                                    <span className={`${style.favorites}  fa fa-star-o col-lg-1 d-flex align-items-lg-end mb-lg-3`}>
+                                <span
+                                    className={`${style.favorites}  fa fa-star-o col-lg-1 offset-lg-1 d-flex align-items-lg-end mb-lg-3`}>
                                     </span>
 
 
@@ -222,7 +237,7 @@ class HomePage extends React.Component {
                     </div>
 
                     {/* main Right*/}
-                    <div className={`${style.targeting} col-lg-2`}>
+                    <div className={`${style.targeting} col-lg-1`}>
                         <div className={`${style.pic1} mt-lg-3 `}>
                         </div>
                         <div className={`${style.pic2} mt-lg-3`}>

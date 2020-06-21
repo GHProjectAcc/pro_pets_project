@@ -1,9 +1,6 @@
-.container {
-    max-width: 1366px;
-    max-height: 768px;
-}
 
 .header {
+    align-items: center;
     height: 4.38em;
     background: #FFFFFF 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
@@ -13,7 +10,7 @@
 
 .headerLogo {
     display: inline-block;
-    height: auto;
+    height: 34px;
     background: transparent url('../images/home_img/footerLogo.png') no-repeat center padding-box;
     padding: 0;
 }
@@ -27,9 +24,8 @@
     opacity: 1;
 }
 
-.header span {
-    text-align: left;
-    font-family: Medium, Montserrat, sans-serif;
+.addButtonText {
+    font-family: Bold, Montserrat, sans-serif;
     font-size: 0.85em;
     letter-spacing: 0;
     color: #FFFFFF;
@@ -43,8 +39,8 @@
 }
 
 .navButtonHome, .navButtonOther {
+    height: 2.2em;
     text-align: left;
-    margin-top: 1.2em;
     border-radius: 0 17px 17px 0;
     background: #FFFFFF 0 0 no-repeat padding-box;
     opacity: 1;
@@ -71,9 +67,8 @@
 }
 
 .line {
-    border: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
     opacity: 0.37;
-    margin-top: 6.45em;
 }
 
 .avatar {
@@ -189,11 +184,23 @@
 }
 .postImage {
     height: 236px;
-    background-image: url('../images/home_img/5d87fd0f82452ab6787e72d1754d8900.png');
-        opacity: 1;
+    background: transparent url('../images/home_img/5d87fd0f82452ab6787e72d1754d8900.png') 0 0 no-repeat padding-box;
+    opacity: 1;
 }
 .avatarAuthor {
     height: 2.8em;
     width: 2.8em;
     border-radius: 100px;
+}
+
+@media screen and (max-width: 992px) {
+    .mainNavigation {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .pic1, .pic2, .pic3 {
+        display: none;
+    }
 }
