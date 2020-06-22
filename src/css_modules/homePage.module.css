@@ -8,10 +8,20 @@
 
 }
 
+.headerDropMenu {
+    color: #FFFFFF;
+}
+
+.headerDropMenu i {
+    height: 34px;
+    font-size: x-large;
+}
+
+
 .headerLogo {
     display: inline-block;
     height: 34px;
-    background: transparent url('../images/home_img/footerLogo.png') no-repeat center padding-box;
+    background: transparent url('../images/home_img/headerLogoForLarge.png') no-repeat center padding-box;
     padding: 0;
 }
 
@@ -24,7 +34,7 @@
     opacity: 1;
 }
 
-.addButtonText {
+.headerButtonText {
     font-family: Bold, Montserrat, sans-serif;
     font-size: 0.85em;
     letter-spacing: 0;
@@ -107,9 +117,8 @@
     justify-content: center;
     height: 2.3em;
     line-height: 1.1em;
-    text-align: left;
     font-family: SemiBold, Montserrat, serif;
-    font-size: 1em;
+    font-size: 16px;
     letter-spacing: 0;
     color: #84B6A3;
     opacity: 1;
@@ -136,7 +145,7 @@
 .postText {
     text-align: left;
     font-family: Montserrat, serif;
-    font-size: 1em;
+    font-size: 16px;
     letter-spacing: 0;
     opacity: 1;
 }
@@ -151,18 +160,18 @@
 .pic1, .pic2, .pic3 {
     opacity: 1;
     height: 219px;
-    background: transparent url('../images/home_img/194578053061e534f7d685209f06144b.png') no-repeat;
+    background: transparent url('../images/home_img/targetingPic1Small.png') no-repeat;
     background-size: contain;
 
 }
 
 .pic2 {
     height: 284px;
-    background-image: url('../images/home_img/4aaf24a92b72b34f20406a424cc82de1.png');
+    background-image: url('../images/home_img/targetingPic2Small.png');
 }
 
 .pic3 {
-    background-image: url('../images/home_img/3c736769edb2e030741403fbfcee33f4.png');
+    background-image: url('../images/home_img/targetingPic3Small.png');
     height: 98px;
 }
 
@@ -171,6 +180,7 @@
     box-shadow: 0 3px 6px #00000029;
     opacity: 1;
 }
+
 .downMenuText {
     text-align: left;
     font-family: Montserrat, sans-serif;
@@ -179,28 +189,69 @@
     color: #393939;
     opacity: 1;
 }
+
 .faMenu {
     color: #393939;
 }
+
 .postImage {
     height: 236px;
-    background: transparent url('../images/home_img/5d87fd0f82452ab6787e72d1754d8900.png') 0 0 no-repeat padding-box;
+    background: transparent url('../images/home_img/mainPostImageSmall.png') 0 0 no-repeat padding-box;
     opacity: 1;
 }
+
 .avatarAuthor {
     height: 2.8em;
     width: 2.8em;
     border-radius: 100px;
 }
 
-@media screen and (max-width: 992px) {
+@media (max-width: 992px) {
     .mainNavigation {
         display: none;
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
     .pic1, .pic2, .pic3 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerButtonText, .mainNavigation, .targeting {
+        display: none;
+    }
+
+    .avatarAuthor {
+        height: 2em;
+        width: 2em;
+    }
+
+    .headerLogo {
+        background: transparent url('../images/home_img/logoProPetsWhiteSmall.png') no-repeat center padding-box;
+    }
+
+    .header {
+        background: #84B6A3 0 0 no-repeat padding-box;
+    }
+
+    .postAuthorName {
+        font-size: 13px;
+        padding-left: 0;
+    }
+    .postText {
+        font-family: Montserrat, serif;
+        font-size: 12px;
+        letter-spacing: 0;
+        opacity: 1;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    .headerDropMenu {
         display: none;
     }
 }

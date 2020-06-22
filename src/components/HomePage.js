@@ -16,14 +16,20 @@ class HomePage extends React.Component {
     render() {
         return (
             <div className='container'>
-                {/*header row start*/}
+                {/*Header row start*/}
                 <div className={`${style.header} row pr-lg-1`}>
-                    <div className={`${style.headerLogo} col-md-3 offset-md-1 col-lg-2 offset-lg-0`}>
+                    {/* DropMenu for xs-sm media*/}
+                    <div className={`${style.headerDropMenu} col-2`}>
+                        <i className="fa fa-bars fa-fw">
+                        </i>
                     </div>
-                    <button className={`col-md-3 offset-md-5 col-lg-2 offset-lg-8 text-left ${style.headerButton}`}>
+                 {/*HeaderLogo & HeaderButton*/}
+                    <div className={`${style.headerLogo} col-5 col-lg-2 offset-lg-0`}>
+                    </div>
+                    <button className={`col-2 offset-3 col-lg-2 offset-lg-8 text-left ${style.headerButton}`}>
                         <i className="fa fa-plus fa-fw mr-lg-5">
                         </i>
-                        <span className={`${style.addButtonText}`}>Add new</span>
+                        <span className={`${style.headerButtonText}`}>Add new</span>
                     </button>
                 </div>
                 {/*end header row*/}
@@ -93,28 +99,27 @@ class HomePage extends React.Component {
                     </div>
 
 
-                    {/* main Center*/}
-                    <div className='col-lg-8 pt-lg-1'>
+                    {/* main CENTER*/}
+                    <div className='col-12 col-lg-8 pt-2'>
 
                         {/* Post1*/}
-                        <div className={`${style.post} pt-lg-2 pl-lg-2 mb-lg-2`}>
-
-                            <div className='pt-lg-2 row'>
+                        <div className={`${style.post} mt-2 pt-2 pl-2 mb-2 container`}>
+                            <div className='pt-2 row'>
                                 {/*AuthorAvatar*/}
-                                <div className='col-lg-1'>
+                                <div className='col-2 col-lg-1 pl-4 pl-lg-3'>
                                     <img className={`${style.avatarAuthor} `}
                                          src={this.state.avatarAuthor}
                                          alt=''/>
                                 </div>
 
                                 {/*AuthorName*/}
-                                <div className={`${style.postAuthorName} col-lg-2 `}>
+                                <div className={`${style.postAuthorName} col-5 col-lg-2`}>
                                     <span>{this.state.name}</span>
                                     <span className={`${style.postTime} d-block`}>{this.state.time}</span>
                                 </div>
 
                                 {/*   DropMenu*/}
-                                <div className="dropdown  col-lg-1 offset-lg-8">
+                                <div className="dropdown  col-2 offset-3 col-lg-1 offset-lg-8 pr-2 pr-lg-4 text-right text-lg-center ">
                                     <span className={`${style.postDropMenu}`}
                                           data-toggle="dropdown">
                                        ...
@@ -147,8 +152,8 @@ class HomePage extends React.Component {
 
 
                             {/*Content*/}
-                            <div className='row pt-lg-2'>
-                                <p className={`${style.postText} col-lg-9 offset-lg-1`}>Lorem ipsum dolor sit amet,
+                            <div className='row pt-2'>
+                                    <p className={`${style.postText} col-11 col-lg-9 offset-lg-1`}>Lorem ipsum dolor sit amet,
                                     consectetur adipisicing
                                     elit.
                                     Eum, iusto, labore. Eligendi iusto, labore magni rerum sunt veniam?
@@ -156,7 +161,7 @@ class HomePage extends React.Component {
                                     A assumenda debitis in saepe.
                                 </p>
                                 <span
-                                    className={`${style.favorites} fa fa-star-o col-lg-1 offset-lg-1 d-flex align-items-lg-end mb-lg-3`}>
+                                    className={`${style.favorites} fa fa-star-o col-1 col-lg-1 offset-lg-1 d-flex align-items-end mb-3 pr-0`}>
                                     </span>
                             </div>
                         </div>
@@ -236,7 +241,7 @@ class HomePage extends React.Component {
                         </div>
                     </div>
 
-                    {/* main Right*/}
+                    {/* main RIGHT*/}
                     <div className={`${style.targeting} col-lg-1`}>
                         <div className={`${style.pic1} mt-lg-3 `}>
                         </div>
