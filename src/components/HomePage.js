@@ -19,15 +19,23 @@ class HomePage extends React.Component {
                 {/*Header row start*/}
                 <div className={`${style.header} row pr-lg-1`}>
                     {/* DropMenu for xs-sm media*/}
-                    <div className={`${style.headerDropMenu} col-2`}>
-                        <i className="fa fa-bars fa-fw">
-                        </i>
+                    <div className={`${style.headerDropMenu} dropdown col-2`}>
+                        <span className="fa fa-bars "
+                              data-toggle="dropdown">
+                        </span>
+                        <div className={`${style.downMenu} dropdown-menu dropdown-menu-right`}>
+                            <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
+                                <i className={`${style.faMenu} fa fa-eye-slash  mr-lg-1`}>
+                                </i>
+                                <span>Hide from feed</span>
+                            </button>
+                        </div>
                     </div>
-                 {/*HeaderLogo & HeaderButton*/}
+                    {/*HeaderLogo & HeaderButton*/}
                     <div className={`${style.headerLogo} col-5 col-lg-2 offset-lg-0`}>
                     </div>
                     <button className={`col-2 offset-3 col-lg-2 offset-lg-8 text-left ${style.headerButton}`}>
-                        <i className="fa fa-plus fa-fw mr-lg-5">
+                        <i className="fa fa-plus mr-lg-5">
                         </i>
                         <span className={`${style.headerButtonText}`}>Add new</span>
                     </button>
@@ -40,35 +48,35 @@ class HomePage extends React.Component {
 
                         {/* home button*/}
                         <div className={`${style.navButtonHome} d-flex align-items-center mt-lg-4`}>
-                            <i className="ml-lg-4 mr-lg-3 fa fa-home fa-fw">
+                            <i className="ml-lg-4 mr-lg-3 fa fa-home ">
                             </i>
                             <span>Home</span>
                         </div>
 
                         {/* lost button*/}
                         <div className={`${style.navButtonOther} mt-lg-2`}>
-                            <i className="ml-lg-4 mr-lg-3 fa fa-search fa-fw">
+                            <i className="ml-lg-4 mr-lg-3 fa fa-search">
                             </i>
                             <span>Lost</span>
                         </div>
 
                         {/*found button*/}
                         <div className={`${style.navButtonOther}`}>
-                            <i className="ml-lg-4 mr-lg-3 fa fa-paw fa-fw">
+                            <i className="ml-lg-4 mr-lg-3 fa fa-paw ">
                             </i>
                             <span>Found</span>
                         </div>
 
                         {/* services button*/}
                         <div className={`${style.navButtonOther} `}>
-                            <i className="ml-lg-4 mr-lg-3 fa fa-bullhorn fa-fw">
+                            <i className="ml-lg-4 mr-lg-3 fa fa-bullhorn ">
                             </i>
                             <span>Services</span>
                         </div>
 
                         {/* favorites button*/}
                         <div className={`${style.navButtonOther}`}>
-                            <i className="ml-lg-4 mr-lg-3 fa fa fa-star fa-fw">
+                            <i className="ml-lg-4 mr-lg-3 fa fa fa-star ">
                             </i>
                             <span>Favorites</span>
                         </div>
@@ -87,7 +95,7 @@ class HomePage extends React.Component {
                         </div>
 
                         <div className={`${style.name} mt-lg-5  ml-lg-5`}>
-                            <i className=" mr-lg-2 fa fa-sign-out fa-fw">
+                            <i className=" mr-lg-2 fa fa-sign-out ">
                             </i>
                             <span>Logout</span>
                         </div>
@@ -103,23 +111,23 @@ class HomePage extends React.Component {
                     <div className='col-12 col-lg-8 pt-2'>
 
                         {/* Post1*/}
-                        <div className={`${style.post} mt-2 pt-2 pl-2 mb-2 container`}>
+                        <div className={`${style.post} mt-3 pl-pr-1 container`}>
                             <div className='pt-2 row'>
                                 {/*AuthorAvatar*/}
-                                <div className='col-2 col-lg-1 pl-4 pl-lg-3'>
+                                <div className='col-2 pr-0'>
                                     <img className={`${style.avatarAuthor} `}
                                          src={this.state.avatarAuthor}
                                          alt=''/>
                                 </div>
 
                                 {/*AuthorName*/}
-                                <div className={`${style.postAuthorName} col-5 col-lg-2`}>
+                                <div className={`${style.postAuthorName} col-5 col-lg-4 pl-0`}>
                                     <span>{this.state.name}</span>
                                     <span className={`${style.postTime} d-block`}>{this.state.time}</span>
                                 </div>
 
                                 {/*   DropMenu*/}
-                                <div className="dropdown  col-2 offset-3 col-lg-1 offset-lg-8 pr-2 pr-lg-4 text-right text-lg-center ">
+                                <div className="dropdown  col-1 offset-4 pr-2 pl-0 pl-lg-3 col-lg-1 offset-lg-5  ">
                                     <span className={`${style.postDropMenu}`}
                                           data-toggle="dropdown">
                                        ...
@@ -127,22 +135,22 @@ class HomePage extends React.Component {
                                     <div className={`${style.downMenu} dropdown-menu dropdown-menu-right`}>
 
                                         <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
-                                            <i className={`${style.faMenu} fa fa-eye-slash fa-fw mr-lg-1`}>
+                                            <i className={`${style.faMenu} fa fa-eye-slash  mr-lg-1`}>
                                             </i>
                                             <span>Hide from feed</span>
                                         </button>
                                         <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
-                                            <i className={`${style.faMenu} fa fa fa-times fa-fw mr-lg-1`}>
+                                            <i className={`${style.faMenu} fa fa fa-times  mr-lg-1`}>
                                             </i>
                                             <span>Unfollow</span>
                                         </button>
                                         <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
-                                            <i className={`${style.faMenu} fa fa-pencil fa-fw mr-lg-1`}>
+                                            <i className={`${style.faMenu} fa fa-pencil  mr-lg-1`}>
                                             </i>
                                             <span>Edit</span>
                                         </button>
                                         <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
-                                            <i className={`${style.faMenu} fa fa-trash fa-fw mr-lg-1`}>
+                                            <i className={`${style.faMenu} fa fa-trash mr-lg-1`}>
                                             </i>
                                             <span>Remove</span>
                                         </button>
@@ -153,21 +161,26 @@ class HomePage extends React.Component {
 
                             {/*Content*/}
                             <div className='row pt-2'>
-                                    <p className={`${style.postText} col-11 col-lg-9 offset-lg-1`}>Lorem ipsum dolor sit amet,
+                                <div className='col-11 pl-3 col-lg-9 offset-lg-2 pl-lg-0'><p
+                                    className={`${style.postText}`}>Lorem
+                                    ipsum dolor sit amet,
                                     consectetur adipisicing
                                     elit.
                                     Eum, iusto, labore. Eligendi iusto, labore magni rerum sunt veniam?
                                     Aspernatur debitis delectus est labore molestias natus!
-                                    A assumenda debitis in saepe.
-                                </p>
-                                <span
-                                    className={`${style.favorites} fa fa-star-o col-1 col-lg-1 offset-lg-1 d-flex align-items-end mb-3 pr-0`}>
+                                    A assumenda debitis in saepe.</p>
+                                </div>
+                                <div className='col-1  col-lg-1 pb-4 pl-0 pl-lg-3 d-flex align-items-end'>
+                                     <span
+                                         className={`${style.favorites} fa fa-star-o`}>
                                     </span>
+                                </div>
+
                             </div>
                         </div>
 
                         {/*Post2*/}
-                        <div className={`${style.post} pt-lg-2 pl-lg-2 mb-lg-2`}>
+                        <div className={`${style.post} mt-3`}>
 
                             <div className='pt-lg-2 row'>
                                 {/*AuthorAvatar*/}
@@ -192,22 +205,22 @@ class HomePage extends React.Component {
                                     <div className={`${style.downMenu} dropdown-menu dropdown-menu-right`}>
 
                                         <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
-                                            <i className={`${style.faMenu} fa fa-eye-slash fa-fw mr-lg-1`}>
+                                            <i className={`${style.faMenu} fa fa-eye-slash  mr-lg-1`}>
                                             </i>
                                             <span>Hide from feed</span>
                                         </button>
                                         <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
-                                            <i className={`${style.faMenu} fa fa fa-times fa-fw mr-lg-1`}>
+                                            <i className={`${style.faMenu} fa fa fa-times  mr-lg-1`}>
                                             </i>
                                             <span>Unfollow</span>
                                         </button>
                                         <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
-                                            <i className={`${style.faMenu} fa fa-pencil fa-fw mr-lg-1`}>
+                                            <i className={`${style.faMenu} fa fa-pencil  mr-lg-1`}>
                                             </i>
                                             <span>Edit</span>
                                         </button>
                                         <button className={`${style.downMenuText} dropdown-item d-lg-inline-block`}>
-                                            <i className={`${style.faMenu} fa fa-trash fa-fw mr-lg-1`}>
+                                            <i className={`${style.faMenu} fa fa-trash mr-lg-1`}>
                                             </i>
                                             <span>Remove</span>
                                         </button>

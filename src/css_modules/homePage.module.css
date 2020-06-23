@@ -113,8 +113,6 @@
 
 
 .postAuthorName {
-    align-items: center;
-    justify-content: center;
     height: 2.3em;
     line-height: 1.1em;
     font-family: SemiBold, Montserrat, serif;
@@ -127,7 +125,7 @@
 .postTime {
     text-align: left;
     font-family: Bold, Montserrat, serif;
-    font-size: 1em;
+    font-size: 14px;
     letter-spacing: 0;
     color: #BABABA;
     opacity: 1;
@@ -245,6 +243,9 @@
         font-size: 12px;
         letter-spacing: 0;
         opacity: 1;
+    }
+    .postTime {
+        font-size: 10px;
     }
 
 
