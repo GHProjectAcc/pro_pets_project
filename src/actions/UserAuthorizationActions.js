@@ -1,10 +1,17 @@
+import history from "../history";
+
 export const LOGIN_USER = 'LOGIN_USER';
 export const REGISTRATION_USER = 'REGISTRATION_USER';
 export const LOGOUT_USER = 'LOGOUT_USER';
 
 
 export const registrationUser = userObj => ({
-    type: 'REGISTRATION_USER',
+    type: REGISTRATION_USER,
+    payload: userObj
+});
+
+const loginUser = userObj => ({
+    type: LOGIN_USER,
     payload: userObj
 });
 
@@ -12,24 +19,28 @@ export const logoutUser = () => ({
     type: 'LOGOUT_USER'
 });
 
-export const userLoginFetch = user => {
+export const userLoginFetch = authData => {
     return dispatch => {
-        return fetch("http://localhost:3000/api/v1/login", {
+        return fetch("https://propets-accounting-service.herokuapp.com/account/v1/sign_in", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
-                Accept: 'application/json',
+                'Authorization': `Basic ${authData}`,
             },
-            body: JSON.stringify({user})
+        }).then(function (response) {
+            if (response.status !== 200) {
+                console.log('Looks like there was a problem. Status Code: ' + response.status);
+                alert(response.status + ' ');
+                return Promise.reject();
+            }
+            return response;
         })
-            .then(resp => resp.json())
+            .then(response => response.json())
             .then(data => {
-                if (data.message) {
-                    //тут ваша логика
-                } else {
-                    localStorage.setItem("token", data);
-                    dispatch(loginUser(data.user))
-                }
+                console.log(data);
+                localStorage.setItem("token", data);
+                dispatch(loginUser(data.user));
+                history.push('home')
             })
     }
 };
@@ -51,21 +62,16 @@ export const userPostFetch = user => {
                 }
                 response.json().then(data => console.log(data))
             })
-            /*.then(data => {
-                if (data.message) {
+        /*.then(data => {
+            if (data.message) {
 
-                } else {
+            } else {
 
-                    localStorage.setItem("token", data);
-                    dispatch(loginUser(data.user))
-                }*/
+                localStorage.setItem("token", data);
+                dispatch(loginUser(data.user))
+            }*/
     }
-}
-
-const loginUser = userObj => ({
-    type: 'LOGIN_USER',
-    payload: userObj
-});
+};
 
 
 export const getProfileFetch = () => {

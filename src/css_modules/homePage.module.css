@@ -1,6 +1,6 @@
 
+
 .header {
-    align-items: center;
     height: 4.38em;
     background: #FFFFFF 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
@@ -26,11 +26,10 @@
 }
 
 .headerButton {
-    display: inline-block;
-    height: 2.5em;
+    vertical-align: middle;
+    height: 2.6em;
     background: #84B6A3 0 0 no-repeat padding-box;
     border-radius: 1.3em;
-    border: none;
     opacity: 1;
 }
 
@@ -42,10 +41,33 @@
     opacity: 1;
 }
 
-.mainNavigation {
+
+.mainNavigation, .mainNavigationSmall {
     background: #84B6A3 0 0 no-repeat padding-box;
     opacity: 1;
     padding-left: 0;
+}
+
+.mainNavigationSmall {
+    z-index: 9999;
+    position: absolute;
+    display: block;
+    height: 100%;
+    padding-right: 15px;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.mainNavigationSmallColorSide {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0.4;
 }
 
 .navButtonHome, .navButtonOther {
@@ -148,11 +170,20 @@
     opacity: 1;
 }
 
-.favorites {
+img {
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+.favorites, .inFavorites {
     text-align: left;
     letter-spacing: 0;
     color: #BABABA;
     opacity: 1;
+}
+.inFavorites {
+   color: #FFE18B ;
 }
 
 .pic1, .pic2, .pic3 {
@@ -192,11 +223,6 @@
     color: #393939;
 }
 
-.postImage {
-    height: 236px;
-    background: transparent url('../images/home_img/mainPostImageSmall.png') 0 0 no-repeat padding-box;
-    opacity: 1;
-}
 
 .avatarAuthor {
     height: 2.8em;
@@ -204,11 +230,6 @@
     border-radius: 100px;
 }
 
-@media (max-width: 992px) {
-    .mainNavigation {
-        display: none;
-    }
-}
 
 @media (max-width: 1200px) {
     .pic1, .pic2, .pic3 {
@@ -238,12 +259,14 @@
         font-size: 13px;
         padding-left: 0;
     }
+
     .postText {
         font-family: Montserrat, serif;
         font-size: 12px;
         letter-spacing: 0;
         opacity: 1;
     }
+
     .postTime {
         font-size: 10px;
     }
@@ -252,7 +275,7 @@
 }
 
 @media (min-width: 768px) {
-    .headerDropMenu {
+    .headerDropMenu, .mainNavigationSmall {
         display: none;
     }
 }
