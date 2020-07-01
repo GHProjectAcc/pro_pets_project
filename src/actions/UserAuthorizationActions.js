@@ -10,9 +10,9 @@ export const registrationUser = userObj => ({
     payload: userObj
 });
 
-const loginUser = userObj => ({
+const loginUser = user => ({
     type: LOGIN_USER,
-    payload: userObj
+    payload: user
 });
 
 export const logoutUser = () => ({
@@ -38,8 +38,8 @@ export const userLoginFetch = authData => {
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                localStorage.setItem("token", data);
-                dispatch(loginUser(data.user));
+                localStorage.setItem("token", data.email);
+                dispatch(loginUser(data));
                 history.push('home')
             })
     }

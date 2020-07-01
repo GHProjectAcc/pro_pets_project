@@ -1,6 +1,8 @@
 import React from "react";
 import style from '../css_modules/homePage.module.css'
 import {header, mainCenterColumn, mainNavigation, mainRightColumn} from '../constants/HomePageCostants'
+import MainNavigation from "./HomePageComponents/homePageMenu";
+import {store} from "../store/ProPetsStore";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -29,6 +31,7 @@ class HomePage extends React.Component {
     };
 
     render() {
+        console.log(store.getState());
         const mainNavigationSmall = (
             <div className=' no-gutters'>
                 <div className={`col-7 ${this.state.display ? style.mainNavigationSmall : style.noDisplay} pr-3`}>
@@ -102,7 +105,7 @@ class HomePage extends React.Component {
 
                 {/* main row start LEFT*/}
                 <div className='row'>
-                    {mainNavigation}
+                    <MainNavigation/>
                     {mainNavigationSmall}
 
                     {/* main CENTER*/}

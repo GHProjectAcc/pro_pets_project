@@ -1,14 +1,16 @@
 import {LOGIN_USER, REGISTRATION_USER, LOGOUT_USER} from "../actions/UserAuthorizationActions";
 
-export default function userAuthorizationReducer(user = {}, action) {
+function userAuthorizationReducer(state = {}, action) {
     switch (action.type) {
         case LOGIN_USER:
-            return {...user, user: action.payload};
+            return {...state, user: action.payload};
         case REGISTRATION_USER:
-            return {...user, user: action.payload};
+            return {...state, user: action.payload};
         case LOGOUT_USER:
-            return {...user, user: {}};
+            return {...state, user: {}};
         default:
-            return user;
+            return state;
     }
 }
+
+export default userAuthorizationReducer;
