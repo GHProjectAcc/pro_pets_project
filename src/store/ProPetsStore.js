@@ -10,8 +10,11 @@ const initialState = {
         posts: [],
         display: false,
         favorites: false
+    },
+    displayChange: {
+        display: false
     }
 };
 
-export const store = createStore(userAuthorizationReducer, initialState, applyMiddleware(thunk));
+export const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
 

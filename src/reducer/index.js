@@ -1,11 +1,9 @@
 import {combineReducers} from "redux";
 import userAuthorizationReducer from '../reducer/userAuthorizationReducer'
+import displayChangeReducer from "./displayChangeReducer";
 
-// export function rootReducer(state, action) {
-//     return {
-//         user: userReducer(state.user, action),
-//         stats: statsReducer(state.stats,action)
-//     };
-// }
 
-export const rootReducer = combineReducers({user: userAuthorizationReducer});
+export const rootReducer = combineReducers({
+    user: userAuthorizationReducer,
+    displayChange: displayChangeReducer
+});

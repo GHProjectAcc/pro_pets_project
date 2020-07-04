@@ -28,7 +28,7 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path={["/signup", '/']} component={RegistrationPage}/>
                     <Route exact path="/signin" component={LoginPage}/>
-                    <Route exact path='/home' component={HomePage}/>
+                    <Route exact path='/home' component={HomePage} />
                 </Switch>
                 {/*{this.props.currentUser.username*/}
                 {/*    ? <button onClick={this.handleClick}>Log Out</button>*/}

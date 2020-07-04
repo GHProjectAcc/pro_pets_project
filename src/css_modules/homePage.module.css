@@ -1,5 +1,4 @@
 
-
 .header {
     height: 4.38em;
     background: #FFFFFF 0 0 no-repeat padding-box;
@@ -53,7 +52,6 @@
     position: absolute;
     display: block;
     height: 100%;
-    padding-right: 15px;
 }
 
 .noDisplay {
@@ -63,14 +61,13 @@
 .mainNavigationSmallColorSide {
     position: absolute;
     right: 0;
-    width: 100%;
     height: 100%;
-    z-index: 9999;
+    z-index: 9998;
     background: rgba(0, 0, 0, 0.4);
     opacity: 0.4;
 }
 
-.navButtonHome, .navButtonOther {
+.navButtonOn, .navButtonOff {
     height: 2.2em;
     text-align: left;
     border-radius: 0 17px 17px 0;
@@ -79,22 +76,22 @@
     padding-right: 1.2em;
 }
 
-.navButtonOther {
+.navButtonOff {
     background: #84B6A3 0 0 no-repeat padding-box;
 }
 
-.navButtonHome span, i, .navButtonOther span, i {
+.navButtonOn span, i, .navButtonOff span, i {
     font-family: Medium, Montserrat, sans-serif;
     font-size: 1em;
     color: #84B6A3;
     opacity: 1;
 }
 
-.navButtonHome i {
+.navButtonOn i {
     color: #84B6A3;
 }
 
-.navButtonOther span, i {
+.navButtonOff span, i {
     color: #FFFFFF;
 }
 
@@ -182,8 +179,9 @@ img {
     color: #BABABA;
     opacity: 1;
 }
+
 .inFavorites {
-   color: #FFE18B ;
+    color: #FFE18B;
 }
 
 .pic1, .pic2, .pic3 {
