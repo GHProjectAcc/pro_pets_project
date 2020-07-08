@@ -1,0 +1,56 @@
+.titleText {
+    text-align: left;
+    font-family: Montserrat, Bold, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: #669885;
+}
+
+.addPostText {
+    height: 687px;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: 1;
+}
+
+.span1, .span2 {
+    text-align: right;
+    font-family: Montserrat, Medium, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: #393939;
+    opacity: 1;
+}
+
+.span2 {
+    font-size: 10px;
+    color: #84B6A3;
+}
+
+.textBox {
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    opacity: 1;
+}
+
+input   {
+    outline: 0;
+    outline-offset: 0;
+    border: 1px solid #8DBFAC;
+}
+
+.inputTextBox {
+    text-align: left;
+    font-family: Montserrat, Medium, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: #BABABA;
+    opacity: 1;
+    height: 422px;
+}
+
+.photo1 {
+   border: 1px solid #FF6F61;
+    width: 152px;
+    height: 111px;
+}
+

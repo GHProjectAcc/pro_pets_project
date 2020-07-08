@@ -2,12 +2,12 @@ import style from "../../../css_modules/homePage.module.css";
 import React from "react";
 
 const PostDropMenu = (props) => (
-    <div className="dropdown col-1 offset-4 pr-2 pl-0  col-lg-1 offset-lg-5 pl-lg-3">
-                                    <div className={`${style.postDropMenu} align-items-top d-flex`}
+    <div className="dropdown col-1 offset-3 pr-2 pl-0  col-lg-1 offset-lg-5 pl-lg-3">
+                                    <div className={`${style.postDropMenu} `}
                                           data-toggle="dropdown">
-                                       <span>...</span>
+                                       <span >...</span>
                                     </div>
-        <div className={`${style.downMenu} dropdown-menu dropdown-menu-right`}>
+        <div className={`${style.downMenu} dropdown-menu dropdown-menu-right `}>
 
             <button className={`${style.downMenuText} dropdown-item `}>
                 <i className={`${style.faMenu} fa fa-eye-slash  mr-2`}>

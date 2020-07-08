@@ -8,7 +8,7 @@ class Navigation extends React.Component {
     render() {
         const path = window.location.pathname;
         return (
-            <div className={`col-5 col-lg-3 ${style.mainNavigation} pr-lg-5 pt-lg-3`}>
+            <div className={`col-5 col-lg-3 ${style.mainNavigation} pr-lg-4 pt-lg-3 pl-0`}>
 
                 {/* home button*/}
                 <div
@@ -45,13 +45,13 @@ class Navigation extends React.Component {
 
                 {/* favorites button*/}
                 <div
-                    className={`${path.includes('/favorites') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mt-lg-2`}>
+                    className={`${path.includes('/favorites') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mt-lg-2 mb-lg-5`}>
                     <i className="ml-lg-4 mr-lg-3 fa fa fa-star ">
                     </i>
                     <span>Favorites</span>
                 </div>
                 {/*Line_1*/}
-                <div className={`${style.line} mt-lg-5 ml-lg-4`}>
+                <div className={`${style.line}  ml-lg-4`}>
                 </div>
 
                 {/*avatar*/}
@@ -64,7 +64,7 @@ class Navigation extends React.Component {
                     <span>{this.props.user.name}</span>
                 </div>
 
-                <div className={`${style.name} mt-lg-5  ml-lg-5`}>
+                <div className={`${style.name} mt-lg-5   text-center`}>
                     <i className=" mr-lg-2 fa fa-sign-out ">
                     </i>
                     <span>Logout</span>

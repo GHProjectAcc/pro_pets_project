@@ -7,6 +7,8 @@ import LoginPage from './components/LoginPage';
 import RegistrationPage from './components/RegistrationPage'
 import StartPageV2 from "./components/StarPageV2";
 import HomePage from "./components/HomePage";
+import AddPost from "./components/AddPostPage";
+import NewPostMatched from "./components/NewPostMatchedPage";
 
 
 class App extends React.Component {
@@ -28,7 +30,9 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path={["/signup", '/']} component={RegistrationPage}/>
                     <Route exact path="/signin" component={LoginPage}/>
-                    <Route exact path='/home' component={HomePage} />
+                    <Route exact path='/home' component={HomePage}/>
+                    <Route exact path='/addpost' component={AddPost}/>
+                    <Route exact path='/new_matched' component={NewPostMatched}/>
                 </Switch>
                 {/*{this.props.currentUser.username*/}
                 {/*    ? <button onClick={this.handleClick}>Log Out</button>*/}

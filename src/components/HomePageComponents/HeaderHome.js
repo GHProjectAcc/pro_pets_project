@@ -11,7 +11,7 @@ const Header = (props) => {
 
 
     return (
-        <div className={`${style.header} row pr-lg-1 align-items-center`}>
+        <div className={`${style.header} row pl-lg-4 align-items-center`}>
             {/* DropMenu for xs-sm media*/}
             <span className={`${style.headerDropMenu} fa fa-bars col-2 text-center`}
                   onClick={mainNavigationOnClick}>
@@ -22,7 +22,7 @@ const Header = (props) => {
             </div>
             <div
                 className={`col-2 offset-3 col-lg-2 offset-lg-8 align-items-center d-flex ${style.headerButton}`}>
-                <i className="fa fa-plus mr-lg-5 ">
+                <i className="fa fa-plus mr-lg-4 ">
                 </i>
                 <span className={`${style.headerButtonText}`}>Add new</span>
             </div>

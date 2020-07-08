@@ -1,3 +1,6 @@
+.page {
+    height: 1019px;
+}
 
 .header {
     height: 4.38em;
@@ -25,6 +28,7 @@
 }
 
 .headerButton {
+    max-width: 145px;
     vertical-align: middle;
     height: 2.6em;
     background: #84B6A3 0 0 no-repeat padding-box;
@@ -42,16 +46,15 @@
 
 
 .mainNavigation, .mainNavigationSmall {
+    height: 100vh;
     background: #84B6A3 0 0 no-repeat padding-box;
     opacity: 1;
-    padding-left: 0;
 }
 
 .mainNavigationSmall {
     z-index: 9999;
     position: absolute;
     display: block;
-    height: 100%;
 }
 
 .noDisplay {
@@ -96,6 +99,7 @@
 }
 
 .line {
+    margin-top: 9em;
     border-bottom: 1px solid #FFFFFF;
     opacity: 0.37;
 }
@@ -236,6 +240,10 @@ img {
 }
 
 @media (max-width: 768px) {
+    .headerButton {
+        background-color: #669885;
+    }
+
     .headerButtonText, .mainNavigation, .targeting {
         display: none;
     }
@@ -250,7 +258,7 @@ img {
     }
 
     .header {
-        background: #84B6A3 0 0 no-repeat padding-box;
+        background: #669885 0 0 no-repeat padding-box;
     }
 
     .postAuthorName {

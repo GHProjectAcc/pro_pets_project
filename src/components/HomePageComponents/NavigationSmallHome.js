@@ -7,40 +7,69 @@ class NavigationSmall extends React.Component {
 
 
     render() {
-
+        const path = window.location.pathname;
         return (
             <div >
-                <div className={`col-7 ${this.props.display ? style.mainNavigationSmall : style.noDisplay} pr-3`}>
+                <div className={`col-7 ${this.props.display ? style.mainNavigationSmall : style.noDisplay} pr-4 pt-2 pl-0`}>
                     {/* home button*/}
-                    <div className={`${style.navButtonOn} d-flex align-items-center mt-4`}>
+                    <div className={`${path.includes('/home') ? style.navButtonOn : style.navButtonOff} 
+                    d-flex align-items-center mt-2`}>
                         <i className="ml-4 mr-3 fa fa-home ">
                         </i>
                         <span>Home</span>
                     </div>
 
                     {/* lost button*/}
-                    <div className={`${style.navButtonOff} mt-2`}>
+                    <div className={`${path.includes('/lost') ? style.navButtonOn : style.navButtonOff} 
+                    d-flex align-items-center mt-2`}>
                         <i className="ml-4 mr-3 fa fa-search">
                         </i>
                         <span>Lost</span>
                     </div>
 
                     {/*found button*/}
-                    <div className={`${style.navButtonOff}`}>
+                    <div className={`${path.includes('/found') ? style.navButtonOn : style.navButtonOff} 
+                    d-flex align-items-center mt-2`}>
                         <i className="ml-4 mr-3 fa fa-paw ">
                         </i>
                         <span>Found</span>
                     </div>
 
-                    {/* services button*/}
-                    <div className={`${style.navButtonOff} `}>
+                    {/* vetHelp button*/}
+                    <div className={`${path.includes('/vethelp') ? style.navButtonOn : style.navButtonOff} 
+                    d-flex align-items-center mt-2`}>
+                        <i className="ml-4 mr-3 fa fa-stethoscope ">
+                        </i>
+                        <span>VetHelp</span>
+                    </div>
+
+                    {/*  hotels button*/}
+                    <div className={`${path.includes('/hotels') ? style.navButtonOn : style.navButtonOff} 
+                    d-flex align-items-center mt-2`}>
+                        <i className="ml-4 mr-3 fa fa-building ">
+                        </i>
+                        <span>Hotels</span>
+                    </div>
+
+                    {/*  walking button*/}
+                    <div className={`${path.includes('/walking') ? style.navButtonOn : style.navButtonOff} 
+                    d-flex align-items-center mt-2`}>
                         <i className="ml-4 mr-3 fa fa-bullhorn ">
                         </i>
-                        <span>Services</span>
+                        <span>Walking</span>
+                    </div>
+
+                    {/*  fostering button*/}
+                    <div className={`${path.includes('/fostering') ? style.navButtonOn : style.navButtonOff} 
+                    d-flex align-items-center mt-2`}>
+                        <i className="ml-4 mr-3 fa fa-bullhorn ">
+                        </i>
+                        <span>Fostering</span>
                     </div>
 
                     {/* favorites button*/}
-                    <div className={`${style.navButtonOff}`}>
+                    <div className={`${path.includes('/favorites') ? style.navButtonOn : style.navButtonOff} 
+                    d-flex align-items-center mt-2`}>
                         <i className="ml-4 mr-3 fa fa fa-star ">
                         </i>
                         <span>Favorites</span>
@@ -59,7 +88,8 @@ class NavigationSmall extends React.Component {
                         <span>Name</span>
                     </div>
 
-                    <div className={`${style.name} mt-5  ml-5`}>
+
+                    <div className={`${style.name} mt-5 text-center`}>
                         <i className=" mr-2 fa fa-sign-out ">
                         </i>
                         <span>Logout</span>
