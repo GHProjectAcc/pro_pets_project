@@ -3,12 +3,13 @@ import {Route, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getProfileFetch, logoutUser} from './actions/UserAuthorizationActions';
 import Signup from './components/Signup';
-import LoginPage from './components/LoginPage';
-import RegistrationPage from './components/RegistrationPage'
-import StartPageV2 from "./components/StarPageV2";
-import HomePage from "./components/HomePage";
-import AddPost from "./components/AddPostPage";
-import NewPostMatched from "./components/NewPostMatchedPage";
+import LoginPage from './components/Pages/LoginPage';
+import RegistrationPage from './components/Pages/RegistrationPage'
+import StartPageV2 from "./components/Pages/StarPageV2";
+import Home from "./components/Pages/HomePage";
+import AddPost from "./components/Pages/AddPostPage";
+import NewPostMatched from "./components/Pages/NewPostMatchedPage";
+import Profile from "./components/Pages/ProfilePage";
 
 
 class App extends React.Component {
@@ -30,9 +31,10 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path={["/signup", '/']} component={RegistrationPage}/>
                     <Route exact path="/signin" component={LoginPage}/>
-                    <Route exact path='/home' component={HomePage}/>
+                    <Route exact path='/home' component={Home}/>
                     <Route exact path='/addpost' component={AddPost}/>
                     <Route exact path='/new_matched' component={NewPostMatched}/>
+                    <Route exact path='/profile' component={Profile}/>}
                 </Switch>
                 {/*{this.props.currentUser.username*/}
                 {/*    ? <button onClick={this.handleClick}>Log Out</button>*/}

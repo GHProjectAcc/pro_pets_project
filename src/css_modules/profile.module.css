@@ -1,0 +1,119 @@
+
+
+.page {
+    min-height: 100vh;
+    padding-bottom: 4.3em;
+}
+
+.profileButton, .profileActivities {
+    background: #84B6A3 0 0 no-repeat padding-box;
+    opacity: 1;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileActivities {
+    opacity: 0.36;
+}
+
+
+.profileButton span, .profileActivities span {
+    font-size: 15px;
+    font-family: Montserrat, Bold, sans-serif;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.title {
+    text-align: left;
+    font-size: 15px;
+    font-family: Montserrat, Bold, sans-serif;
+    letter-spacing: 0;
+    color: #669885;
+}
+
+.avatar {
+    height: 2.6em;
+    width: 2.6em;
+    border-radius: 100px;
+    opacity: 1;
+}
+
+.authorName {
+    text-align: left;
+    font-size: 16px;
+    font-family: Montserrat, SemiBold, sans-serif;
+    letter-spacing: 0;
+    color: #84B6A3;
+    opacity: 1;
+}
+
+.email {
+    font-size: 12px;
+    font-family: Montserrat, SemiBold, sans-serif;
+    letter-spacing: 0;
+    color: #393939;
+    opacity: 1;
+}
+
+
+.emailInput {
+    outline: 0;
+    outline-offset: 0;
+    border: none;
+    border-bottom: 1px solid #84B6A3;
+    opacity: 1;
+}
+
+input::placeholder {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.saveButton, .cancelButton {
+    height: 2.2em;
+    justify-content: center;
+    align-items: center;
+    background: #84B6A3 0 0 no-repeat padding-box;
+    border: 1px solid #8DBFAC;
+    border-radius: 17px;
+    opacity: 1;
+}
+
+.cancelButton {
+    background: none;
+}
+
+.saveButton span, .cancelButton span {
+    font-size: 12px;
+    font-family: Montserrat, SemiBold, sans-serif;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.cancelButton span {
+    color: #84B6A3;;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6.3em;
+    background: #669885 0 0 no-repeat padding-box;
+}
+
+.footerLogo {
+    background: transparent url('../images/home_img/logoProPetsWhiteSmall.png') no-repeat center padding-box;
+}
+
+.address {
+    text-align: center;
+    font-size: 12px;
+    font-family: Montserrat, Bold, sans-serif;
+    letter-spacing: 0;
+    color: #FFFFFF;
+}

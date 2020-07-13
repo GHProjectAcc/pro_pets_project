@@ -55,16 +55,20 @@ class Navigation extends React.Component {
                 </div>
 
                 {/*avatar*/}
-                <div className='mt-lg-4 ml-lg-4 d-lg-inline-block'>
-                    <img className={`${style.avatar} `}
-                         src={this.props.user.avatar}
-                         alt=''/>
-                </div>
-                <div className={`${style.name} ml-lg-3 mt-lg-4 d-lg-inline-block`}>
-                    <span>{this.props.user.name}</span>
+                <div className={`${path.includes('/profile') ? style.avatarOn : style.avatarOff} d-flex mt-lg-4 `}>
+                    <div className='ml-lg-4 d-lg-inline-block '>
+                        <img className={`${style.avatar} `}
+                             src={this.props.user.avatarAuthor}
+                             alt=''/>
+                    </div>
+                    <div
+                        className={`${path.includes('/profile') ? style.nameOn : style.nameOff} ml-lg-3  d-lg-inline-block`}>
+                        <span>{this.props.user.name}</span>
+                    </div>
                 </div>
 
-                <div className={`${style.name} mt-lg-5   text-center`}>
+
+                <div className={`${style.nameOff} mt-lg-5   text-center`}>
                     <i className=" mr-lg-2 fa fa-sign-out ">
                     </i>
                     <span>Logout</span>

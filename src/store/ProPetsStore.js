@@ -6,6 +6,7 @@ import {rootReducer} from "../reducer";
 const initialState = {
     user: {
         avatarAuthor: require('../images/home_img/logoKuzya.png'),
+        name: 'Tigran Tigrov',
         time: '2h',
         posts: [],
         display: false,

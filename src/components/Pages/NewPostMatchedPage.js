@@ -1,6 +1,6 @@
 import React from "react";
-import style from "../css_modules/homePage.module.css";
-import Post from "./HomePageComponents/PostComponents/PostHome";
+import style from "../../css_modules/homePage.module.css";
+import Post from "../HomePageComponents/PostComponents/PostHome";
 
 class NewPostMatched extends React.Component {
 

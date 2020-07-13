@@ -1,5 +1,5 @@
 .page {
-    height: 1019px;
+    max-height: 1366px;
 }
 
 .header {
@@ -46,7 +46,6 @@
 
 
 .mainNavigation, .mainNavigationSmall {
-    height: 100vh;
     background: #84B6A3 0 0 no-repeat padding-box;
     opacity: 1;
 }
@@ -55,6 +54,7 @@
     z-index: 9999;
     position: absolute;
     display: block;
+    height: 100%;
 }
 
 .noDisplay {
@@ -70,7 +70,7 @@
     opacity: 0.4;
 }
 
-.navButtonOn, .navButtonOff {
+.navButtonOn, .navButtonOff, .avatarOn, .avatarOff {
     height: 2.2em;
     text-align: left;
     border-radius: 0 17px 17px 0;
@@ -79,7 +79,12 @@
     padding-right: 1.2em;
 }
 
-.navButtonOff {
+.avatarOn, .avatarOff {
+    height: 2.6em;
+    align-items: center;
+}
+
+.navButtonOff, .avatarOff {
     background: #84B6A3 0 0 no-repeat padding-box;
 }
 
@@ -108,17 +113,20 @@
     height: 2.3em;
     width: 2.3em;
     border-radius: 100px;
-    border: 1px solid #FFFFFF;
     opacity: 1;
 }
 
-.name {
+.nameOn, .nameOff {
     text-align: left;
     font-family: Bold, Montserrat, serif;
     font-size: 0.8em;
     letter-spacing: 0;
-    color: #FFFFFF;
+    color: #84B6A3;
     opacity: 1;
+}
+
+.nameOff {
+    color: #FFFFFF;
 }
 
 

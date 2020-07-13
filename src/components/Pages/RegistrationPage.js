@@ -1,6 +1,6 @@
 import React from "react";
-import style from '../css_modules/registrationPage.module.css'
-import history from "../history";
+import style from '../../css_modules/registrationPage.module.css'
+import history from "../../history";
 import {Link} from "react-router-dom";
 
 class RegistrationPage extends React.Component {

@@ -1,9 +1,9 @@
 import React from "react";
-import style from '../css_modules/registrationPage.module.css'
-import styleLogin from '../css_modules/loginPage.module.css'
-import history from "../history";
+import style from '../../css_modules/registrationPage.module.css'
+import styleLogin from '../../css_modules/loginPage.module.css'
+import history from "../../history";
 import {Link} from "react-router-dom";
-import {userLoginFetch} from "../actions/UserAuthorizationActions";
+import {userLoginFetch} from "../../actions/UserAuthorizationActions";
 import {connect} from "react-redux";
 
 class LoginPage extends React.Component {

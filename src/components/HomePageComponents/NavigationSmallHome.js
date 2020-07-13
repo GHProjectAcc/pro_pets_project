@@ -9,8 +9,9 @@ class NavigationSmall extends React.Component {
     render() {
         const path = window.location.pathname;
         return (
-            <div >
-                <div className={`col-7 ${this.props.display ? style.mainNavigationSmall : style.noDisplay} pr-4 pt-2 pl-0`}>
+            <div>
+                <div
+                    className={`col-7 ${this.props.display ? style.mainNavigationSmall : style.noDisplay} pr-4 pt-2 pl-0`}>
                     {/* home button*/}
                     <div className={`${path.includes('/home') ? style.navButtonOn : style.navButtonOff} 
                     d-flex align-items-center mt-2`}>
@@ -79,17 +80,21 @@ class NavigationSmall extends React.Component {
                     </div>
 
                     {/*avatar*/}
-                    <div className='mt-4 ml-4 d-inline-block'>
-                        <img className={`${style.avatar} `}
-                            /*src={this.state.avatar}*/
-                             alt=''/>
-                    </div>
-                    <div className={`${style.name} ml-3 mt-4 d-inline-block`}>
-                        <span>Name</span>
+
+                    <div className={`${path.includes('/profile') ? style.avatarOn : style.avatarOff} d-flex mt-4 `}>
+                        <div className='ml-4 d-inline-block '>
+                            <img className={`${style.avatar} `}
+                                 src={this.props.user.avatarAuthor}
+                                 alt=''/>
+                        </div>
+                        <div
+                            className={`${path.includes('/profile') ? style.nameOn : style.nameOff} ml-3  d-inline-block`}>
+                            <span>{this.props.user.name}</span>
+                        </div>
                     </div>
 
 
-                    <div className={`${style.name} mt-5 text-center`}>
+                    <div className={`${style.nameOff} mt-5 text-center`}>
                         <i className=" mr-2 fa fa-sign-out ">
                         </i>
                         <span>Logout</span>
@@ -111,7 +116,8 @@ class NavigationSmall extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        display: state.displayChange.display
+        display: state.displayChange.display,
+        user: state.user
     };
 }
 

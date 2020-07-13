@@ -32,7 +32,8 @@
     opacity: 1;
 }
 
-input   {
+textarea {
+    max-height: 422px;
     outline: 0;
     outline-offset: 0;
     border: 1px solid #8DBFAC;
@@ -48,9 +49,64 @@ input   {
     height: 422px;
 }
 
-.photo1 {
-   border: 1px solid #FF6F61;
-    width: 152px;
-    height: 111px;
+.photoBox {
+    width: 199px;
+    height: 114px;
 }
 
+.photo1 {
+    border: 1px solid rgba(21, 21, 21, 0.18);
+    width: 133px;
+}
+
+.photo1Label {
+    min-width: 133px;
+    height: 114px;
+}
+
+.photo2 {
+    width: 66px;
+    border: 1px solid rgba(21, 21, 21, 0.18);
+    border-left: none;
+    height: 39px;
+}
+
+.smallBox {
+    flex-direction: column;
+}
+
+.buttonBox {
+    align-self: flex-end;
+    justify-content: center;
+}
+
+.browseButton {
+    text-align: center;
+    width: 77px;
+    height: 30px;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    border: 1px solid #8DBFAC;
+    border-radius: 15px;
+    opacity: 1
+}
+
+.textButton {
+    text-align: left;
+    font-family: Montserrat, Medium, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0;
+    color: #84B6A3;
+    opacity: 1;
+}
+
+.inputUpload {
+    display: none;
+}
+
+.imageRemoveBox {
+    width: 135px;
+    height: 114px;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    border: 1px solid #8DBFAC;
+    opacity: 1;
+}
