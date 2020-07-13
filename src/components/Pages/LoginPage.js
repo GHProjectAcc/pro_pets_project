@@ -20,7 +20,6 @@ class LoginPage extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        console.log(this.state);
         const authData = window.btoa(this.state.login + ':' + this.state.password);
         this.props.userLoginFetch(authData)
     };

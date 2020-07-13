@@ -10,6 +10,7 @@ import AvatarName from "./MainProfileAvatarName";
 import Title from "./MainProfileTitle";
 import MyProfileButton from "./MainProfileMyProfileButton";
 import ActivitiesButton from "./MainProfileActivitiesButton";
+import Footer from "./MainProfileFooter";
 
 class MainProfile extends React.Component {
     constructor(props) {
@@ -33,6 +34,7 @@ class MainProfile extends React.Component {
                 {/*profile buttons save + cancel*/}
                 <SaveButton/>
                 <CancelButton/>
+
             </div>
         );
     }

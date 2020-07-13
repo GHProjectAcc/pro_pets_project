@@ -5,5 +5,7 @@ import displayChangeReducer from "./displayChangeReducer";
 
 export const rootReducer = combineReducers({
     user: userAuthorizationReducer,
-    displayChange: displayChangeReducer
+    displayChange: displayChangeReducer,
+
+
 });

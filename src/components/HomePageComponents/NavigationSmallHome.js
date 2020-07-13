@@ -12,6 +12,7 @@ class NavigationSmall extends React.Component {
             <div>
                 <div
                     className={`col-7 ${this.props.display ? style.mainNavigationSmall : style.noDisplay} pr-4 pt-2 pl-0`}>
+
                     {/* home button*/}
                     <div className={`${path.includes('/home') ? style.navButtonOn : style.navButtonOff} 
                     d-flex align-items-center mt-2`}>

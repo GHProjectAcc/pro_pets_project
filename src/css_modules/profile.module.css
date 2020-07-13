@@ -1,5 +1,4 @@
 
-
 .page {
     min-height: 100vh;
     padding-bottom: 4.3em;
@@ -35,10 +34,35 @@
 }
 
 .avatar {
+    position: relative;
+    height: 2.6em;
+    width: 2.6em;
+    opacity: 1;
+}
+
+.avatar img {
     height: 2.6em;
     width: 2.6em;
     border-radius: 100px;
-    opacity: 1;
+}
+
+.avatarChangeButton {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    right: 15px;
+    top: 65%;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatarChangeButton i {
+    color: #84B6A3;
+    font-size: 10px;
 }
 
 .authorName {
@@ -50,6 +74,11 @@
     opacity: 1;
 }
 
+.authorName i {
+    color: #84B6A3;
+    font-size: 13px;
+}
+
 .email {
     font-size: 12px;
     font-family: Montserrat, SemiBold, sans-serif;
@@ -57,9 +86,16 @@
     color: #393939;
     opacity: 1;
 }
+.emailText {
+    font-size: 12px;
+    font-family: Montserrat, SemiBold, sans-serif;
+    letter-spacing: 0;
+    color: #75B29A;
+    opacity: 1;
+}
 
 
-.emailInput {
+.emailInput  {
     outline: 0;
     outline-offset: 0;
     border: none;
@@ -67,14 +103,16 @@
     opacity: 1;
 }
 
+
 input::placeholder {
-    font-size: 12px;
+    line-height: 2.5em;
+    font-size: 11px;
     opacity: 0.5;
 }
 
 .saveButton, .cancelButton {
     height: 2.2em;
-    justify-content: center;
+
     align-items: center;
     background: #84B6A3 0 0 no-repeat padding-box;
     border: 1px solid #8DBFAC;
@@ -84,6 +122,7 @@ input::placeholder {
 
 .cancelButton {
     background: none;
+    justify-content: center;
 }
 
 .saveButton span, .cancelButton span {
@@ -94,14 +133,16 @@ input::placeholder {
     opacity: 1;
 }
 
+.saveButton i {
+    text-align: left;
+    margin-right: 4em;
+}
+
 .cancelButton span {
     color: #84B6A3;;
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     height: 6.3em;
     background: #669885 0 0 no-repeat padding-box;
 }

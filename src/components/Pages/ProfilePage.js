@@ -5,25 +5,31 @@ import NavigationSmall from "../HomePageComponents/NavigationSmallHome";
 import Navigation from "../HomePageComponents/NavigationHome";
 import AdRightColumn from "../HomePageComponents/AdvertisingHome";
 import MainProfile from "../ProfileComponents/MainProfile";
+import Footer from "../ProfileComponents/MainProfileFooter";
+import MainActivities from "../ProfileComponents/MainActivities";
 
-const Profile = (props) => (
-    <div className={`${style.page} container`}>
-        <Header/>
-        <div className='row h-100 '>
-            {window.matchMedia('(max-width: 768px)').matches ? <NavigationSmall/> : <Navigation/>}
-            <MainProfile/>
-            <AdRightColumn/>
-        </div>
-        <div className={`${style.footer} row justify-content-center`}>
-            <div className={`${style.footerLogo} col-6  pt-5`}>
-            </div>
-            <div className={`${style.address}`}>
-                <span className='d-block'>1600 Amphitheatre Pkwy Mountain View, </span>
-                <span className='d-block'>CA 94043,USA</span>
-            </div>
+class Profile extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            profile: true
+        }
+    }
 
-        </div>
-    </div>);
+    render() {
+        return (
+            <div className={`${style.page} container`}>
+                <Header/>
+                <div className='row h-100 '>
+                    {window.matchMedia('(max-width: 768px)').matches ? <NavigationSmall/> : <Navigation/>}
+                    {this.state.profile ?  <MainProfile/> : <MainActivities/>}
+                    <AdRightColumn/>
+                </div>
+                <Footer/>
+            </div>);
+
+    }
+}
 
 
 export default Profile;
