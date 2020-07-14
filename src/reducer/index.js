@@ -1,10 +1,10 @@
 import {combineReducers} from "redux";
-import userAuthorizationReducer from '../reducer/userAuthorizationReducer'
+import userReducer from './userReducer'
 import displayChangeReducer from "./displayChangeReducer";
 
 
 export const rootReducer = combineReducers({
-    user: userAuthorizationReducer,
+    user: userReducer,
     displayChange: displayChangeReducer,
 
 

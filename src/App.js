@@ -94,7 +94,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-    currentUser: state.userAuthorizationReducer.currentUser
+    currentUser: state.userReducer.currentUser
 })
 
 const mapDispatchToProps = dispatch => {

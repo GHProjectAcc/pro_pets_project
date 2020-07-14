@@ -1136,9 +1136,9 @@
    * A fast object `.reduce()` implementation.
    *
    * @param  {Object}   subject      The object to reduce over.
-   * @param  {Function} fn           The userAuthorizationReducer function.
-   * @param  {mixed}    initialValue The initial value for the userAuthorizationReducer, defaults to subject[0].
-   * @param  {Object}   thisContext  The context for the userAuthorizationReducer.
+   * @param  {Function} fn           The userReducer function.
+   * @param  {mixed}    initialValue The initial value for the userReducer, defaults to subject[0].
+   * @param  {Object}   thisContext  The context for the userReducer.
    * @return {mixed}                 The final result.
    */
 

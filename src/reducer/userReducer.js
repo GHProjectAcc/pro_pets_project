@@ -1,7 +1,7 @@
 import {LOGIN_USER, REGISTRATION_USER, LOGOUT_USER} from "../actions/UserAuthorizationActions";
 import {UPDATE_NAME, UPDATE_PHONE} from "../actions/EditUserActions";
 
-function userAuthorizationReducer(user = {}, action) {
+function userReducer(user = {}, action) {
     switch (action.type) {
         case LOGIN_USER:
             return {...user, user: action.payload};
@@ -18,4 +18,4 @@ function userAuthorizationReducer(user = {}, action) {
     }
 }
 
-export default userAuthorizationReducer;
+export default userReducer;

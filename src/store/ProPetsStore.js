@@ -1,12 +1,12 @@
 import {applyMiddleware, createStore} from "redux";
-import userAuthorizationReducer from "../reducer/userAuthorizationReducer";
+import userReducer from "../reducer/userReducer";
 import thunk from "redux-thunk";
 import {rootReducer} from "../reducer";
 
 const initialState = {
     user: {
         avatarAuthor: require('../images/home_img/logoKuzya.png'),
-        name: '',
+        name: 'Tom Hardi',
         time: '2h',
         posts: [],
         display: false,
