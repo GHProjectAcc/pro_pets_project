@@ -8,46 +8,40 @@ class Navigation extends React.Component {
     render() {
         const path = window.location.pathname;
         return (
-            <div className={`col-5 col-lg-3 ${style.mainNavigation} pr-lg-4 pt-lg-3 pl-0`}>
+            <div className={`col-5 col-lg-3 ${style.mainNavigation} pr-lg-4 pt-lg-4 pl-0`}>
 
                 {/* home button*/}
-                <div
-                    className={`${path.includes('/home') ? style.navButtonOn : style.navButtonOff} 
-                    d-flex align-items-center mt-2`}>
-                    <i className="ml-lg-4 mr-lg-3 fa fa-home ">
-                    </i>
+                <div className={`${path.includes('/home') ? style.navButtonOn : style.navButtonOff} 
+                    d-flex align-items-center mt-3`}>
+                    <i className="ml-lg-4 mr-lg-3 fa fa-home"/>
                     <span>Home</span>
                 </div>
 
                 {/* lost button*/}
-                <div
-                    className={`${path.includes('/lost') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mt-lg-2`}>
-                    <i className="ml-lg-4 mr-lg-3 fa fa-search">
-                    </i>
+                <div className={`${path.includes('/lost') ? style.navButtonOn : style.navButtonOff} 
+                    d-flex align-items-center mt-3`}>
+                    <i className="ml-lg-4 mr-lg-3 fa fa-search"/>
                     <span>Lost</span>
                 </div>
 
                 {/*found button*/}
-                <div
-                    className={`${path.includes('/found') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mt-lg-2`}>
-                    <i className="ml-lg-4 mr-lg-3 fa fa-paw ">
-                    </i>
+                <div className={`${path.includes('/found') ? style.navButtonOn : style.navButtonOff} 
+                d-flex align-items-center mt-3`}>
+                    <i className="ml-lg-4 mr-lg-3 fa fa-paw "/>
                     <span>Found</span>
                 </div>
 
                 {/* services button*/}
-                <div
-                    className={`${path.includes('/services') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mt-lg-2`}>
-                    <i className="ml-lg-4 mr-lg-3 fa fa-bullhorn ">
-                    </i>
+                <div className={`${path.includes('/services') ? style.navButtonOn : style.navButtonOff} 
+                d-flex align-items-center mt-3`}>
+                    <i className="ml-lg-4 mr-lg-3 fa fa-bullhorn"/>
                     <span>Services</span>
                 </div>
 
                 {/* favorites button*/}
-                <div
-                    className={`${path.includes('/favorites') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mt-lg-2 mb-lg-5`}>
-                    <i className="ml-lg-4 mr-lg-3 fa fa fa-star ">
-                    </i>
+                <div className={`${path.includes('/favorites') ? style.navButtonOn : style.navButtonOff} 
+                d-flex align-items-center mt-3 mb-lg-5`}>
+                    <i className="ml-lg-4 mr-lg-3 fa fa fa-star "/>
                     <span>Favorites</span>
                 </div>
                 {/*Line_1*/}

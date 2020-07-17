@@ -1,5 +1,5 @@
 .page {
-    max-height: 1366px;
+    max-height: 100%;
 }
 
 .header {
@@ -7,7 +7,6 @@
     background: #FFFFFF 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
     opacity: 1;
-
 }
 
 .headerDropMenu {
@@ -139,7 +138,6 @@
     background: #FFFFFF 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
     opacity: 1;
-    max-height: 33em;
 }
 
 
@@ -171,6 +169,8 @@
     opacity: 1;
 }
 
+
+
 .postText {
     text-align: left;
     font-family: Montserrat, serif;
@@ -178,11 +178,28 @@
     letter-spacing: 0;
     opacity: 1;
 }
+.moreTextButton {
+    color: #75B29A;
+}
 
-img {
+.collapseText {
+    color: #75B29A;
+}
+
+.postImage {
     max-width: 100%;
-    height: auto;
+    max-height: 15em;
     background-size: cover;
+}
+
+.arrowImage {
+    align-items: center;
+
+}
+
+.arrowImage i {
+    font-size: 18px;
+    color: #e7d5e7;
 }
 
 .favorites, .inFavorites {
@@ -191,6 +208,7 @@ img {
     color: #BABABA;
     opacity: 1;
 }
+
 
 .inFavorites {
     color: #FFE18B;

@@ -31,7 +31,7 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path={["/signup", '/']} component={RegistrationPage}/>
                     <Route exact path="/signin" component={LoginPage}/>
-                    <Route exact path='/home' component={Home}/>
+                    <Route exact path={['/home', '/home/:page']} component={Home}/>
                     <Route exact path='/addpost' component={AddPost}/>
                     <Route exact path='/new_matched' component={NewPostMatched}/>
                     <Route exact path='/profile' component={Profile}/>}
