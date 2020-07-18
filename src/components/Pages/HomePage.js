@@ -6,6 +6,7 @@ import NavigationSmall from "../HomePageComponents/NavigationSmallHome";
 import MainHome from "../HomePageComponents/MainHome";
 import style from "../../css_modules/homePage.module.css";
 
+
 class Home extends React.Component {
     constructor(props) {
         super(props);
@@ -15,10 +16,10 @@ class Home extends React.Component {
             avatarAuthor: require('../../images/home_img/logoKuzya.png'),
             time: '2h',
             posts: [],
-            favorites: false
+            favorites: false,
+            activePage: 0
         }
     }
-
 
     editFavorites = () => {
         this.setState({

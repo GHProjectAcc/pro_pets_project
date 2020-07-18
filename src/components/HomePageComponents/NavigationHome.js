@@ -1,6 +1,7 @@
 import style from "../../css_modules/homePage.module.css";
 import React from "react";
 import {connect} from "react-redux";
+import history from "../../history";
 
 class Navigation extends React.Component {
 
@@ -12,35 +13,50 @@ class Navigation extends React.Component {
 
                 {/* home button*/}
                 <div className={`${path.includes('/home') ? style.navButtonOn : style.navButtonOff} 
-                    d-flex align-items-center mt-3`}>
+                    d-flex align-items-center mt-3`}
+                     onClick={() => {
+                         history.push('/home')
+                     }}>
                     <i className="ml-lg-4 mr-lg-3 fa fa-home"/>
                     <span>Home</span>
                 </div>
 
                 {/* lost button*/}
                 <div className={`${path.includes('/lost') ? style.navButtonOn : style.navButtonOff} 
-                    d-flex align-items-center mt-3`}>
+                    d-flex align-items-center mt-3`}
+                     onClick={() => {
+                         history.push('/lost')
+                     }}>
                     <i className="ml-lg-4 mr-lg-3 fa fa-search"/>
                     <span>Lost</span>
                 </div>
 
                 {/*found button*/}
                 <div className={`${path.includes('/found') ? style.navButtonOn : style.navButtonOff} 
-                d-flex align-items-center mt-3`}>
+                d-flex align-items-center mt-3`}
+                     onClick={() => {
+                         history.push('/found')
+                     }}>
                     <i className="ml-lg-4 mr-lg-3 fa fa-paw "/>
                     <span>Found</span>
                 </div>
 
                 {/* services button*/}
                 <div className={`${path.includes('/services') ? style.navButtonOn : style.navButtonOff} 
-                d-flex align-items-center mt-3`}>
+                d-flex align-items-center mt-3`}
+                     onClick={() => {
+                         history.push('/services')
+                     }}>
                     <i className="ml-lg-4 mr-lg-3 fa fa-bullhorn"/>
                     <span>Services</span>
                 </div>
 
                 {/* favorites button*/}
                 <div className={`${path.includes('/favorites') ? style.navButtonOn : style.navButtonOff} 
-                d-flex align-items-center mt-3 mb-lg-5`}>
+                d-flex align-items-center mt-3 mb-lg-5`}
+                     onClick={() => {
+                         history.push('/favorites')
+                     }}>
                     <i className="ml-lg-4 mr-lg-3 fa fa fa-star "/>
                     <span>Favorites</span>
                 </div>
@@ -49,7 +65,10 @@ class Navigation extends React.Component {
                 </div>
 
                 {/*avatar*/}
-                <div className={`${path.includes('/profile') ? style.avatarOn : style.avatarOff} d-flex mt-lg-4 `}>
+                <div className={`${path.includes('/profile') ? style.avatarOn : style.avatarOff} d-flex mt-lg-4 `}
+                     onClick={() => {
+                         history.push('/profile')
+                     }}>
                     <div className='ml-lg-4 d-lg-inline-block '>
                         <img className={`${style.avatar} `}
                              src={this.props.user.avatarAuthor}

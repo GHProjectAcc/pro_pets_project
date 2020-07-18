@@ -2,6 +2,7 @@ import style from "../../css_modules/homePage.module.css";
 import React from "react";
 import {display} from "../../actions/SmallMediaDropMenuAction";
 import {connect} from "react-redux";
+import history from "../../history";
 
 const Header = (props) => {
 
@@ -20,8 +21,10 @@ const Header = (props) => {
             {/*HeaderLogo & HeaderButton*/}
             <div className={`${style.headerLogo} col-5 col-lg-2`}>
             </div>
-            <div
-                className={`col-2 offset-3 col-lg-2 offset-lg-8 align-items-center d-flex ${style.headerButton}`}>
+            <div className={`col-2 offset-3 col-lg-2 offset-lg-8 align-items-center d-flex ${style.headerButton}`}
+                 onClick={() => {
+                     history.push('/addpost')
+                 }}>
                 <i className="fa fa-plus mr-lg-4 ">
                 </i>
                 <span className={`${style.headerButtonText}`}>Add new</span>

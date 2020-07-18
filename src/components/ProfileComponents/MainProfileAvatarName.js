@@ -2,21 +2,19 @@ import React, {useState} from "react";
 import style from "../../css_modules/profile.module.css";
 import {connect} from "react-redux";
 import {editName} from "../../actions/EditUserActions";
-import {store} from "../../store/ProPetsStore";
 
 const AvatarName = (props) => {
-    console.log(store.getState());
+
     const [name, setName] = useState(props.user.name);
     const [onUpdate, setUpdate] = useState(false);
+
     const changeName = () => {
         setUpdate(!onUpdate);
     };
 
     const handleChangeName = (event) => {
-
         event.preventDefault();
         setName(event.target.value);
-        console.log(name);
         props.editName(name);
     };
     return (

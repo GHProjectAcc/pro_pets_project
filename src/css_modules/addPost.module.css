@@ -57,6 +57,8 @@ textarea {
 .photo1 {
     border: 1px solid rgba(21, 21, 21, 0.18);
     width: 133px;
+    background-size: cover;
+    height: 100%;
 }
 
 .photo1Label {
@@ -68,7 +70,7 @@ textarea {
     width: 66px;
     border: 1px solid rgba(21, 21, 21, 0.18);
     border-left: none;
-    height: 39px;
+    height: 2.38em;
 }
 
 .smallBox {
