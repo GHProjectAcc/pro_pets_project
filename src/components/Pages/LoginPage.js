@@ -13,8 +13,10 @@ class LoginPage extends React.Component {
     };
 
     handleChange = event => {
+        console.log(this.state.login);
         this.setState({
             [event.target.name]: event.target.value
+
         });
     };
 

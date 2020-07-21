@@ -20,11 +20,13 @@ export const logoutUser = () => ({
 });
 
 export const userLoginFetch = authData => {
+    console.log(authData)
     return dispatch => {
         return fetch("https://propets-accounting-service.herokuapp.com/account/v1/sign_in", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
+                Accept: 'application/json',
                 'Authorization': `Basic ${authData}`,
             },
         }).then(function (response) {
@@ -34,13 +36,19 @@ export const userLoginFetch = authData => {
                 return Promise.reject();
             }
             return response;
+        }).then(function (response) {
+            let token = response.headers.get('X-token');
+            console.log(token);
+            localStorage.setItem("token", token);
+            return response;
         })
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                localStorage.setItem("token", data.email);
+
                 dispatch(loginUser(data));
-                history.push('home')
+                history.push('home');
+
             })
     }
 };

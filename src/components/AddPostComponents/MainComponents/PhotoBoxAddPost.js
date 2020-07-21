@@ -1,5 +1,9 @@
 import React, {useState} from "react";
 import style from "../../../css_modules/addPost.module.css";
+import {CLOUDINARY_UPLOAD_PRESET} from "../../../constants/base_url";
+import {userLoginFetch} from "../../../actions/UserAuthorizationActions";
+import {uploadImageFetch} from "../../../actions/UploadImagesActions";
+import {connect} from "react-redux";
 
 const PhotoBox = (props) => {
 
@@ -9,12 +13,15 @@ const PhotoBox = (props) => {
         require('../../../images/testPictures/testPic3.jpg')]);
 
 
-
-
     const handleFiles = (e) => {
         e.preventDefault();
         let reader = new FileReader();
         let file = e.target.files[0];
+        let formData = new FormData();
+        formData.append('file', file);
+        console.log(formData);
+        formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);//name only 'upload_preset'
+        props.uploadImageFetch(formData);
         reader.onload = () => {
             if (images.length > 3) {
                 images.splice(0, 1);
@@ -23,8 +30,13 @@ const PhotoBox = (props) => {
             setImages(newUrl);
         };
         reader.readAsDataURL(file);
+
     };
 
+    /*   const saveImages = (e) => {
+   u
+       };
+   */
 
     return (
         <div className={`${style.photoBox} px-0  d-flex col-5`}>
@@ -42,8 +54,16 @@ const PhotoBox = (props) => {
                 <img src={images[3]}
                      className={`${style.photo2}  `} alt=''/>
             </label>
+
+            {/*   <button className='btn-info'
+                    onSubmit={saveImages}>Submit
+            </button>*/}
         </div>
     )
 };
 
-export default PhotoBox;
+const mapDispatchToProps = dispatch => ({
+    uploadImageFetch: formData => dispatch(uploadImageFetch(formData))
+});
+
+export default connect(null, mapDispatchToProps)(PhotoBox);

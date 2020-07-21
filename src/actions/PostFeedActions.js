@@ -3,9 +3,9 @@ import history from "../history";
 
 export const POST_FEED = 'POST_FEED';
 
-export const getFeed = payload => ({
+export const getFeed = posts => ({
         type: POST_FEED,
-        payload: payload
+        payload: posts
     })
 ;
 
@@ -27,6 +27,7 @@ export const getPostFeed = () => {
                 return response;
             }).then(response => response.json())
                 .then(data => {
+                    console.log(data);
                     dispatch(getFeed(data))
                 })
         }
