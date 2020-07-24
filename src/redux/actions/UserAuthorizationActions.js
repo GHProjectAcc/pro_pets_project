@@ -1,4 +1,4 @@
-import history from "../history";
+import history from "../../history";
 
 export const LOGIN_USER = 'LOGIN_USER';
 export const REGISTRATION_USER = 'REGISTRATION_USER';

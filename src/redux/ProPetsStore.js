@@ -1,7 +1,7 @@
 import {applyMiddleware, createStore} from "redux";
-import userReducer from "../reducer/userReducer";
+import userReducer from "./reducer/userReducer";
 import thunk from "redux-thunk";
-import {rootReducer} from "../reducer";
+import {rootReducer} from "./reducer";
 
 const initialState = {
     user: {

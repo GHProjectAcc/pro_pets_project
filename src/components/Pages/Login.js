@@ -3,10 +3,10 @@ import style from '../../css_modules/registrationPage.module.css'
 import styleLogin from '../../css_modules/loginPage.module.css'
 import history from "../../history";
 import {Link} from "react-router-dom";
-import {userLoginFetch} from "../../actions/UserAuthorizationActions";
+import {userLoginFetch} from "../../redux/actions/UserAuthorizationActions";
 import {connect} from "react-redux";
 
-class LoginPage extends React.Component {
+class Login extends React.Component {
     state = {
         login: "",
         password: ""
@@ -96,4 +96,4 @@ const mapDispatchToProps = dispatch => ({
     userLoginFetch: authData => dispatch(userLoginFetch(authData))
 });
 
-export default connect(null, mapDispatchToProps)(LoginPage);
+export default connect(null, mapDispatchToProps)(Login);

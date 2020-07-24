@@ -1,0 +1,29 @@
+.lostPetButton, .foundPetButton {
+    background: #FFE18B 0 0 no-repeat padding-box;
+    border: 1px solid #FFE78D;
+    height: 2.3em;
+    border-radius: 17px;
+    opacity: 1;
+}
+
+.foundPetButton {
+    background: #84B6A3 0 0 no-repeat padding-box;
+    border: 1px solid #8DBFAC;
+}
+.lostPetButton i {
+    letter-spacing: 0;
+    color: #393939;
+}
+
+.lostPetButton span, .foundPetButton span {
+    text-align: left;
+    font-size:  14px;
+    font-family: Montserrat, Bold, sans-serif;
+    letter-spacing: 0;
+    color:  #393939 ;
+    opacity: 1;
+}
+
+.foundPetButton i, .foundPetButton span {
+    color: #FFFFFF;
+}

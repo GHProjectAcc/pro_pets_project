@@ -3,7 +3,7 @@ import style from '../../css_modules/registrationPage.module.css'
 import history from "../../history";
 import {Link} from "react-router-dom";
 
-class RegistrationPage extends React.Component {
+class Registration extends React.Component {
 
 
     render() {
@@ -65,4 +65,4 @@ class RegistrationPage extends React.Component {
     }
 }
 
-export default RegistrationPage;
+export default Registration;

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import style from "../../css_modules/profile.module.css";
 import {connect} from "react-redux";
-import {editPhone} from "../../actions/EditUserActions";
+import {editPhone} from "../../redux/actions/EditUserActions";
 
 const ProfilePhone = (props) => {
     const [phone, setPhone] = useState('000-000-00-00');

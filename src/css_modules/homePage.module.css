@@ -69,6 +69,16 @@
     opacity: 0.4;
 }
 
+
+.noDecoration:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgb(35, 141, 86);
+}
+
 .navButtonOn, .navButtonOff, .avatarOn, .avatarOff {
     height: 2.2em;
     text-align: left;
@@ -169,7 +179,6 @@
 }
 
 
-
 .postText {
     text-align: left;
     font-family: Montserrat, serif;
@@ -177,6 +186,7 @@
     letter-spacing: 0;
     opacity: 1;
 }
+
 .moreTextButton {
     color: #75B29A;
 }

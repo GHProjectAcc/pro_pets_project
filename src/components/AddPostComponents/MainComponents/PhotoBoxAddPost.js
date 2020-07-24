@@ -1,16 +1,15 @@
 import React, {useState} from "react";
 import style from "../../../css_modules/addPost.module.css";
-import {CLOUDINARY_UPLOAD_PRESET} from "../../../constants/base_url";
-import {userLoginFetch} from "../../../actions/UserAuthorizationActions";
-import {uploadImageFetch} from "../../../actions/UploadImagesActions";
+import {CLOUDINARY_UPLOAD_PRESET} from "../../../constants/baseUrl";
+import {uploadImageFetch} from "../../../redux/actions/UploadImagesActions";
 import {connect} from "react-redux";
 
 const PhotoBox = (props) => {
 
-    const [images, setImages] = useState([require('../../../images/home_img/mainPostImageSmall.png'),
-        require('../../../images/testPictures/testPic1.jpg'),
-        require('../../../images/testPictures/testPic2.jpg'),
-        require('../../../images/testPictures/testPic3.jpg')]);
+    const [images, setImages] = useState([require('../../../images/addPost_img/background.png'),
+        require('../../../images/addPost_img/backgroundSmall.png'),
+        require('../../../images/addPost_img/backgroundSmall.png'),
+        require('../../../images/addPost_img/backgroundSmall.png')]);
 
 
     const handleFiles = (e) => {
@@ -33,10 +32,6 @@ const PhotoBox = (props) => {
 
     };
 
-    /*   const saveImages = (e) => {
-   u
-       };
-   */
 
     return (
         <div className={`${style.photoBox} px-0  d-flex col-5`}>

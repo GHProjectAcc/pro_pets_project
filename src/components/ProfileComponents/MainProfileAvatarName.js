@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import style from "../../css_modules/profile.module.css";
 import {connect} from "react-redux";
-import {editName} from "../../actions/EditUserActions";
+import {editName} from "../../redux/actions/EditUserActions";
 
 const AvatarName = (props) => {
 

@@ -1,6 +1,6 @@
 import style from "../../css_modules/homePage.module.css";
 import React from "react";
-import {display} from "../../actions/SmallMediaDropMenuAction";
+import {display} from "../../redux/actions/SmallMediaDropMenuAction";
 import {connect} from "react-redux";
 import history from "../../history";
 

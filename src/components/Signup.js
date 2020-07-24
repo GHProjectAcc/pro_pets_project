@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from 'react-redux';
-import {userPostFetch} from '../actions/UserAuthorizationActions';
+import {userPostFetch} from '../redux/actions/UserAuthorizationActions';
 import history from "../history";
 
 class Signup extends React.Component {

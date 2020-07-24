@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import style from "../../css_modules/profile.module.css";
 import {connect} from "react-redux";
-import {editFBLink} from "../../actions/EditUserActions";
+import {editFBLink} from "../../redux/actions/EditUserActions";
 
 const ProfileFBLink = (props) => {
     const [fblink, setFblink] = useState(null);

@@ -1,15 +1,16 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {getProfileFetch, logoutUser} from './actions/UserAuthorizationActions';
+import {getProfileFetch, logoutUser} from './redux/actions/UserAuthorizationActions';
 import Signup from './components/Signup';
-import LoginPage from './components/Pages/LoginPage';
-import RegistrationPage from './components/Pages/RegistrationPage'
+import LoginPage from './components/Pages/Login';
+import Registration from './components/Pages/Registration'
 import StartPageV2 from "./components/Pages/StarPageV2";
-import Home from "./components/Pages/HomePage";
-import AddPost from "./components/Pages/AddPostPage";
-import NewPostMatched from "./components/Pages/NewPostMatchedPage";
-import Profile from "./components/Pages/ProfilePage";
+import Home from "./components/Pages/Home";
+import AddPost from "./components/Pages/AddPost";
+import NewPostMatched from "./components/Pages/NewPostMatched";
+import Profile from "./components/Pages/Profile";
+import LostPage from "./components/Pages/Lost";
 
 
 class App extends React.Component {
@@ -29,12 +30,14 @@ class App extends React.Component {
         return (
             <div>
                 <Switch>
-                    <Route exact path={["/signup", '/']} component={RegistrationPage}/>
+                    <Route exact path={["/signup", '/']} component={Registration}/>
                     <Route exact path="/signin" component={LoginPage}/>
                     <Route exact path={['/home', '/home/:page']} component={Home}/>
                     <Route exact path='/addpost' component={AddPost}/>
                     <Route exact path='/new_matched' component={NewPostMatched}/>
-                    <Route exact path='/profile' component={Profile}/>}
+                    <Route exact path='/profile' component={Profile}/>
+                    <Route exact path='/lost' component={LostPage}/>
+                    <Route exact path='/found' component={LostPage}/>
                 </Switch>
                 {/*{this.props.currentUser.username*/}
                 {/*    ? <button onClick={this.handleClick}>Log Out</button>*/}
