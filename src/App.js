@@ -6,11 +6,11 @@ import Signup from './components/Signup';
 import LoginPage from './components/Pages/Login';
 import Registration from './components/Pages/Registration'
 import StartPageV2 from "./components/Pages/StarPageV2";
-import Home from "./components/Pages/Home";
-import AddPost from "./components/Pages/AddPost";
+import Home from "./components/Pages/HomePage/Home";
+import AddPost from "./components/Pages/AddPostPage/AddPost";
 import NewPostMatched from "./components/Pages/NewPostMatched";
-import Profile from "./components/Pages/Profile";
-import LostPage from "./components/Pages/Lost";
+import Profile from "./components/Pages/ProfilePage/Profile";
+import LostPage from "./components/Pages/LostPage/Lost";
 
 
 class App extends React.Component {

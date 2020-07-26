@@ -27,9 +27,31 @@ const initialState = {
             authorId: "sara5000@gmail.com",
             authorAvatar: "url",
             authorName: "Sara"
-        },
-
+        }
     },
+    /*postsLost: [/!*{
+        id: "5f1b35e3c3129c5934a65dfb",
+        type: "cat",
+        breed: "unknown",
+        sex: "male",
+        color: "brown",
+        height: "110cm",
+        description: "found in park, boy",
+        address: "Herzl St, Tel Aviv-Yafo",
+        distinctiveFeatures: "fluffy, wild, not very kind, tall",
+        picturesURLs: [
+            "https://img2.goodfon.com/wallpaper/nbig/0/1d/sobaka-vzglyad-drug-dvornyaga.jpg"
+        ],
+        dateOfPublish: "2020-07-24",
+        authorData: {
+            authorId: "yurka87k@gmail.com",
+            phone: "email address for contact",
+            fb_link: "facebook link",
+            email: "email address for contact",
+            authorAvatar: "url of avatar from redux Store",
+            authorName: "author name from redux Store"
+        }
+    }*!/],*/
     displayChange: {
         display: false
     },
