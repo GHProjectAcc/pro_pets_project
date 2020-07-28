@@ -1,9 +1,9 @@
 import React from "react";
-import HeaderAddPost from "./HeaderAddPost";
-import NavigationSmall from "../HomePage/NavigationSmallHome";
-import Navigation from "../HomePage/NavigationHome";
-import AdRightColumn from "../HomePage/AdvertisingHome";
-import MainAddPost from "./MainAddPost";
+import HeaderAddPost from "./Pages/AddPostPage/HeaderAddPost";
+import NavigationSmall from "./Pages/HomePage/NavigationSmallHome";
+import Navigation from "./Pages/HomePage/NavigationHome";
+import AdRightColumn from "./Pages/HomePage/AdvertisingHome";
+import MainAddPost from "./Pages/AddPostPage/MainAddPost";
 import {useMediaQuery} from "react-responsive/src";
 
 const AddPost = (props) => {

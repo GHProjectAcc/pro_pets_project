@@ -1,13 +1,13 @@
 import React, {useEffect} from "react";
-import HeaderLostFound from "./HeaderLostFound";
-import NavigationSmall from "../HomePage/NavigationSmallHome";
-import Navigation from "../HomePage/NavigationHome";
+import HeaderLostFound from "./Pages/LostPage/HeaderLostFound";
+import NavigationSmall from "./Pages/HomePage/NavigationSmallHome";
+import Navigation from "./Pages/HomePage/NavigationHome";
 import {useMediaQuery} from "react-responsive/src";
-import MainLost from "./MainLost";
-import style from "../../../css_modules/lostPage.module.css";
-import {fetchPostLostFeed} from "../../../redux/actions/PostLostActions";
+import MainLost from "./Pages/LostPage/MainLost";
+import style from "../css_modules/lostPage.module.css";
+import {fetchPostLostFeed} from "../redux/actions/PostLostActions";
 import {connect} from "react-redux";
-import {store} from "../../../redux/ProPetsStore";
+import {store} from "../redux/ProPetsStore";
 
 
 const LostPage = (props) => {

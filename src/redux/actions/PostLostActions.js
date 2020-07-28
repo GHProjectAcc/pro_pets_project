@@ -29,7 +29,7 @@ export const fetchPostLostFeed = () => {
             //     console.log('fuck')
             //     console.log(err);
             // })
-            return fetch("https://propets-lostfound-service.herokuapp.com/lostFound/lost/v1/post/feed?page=1", {
+            return fetch("https://propets-gateway-service.herokuapp.com/lostFound/lost/v1/post/feed?page=1", {
                 method: "GET",
                 headers: {
 

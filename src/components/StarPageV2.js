@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import '../../AppV2.css'
+import '../AppV2.css'
 
 
 class StartPageV2 extends React.Component {
