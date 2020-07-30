@@ -11,7 +11,7 @@ const PostImage = (props) => {
     const prevImage = () => {
         count - 1 < 0 ? setCount(3) : setCount(count - 1);
     };
-
+console.log(props.postImage)
     return (
         <div className='row mt-2 pl-lg-0 mx-0 ml-lg-n3 '>
             <div className={`${style.arrowImage}  d-flex`}>
@@ -20,7 +20,7 @@ const PostImage = (props) => {
             </div>
             <div className='col-11 d-flex justify-content-center'>
                 <img className={`${style.postImage} `}
-                     src={props.postImage[count]}
+                     src={props.post[0].pictures[count]}
                      alt=''/>
             </div>
             <div className={`${style.arrowImage}  d-flex`}>
@@ -33,7 +33,7 @@ const PostImage = (props) => {
 
 function mapStateToProps(state) {
     return {
-        postImage: state.post.pictures
+        post: state.posts
     }
 }
 

@@ -2,7 +2,7 @@ import style from "../../../../css_modules/homePage.module.css";
 import React from "react";
 
 const PostDropMenu = (props) => (
-    <div className="dropdown col-1 offset-3 pr-3 pl-0  col-lg-1 offset-lg-5 pl-lg-2">
+    <div className="dropdown col-1 offset-3 pr-3 pl-0  col-lg-1 offset-lg-5">
         <div className={`${style.postDropMenu}  `}
              data-toggle="dropdown">
             <span>...</span>

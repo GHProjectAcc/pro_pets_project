@@ -39,7 +39,7 @@ export const userLoginFetch = authData => {
         }).then(function (response) {
             let token = response.headers.get('X-token');
             console.log(token);
-            localStorage.setItem("token", token);
+            localStorage.setItem("token", JSON.stringify(token));
             return response;
         })
             .then(response => response.json())

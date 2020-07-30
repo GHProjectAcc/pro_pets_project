@@ -1,7 +1,7 @@
 import style from "../../../css_modules/homePage.module.css";
 import React from "react";
 
-const AdRightColumn = (props) => (
+const RightColorSide = (props) => (
     <div className={`${style.targeting} col-lg-1`}>
         <div className={`${style.pic1} mt-lg-3 `}>
         </div>
@@ -12,4 +12,4 @@ const AdRightColumn = (props) => (
     </div>
 );
 
-export default AdRightColumn;
+export default RightColorSide;

@@ -1,5 +1,6 @@
 .page {
     max-height: 100%;
+    border: 1px solid #cbcbcb;
 }
 
 .header {
@@ -204,7 +205,6 @@ a:hover {
 
 .arrowImage {
     align-items: center;
-
 }
 
 .arrowImage i {

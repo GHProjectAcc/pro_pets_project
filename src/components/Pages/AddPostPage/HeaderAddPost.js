@@ -4,7 +4,7 @@ import React from "react";
 
 const HeaderAddPost = (props) => {
     return (
-        <div className={`${style.header} row pl-lg-4 align-items-center`}>
+        <div className={`${style.header} row pl-lg-5 align-items-center`}>
             {/* DropMenu for xs-sm media*/}
             <span className={`${style.headerDropMenu} fa fa-bars col-2 text-center`}
                 /* onClick={mainNavigationOnClick}*/>

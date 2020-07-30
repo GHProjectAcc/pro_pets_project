@@ -19,9 +19,9 @@ const Header = (props) => {
                     </span>
 
             {/*HeaderLogo & HeaderButton*/}
-            <div className={`${style.headerLogo} col-5 col-lg-2`}>
+            <div className={`${style.headerLogo} col-5 col-lg-3`}>
             </div>
-            <div className={`col-2 offset-3 col-lg-2 offset-lg-8 align-items-center d-flex ${style.headerButton}`}
+            <div className={`col-2 offset-3 col-lg-2 offset-lg-7 align-items-center d-flex ${style.headerButton}`}
                  onClick={() => {
                      history.push('/addpost')
                  }}>

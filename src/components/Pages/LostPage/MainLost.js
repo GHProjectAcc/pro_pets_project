@@ -4,18 +4,18 @@ import MainInputButtons from "./MainComponents/MainIputButtons";
 import {store} from "../../../redux/ProPetsStore";
 import MainPostImageContainer from "./MainComponents/MainPostImageContainer";
 import MainPostContentContainer from "./MainComponents/MainPostContentContainer";
+import MainLocation from "./MainComponents/MainLocation";
+import PostLost from "./MainComponents/PostLost";
 
 const MainLost = (props) => {
-   /* console.log(store.getState())*/
+    /* console.log(store.getState())*/
     return (
-        <div className='col-lg-9 pt-lg-4 container '>
+        <div className='col-lg-8 pt-lg-4 container '>
             <div className='row'>
                 <MainInputButtons/>
+                <MainLocation/>
                 <div className={`${style.lostPostContainer} container mt-lg-4 mx-lg-2`}>
-                    <div className='row'>
-                        <MainPostImageContainer/>
-                        <MainPostContentContainer/>
-                    </div>
+                    <PostLost/>
                 </div>
             </div>
 

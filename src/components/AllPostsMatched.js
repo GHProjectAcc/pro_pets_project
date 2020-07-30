@@ -5,9 +5,10 @@ import axios from "axios";
 class AllPostsMatched extends React.Component {
 
     componentDidMount() {
-        const token = localStorage.token;
+        const token = localStorage.getItem('token');
         console.log('didMount');
         console.log(token);
+     /*   JSON.parse(token);*/
         if (token) {
             console.log('tut');
             return axios({

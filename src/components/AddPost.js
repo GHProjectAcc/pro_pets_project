@@ -2,7 +2,7 @@ import React from "react";
 import HeaderAddPost from "./Pages/AddPostPage/HeaderAddPost";
 import NavigationSmall from "./Pages/HomePage/NavigationSmallHome";
 import Navigation from "./Pages/HomePage/NavigationHome";
-import AdRightColumn from "./Pages/HomePage/AdvertisingHome";
+import AdRightColumn from "./Pages/HomePage/RightColorSideHome";
 import MainAddPost from "./Pages/AddPostPage/MainAddPost";
 import {useMediaQuery} from "react-responsive/src";
 

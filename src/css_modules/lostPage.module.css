@@ -1,5 +1,6 @@
 .page {
     border: 1px solid #cbcbcb;
+    max-height: 100%;
 }
 
 .lostPetButton, .foundPetButton {
@@ -34,31 +35,54 @@
 }
 
 .typeButton, .additionalButton, .locationButton {
+    outline: 0;
+    outline-offset: 0;
     background: #FFFFFF 0 0 no-repeat padding-box;
     border: 1px solid #8DBFAC;
     border-radius: 15px;
-    width: 7.5em;
+    width: 8.5em;
 }
 
 .additionalButton {
-    width: 15em;
+    float: right;
+    width: 17em;
 }
 
 .locationButton {
-    width: 8em;
+    width: 13em;
+}
+
+.mapButton {
+    outline: 0;
+    outline-offset: 0;
+    background: #8DBFAC 0 0 no-repeat padding-box;
+    border: 1px solid #8DBFAC;
+    border-radius: 15px;
+    width: 10em;
+    float: right;
+}
+
+.mapButtonText {
+    line-height: 1.57em;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
 }
 
 input::placeholder {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 1.57em;
     letter-spacing: 0;
     color: #84B6A3;
     opacity: 1;
 }
+
 .lostPostContainer {
     background: #FFFFFF 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
 }
+
 .lostImageBox {
     display: inline-block;
     line-height: 250px;
@@ -73,8 +97,34 @@ img {
 
 .postTitle {
     text-align: left;
-    font: Bold 22px/27px Montserrat;
-    letter-spacing: 0px;
+    font: Bold 27px Montserrat;
+    letter-spacing: 0;
     color: #84B6A3;
     opacity: 1;
+}
+
+.propertiesText {
+    text-align: left;
+    font: 14px Montserrat;
+    letter-spacing: 0;
+    color: #84B6A3;
+}
+
+
+.chevron {
+    width: 2em;
+    opacity: 0.5;
+    font-size: 1.6em;
+    position: absolute;
+}
+.chevron a {
+    display: none;
+}
+.chevron a:hover {
+    display: block;
+}
+@media (max-width: 1200px) {
+    .pic1, .pic2, .pic3 {
+        display: none;
+    }
 }

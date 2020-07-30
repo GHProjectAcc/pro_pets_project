@@ -16,8 +16,13 @@ const Post = (props) => {
         <div className={`${style.post} mt-3 pl-pr-1 container`}>
             <div className='pt-2 row'>
                 <PostAuthorAvatar/>
-                {small || medium ?
-                    <div className='col-10 col-lg-10 pl-lg-0'>
+                {small || medium ? <div>
+                        <PostAuthorName/>
+                        <PostDropMenu/>
+                        <PostImage/>
+                        <PostContent/>
+                    </div>
+                    : <div className='col-10 col-lg-10 pl-lg-0'>
                         <div className='row ml-0'>
                             <PostAuthorName/>
                             <PostDropMenu/>
@@ -25,13 +30,7 @@ const Post = (props) => {
                         <PostImage/>
                         <PostContent/>
                     </div>
-                    :
-                    <div>
-                        <PostAuthorName/>
-                        <PostDropMenu/>
-                        <PostImage/>
-                        <PostContent/>
-                    </div>}
+                }
             </div>
         </div>
     )

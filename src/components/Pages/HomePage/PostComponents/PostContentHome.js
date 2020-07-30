@@ -12,9 +12,9 @@ const PostContent = (props) => {
         <div className='row pt-2 pl-0 mx-0  ml-lg-n3 '>
             <div className='col-11 pr-0 pl-4 d-flex justify-content-center'>
                 <div className={`${style.postText} pb-2`}>
-                    {props.post.text.length > 200 && !postOnView
+                    {props.post[0].text.length > 200 && !postOnView
                         ?
-                        <span>{props.post.text.substring(0, 200)}
+                        <span>{props.post[0].text.substring(0, 200)}
                             <span className={`${style.moreTextButton} `}
                                   onClick={showPost}> ...more</span>
                           </span>
@@ -41,7 +41,7 @@ const PostContent = (props) => {
 
 function mapStateToProps(state) {
     return {
-        post: state.post
+        post: state.posts
     }
 }
 

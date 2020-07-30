@@ -5,29 +5,28 @@ import {connect} from "react-redux";
 const MainPostContentContainer = (props) => {
     console.log(props.postsFeed);
     return (
-        <div className='mt-3  col-lg-7 row'>
+        <div className='mt-3 col-lg-7 row'>
             <div className={`${style.postTitle} col-lg-12`}>
-                <span>{/*{props.postsFeed[0].type}*/}, </span>
-                <span>{/*{props.postsFeed[0].breed}*/}</span>
+                <span>Dog, </span>
+                <span>Ovcharka</span>
             </div>
             <div className='col-lg-6'>
                 <div>
-                    <span>Color: props color</span>
+                    <span className={`${style.propertiesText}`}>Color: <span>props </span></span>
                 </div>
                 <div>
-                    <span>Sex: props color</span>
+                    <span className={`${style.propertiesText}`}>Sex: <span>props </span></span>
                 </div>
                 <div>
-                    <span>Height: props color</span>
+                    <span className={`${style.propertiesText}`}>Height: <span>props </span></span>
                 </div>
             </div>
             <div className='col-lg-6'>
-                <span>Distinctive features:</span>
-                <span>props features</span>
+                <span className={`${style.propertiesText}`}>Distinctive features: <span>props </span></span>
             </div>
             <div className='col-lg-12'>
-                <span>Description: </span>
-                <span>props description</span>
+                <span className={`${style.propertiesText}`}>Description: <span>props description</span></span>
+
             </div>
         </div>
     )
@@ -35,7 +34,7 @@ const MainPostContentContainer = (props) => {
 
 function mapStateToProps(state) {
     return {
-     /* postsFeed: state.postsLost*/
+        /* postsFeed: state.postsLost*/
     }
 }
 
