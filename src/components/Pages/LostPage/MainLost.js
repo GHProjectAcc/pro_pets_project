@@ -1,27 +1,33 @@
 import React from "react";
 import style from "../../../css_modules/lostPage.module.css";
 import MainInputButtons from "./MainComponents/MainIputButtons";
-import {store} from "../../../redux/ProPetsStore";
-import MainPostImageContainer from "./MainComponents/MainPostImageContainer";
-import MainPostContentContainer from "./MainComponents/MainPostContentContainer";
-import MainLocation from "./MainComponents/MainLocation";
+import MainInputLocation from "./MainComponents/MainInputLocation";
 import PostLost from "./MainComponents/PostLost";
+import {connect} from "react-redux";
 
 const MainLost = (props) => {
-    /* console.log(store.getState())*/
+
+    const createPostLost = (post, index) => {
+        return (<div className={`${style.lostPostContainer} container mt-lg-4 mx-lg-3 `}>
+            <PostLost index={index} key={post.id}/>
+        </div>)
+    };
     return (
         <div className='col-lg-8 pt-lg-4 container '>
             <div className='row'>
                 <MainInputButtons/>
-                <MainLocation/>
-                <div className={`${style.lostPostContainer} container mt-lg-4 mx-lg-2`}>
-                    <PostLost/>
-                </div>
+                <MainInputLocation/>
+                {props.postsLost.map(createPostLost)}
             </div>
 
         </div>
     );
 };
 
+function mapStateToProps(state) {
+    return {
+        postsLost: state.postsLost
+    }
+}
 
-export default MainLost;
+export default connect(mapStateToProps)(MainLost);

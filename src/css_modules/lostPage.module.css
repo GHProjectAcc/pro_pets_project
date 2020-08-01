@@ -56,15 +56,14 @@
     outline: 0;
     outline-offset: 0;
     background: #8DBFAC 0 0 no-repeat padding-box;
-    border: 1px solid #8DBFAC;
     border-radius: 15px;
     width: 10em;
     float: right;
+    line-height: 1.8em;
+    font-size: 16px;
 }
 
 .mapButtonText {
-    line-height: 1.57em;
-    font-size: 14px;
     letter-spacing: 0;
     color: #FFFFFF;
     opacity: 1;
@@ -79,6 +78,7 @@ input::placeholder {
 }
 
 .lostPostContainer {
+    height: auto;
     background: #FFFFFF 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
 }
@@ -86,8 +86,6 @@ input::placeholder {
 .lostImageBox {
     display: inline-block;
     line-height: 250px;
-    width: 250px;
-    height: 250px;
 }
 
 img {
@@ -103,26 +101,61 @@ img {
     opacity: 1;
 }
 
-.propertiesText {
+.properties, .propertiesText {
     text-align: left;
     font: 14px Montserrat;
     letter-spacing: 0;
     color: #84B6A3;
 }
 
+.propertiesText {
+    color: #393939;
+}
 
-.chevron {
-    width: 2em;
+.line {
+    max-height: 1px;
+    border: 1px solid #BABABA;
+    opacity: 0.6;
+    width: 100%;
+}
+
+.chevronLeft, .chevronRight {
+    width: 3em;
     opacity: 0.5;
-    font-size: 1.6em;
+    font-size: 1.8em;
     position: absolute;
+
 }
-.chevron a {
-    display: none;
+
+.chevronRight {
+    right: 0;
 }
-.chevron a:hover {
-    display: block;
+
+
+.chevronLeft i, .chevronRight i {
+    opacity: 0;
 }
+
+.chevronLeft:hover i, .chevronRight:hover i {
+    color: black;
+    opacity: 1;
+}
+
+.locationIcon {
+    text-align: left;
+    letter-spacing: 0;
+    color: #84B6A3;
+    opacity: 1;
+}
+
+.locationText {
+    text-align: left;
+    font: 14px Montserrat;
+    letter-spacing: 0;
+    color: #393939;
+    opacity: 1;
+}
+
 @media (max-width: 1200px) {
     .pic1, .pic2, .pic3 {
         display: none;

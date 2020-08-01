@@ -36,7 +36,7 @@ const initialState = {
         sex: "male",
         color: "brown",
         height: "110cm",
-        description: "found in park, boy",
+        description: "found in park, boy, found in park, boy found in park, boy found in park, boy found in park, boy found in park, boy found in park, boy found in park, boy found in park, boy found in park, boyfound in park, boy found in park, boy found in park, boy",
         address: "Herzl St, Tel Aviv-Yafo",
         distinctiveFeatures: "fluffy, wild, not very kind, tall",
         picturesURLs:[require('../images/home_img/mainPostImageSmall.png'),
@@ -50,7 +50,7 @@ const initialState = {
             fb_link: "facebook link",
             email: "email address for contact",
             authorAvatar: "url of avatar from redux Store",
-            authorName: "author name from redux Store"
+            authorName: "Anton"
         }
     },
         {
@@ -60,7 +60,7 @@ const initialState = {
             sex: "male",
             color: "black",
             height: "120cm",
-            description: "found in park, boy",
+            description: "found in park, boy, found in park, boy found in park, boy found in park, boy found in park, boy found in park, boy found in park, boy found in park, boy found in park, boy found in park, boyfound in park, boy found in park, boy found in park, boy",
             address: "Herzl St, Tel Aviv-Yafo",
             distinctiveFeatures: "fluffy, wild, not very kind, tall",
             picturesURLs:[require('../images/home_img/mainPostImageSmall.png'),

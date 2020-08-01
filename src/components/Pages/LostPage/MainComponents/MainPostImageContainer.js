@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import style from "../../../../css_modules/lostPage.module.css";
 import {connect} from "react-redux";
-import {store} from "../../../../redux/ProPetsStore";
 
 const MainPostImageContainer = (props) => {
     const [count, setCount] = useState(0);
@@ -12,25 +11,22 @@ const MainPostImageContainer = (props) => {
     const prevImage = () => {
         count - 1 < 0 ? setCount(3) : setCount(count - 1);
     };
-    console.log(store.getState())
-    console.log(props.postsLost[0].picturesURLs[0]);
+    const index = props.index;
     return (
-        /*<div className=''>*/
-        <div className={`${style.lostImageBox} col-lg-5`}>
-            <div className={`${style.chevron}`}>
-                <a href=''>
-                    <i className='fas fa-chevron-left'
-                       onClick={prevImage}/>
-                </a>
+
+        <div className={`${style.lostImageBox} col-lg-5 px-1`}>
+            <div className={`${style.chevronLeft} d-inline-block text-left`}>
+                <i className='fas fa-chevron-left pl-1'
+                   onClick={prevImage}/>
             </div>
-            <img src={props.postsLost[0].picturesURLs[2]}
+            <div className={`${style.chevronRight} d-inline-block text-right`}>
+                <i className='fas fa-chevron-right pr-2'
+                   onClick={nextImage}/>
+            </div>
+            <img src={props.postsLost[index].picturesURLs[count]}
                  alt=''/>
-            {/* <div className='d-flex align-items-center'>
-                    <i className='fas fa-chevron-right'
-                       onClick={nextImage}/>
-                </div>*/}
         </div>
-        /*  </div>*/
+
     )
 };
 
