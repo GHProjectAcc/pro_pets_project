@@ -1,0 +1,56 @@
+.headerLogo {
+    background: transparent url("../images/home_img/logoProPetsWhiteSmall.png") no-repeat center padding-box;
+}
+.test {
+  min-width: 100%;
+}
+.header {
+    background: #84b6a3 0 0 no-repeat padding-box;
+    box-shadow: 0 3px 6px #00000029;
+    opacity: 1;
+    color: white;
+    height: 4.38em;
+}
+
+.header i{
+    font-size: 1.5em;
+}
+
+.post{
+    box-shadow: 0 3px 6px #00000029;
+}
+
+.authorAvatar{
+    border: 1px solid #FFFFFF;
+    height: 2.3em;
+    width: auto;
+    border-radius: 100px;
+}
+
+.authorName{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font: 16px Montserrat;
+    font-weight: 600;
+    line-height: 0.9em;
+    letter-spacing: 0;
+    color: #84B6A3;
+    opacity: 1;
+}
+
+.timeStamp{
+    text-align: left;
+    font: Medium Montserrat, serif;
+    font-size: 12px;
+    color: #BABABA;
+}
+
+.post div p{
+    text-align: left;
+    font: 12px Montserrat;
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: 0;
+    opacity: 1;
+}

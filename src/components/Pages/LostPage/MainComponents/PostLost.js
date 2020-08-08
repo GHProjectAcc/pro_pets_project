@@ -1,14 +1,16 @@
 import React from "react";
-import MainPostImageContainer from "./MainPostImageContainer";
-import MainPostContentContainer from "./MainPostContentContainer";
-
+import PostImageContainer from "./PostLostComponents/PostImageContainer";
+import PostContentContainer from "./PostLostComponents/PostContentContainer";
+import style from "../../../../css_modules/lostPage.module.css";
 
 
 const PostLost = (props) => {
     return (
-        <div className='row'>
-            <MainPostImageContainer index={props.index}/>
-            <MainPostContentContainer index={props.index}/>
+        <div className={`${style.lostPostContainer} container mb-4 mx-lg-3 `}>
+            <div className='row'>
+                <PostImageContainer index={props.index}/>
+                <PostContentContainer index={props.index}/>
+            </div>
         </div>
     )
 };

@@ -9,7 +9,7 @@ class Navigation extends React.Component {
     render() {
         const path = window.location.pathname;
         return (
-            <div className={`col-5 col-lg-3 ${style.mainNavigation} pr-lg-4 pt-lg-4 pl-0`}>
+            <div className={`${style.mainNavigation} col-5 col-lg-3 pr-lg-4 pt-lg-4 pl-0`}>
 
                 {/* home button*/}
                 <Link to='/home'

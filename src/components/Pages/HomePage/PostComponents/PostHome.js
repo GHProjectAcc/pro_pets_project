@@ -16,11 +16,12 @@ const Post = (props) => {
         <div className={`${style.post} mt-3 pl-pr-1 container`}>
             <div className='pt-2 row'>
                 <PostAuthorAvatar/>
-                {small || medium ? <div>
+                {small || medium ? <div className='col-12'>
                         <PostAuthorName/>
                         <PostDropMenu/>
                         <PostImage/>
                         <PostContent/>
+
                     </div>
                     : <div className='col-10 col-lg-10 pl-lg-0'>
                         <div className='row ml-0'>

@@ -3,36 +3,6 @@
     max-height: 100%;
 }
 
-.lostPetButton, .foundPetButton {
-    background: #FFE18B 0 0 no-repeat padding-box;
-    border: 1px solid #FFE78D;
-    height: 2.3em;
-    border-radius: 17px;
-    opacity: 1;
-}
-
-.foundPetButton {
-    background: #84B6A3 0 0 no-repeat padding-box;
-    border: 1px solid #8DBFAC;
-}
-
-.lostPetButton i {
-    letter-spacing: 0;
-    color: #393939;
-}
-
-.lostPetButton span, .foundPetButton span {
-    text-align: left;
-    font-size: 14px;
-    font-family: Montserrat, Bold, sans-serif;
-    letter-spacing: 0;
-    color: #393939;
-    opacity: 1;
-}
-
-.foundPetButton i, .foundPetButton span {
-    color: #FFFFFF;
-}
 
 .typeButton, .additionalButton, .locationButton {
     outline: 0;
@@ -85,7 +55,7 @@ input::placeholder {
 
 .lostImageBox {
     display: inline-block;
-    line-height: 250px;
+    line-height: 21em;
 }
 
 img {
@@ -94,15 +64,14 @@ img {
 }
 
 .postTitle {
-    text-align: left;
+    align-self: center;
     font: Bold 27px Montserrat;
     letter-spacing: 0;
     color: #84B6A3;
-    opacity: 1;
 }
 
 .properties, .propertiesText {
-    text-align: left;
+    align-self: center;
     font: 14px Montserrat;
     letter-spacing: 0;
     color: #84B6A3;
@@ -113,8 +82,7 @@ img {
 }
 
 .line {
-    max-height: 1px;
-    border: 1px solid #BABABA;
+    border-bottom: 1px solid #BABABA;
     opacity: 0.6;
     width: 100%;
 }
@@ -142,6 +110,7 @@ img {
 }
 
 .locationIcon {
+    align-self: center;
     text-align: left;
     letter-spacing: 0;
     color: #84B6A3;
@@ -154,6 +123,39 @@ img {
     letter-spacing: 0;
     color: #393939;
     opacity: 1;
+}
+
+.avatarAuthor {
+    border: 1px solid #FFFFFF;
+    height: 2.8em;
+    width: 2.8em;
+    border-radius: 100px;
+}
+
+.postAuthorName {
+    text-align: left;
+    font: 16px Montserrat;
+    letter-spacing: 0;
+    color: #84B6A3;
+    opacity: 1;
+}
+
+.postDate {
+    text-align: left;
+    font: 12px Montserrat;
+    letter-spacing: 0;
+    color: #BABABA;
+    opacity: 1;
+}
+
+
+.propertiesContainer {
+    line-height: 1.3em;
+}
+
+.contactIcons i {
+    font-size: 22px;
+    color: #BABABA;
 }
 
 @media (max-width: 1200px) {

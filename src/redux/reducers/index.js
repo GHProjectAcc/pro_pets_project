@@ -7,8 +7,7 @@ import postLostReducer from "./postLostReducer";
 
 export const rootReducer = combineReducers({
     user: userReducer,
-    displayChange: displayChangeReducer,
     posts: postsReducer,
-    postsLost: postLostReducer
-
+    postsLost: postLostReducer,
+    displayChange: displayChangeReducer
 });

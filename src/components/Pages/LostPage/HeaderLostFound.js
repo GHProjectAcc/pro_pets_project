@@ -1,7 +1,7 @@
 import styleFrom from "../../../css_modules/homePage.module.css";
-import style from "../../../css_modules/lostPage.module.css";
+import style from "../../../css_modules/lostPageHeader.module.css";
 
-import React from "react";
+import React, {useState} from "react";
 import {display} from "../../../redux/actions/SmallMediaDropMenuAction";
 import {connect} from "react-redux";
 import history from "../../../history";
@@ -17,14 +17,17 @@ const HeaderLostFound = (props) => {
     return (
         <div className={`${styleFrom.header} row pl-lg-4 align-items-center`}>
             {/* DropMenu for xs-sm media*/}
-            <span className={`${styleFrom.headerDropMenu} fa fa-bars col-2 text-center`}
+            <i className={`${style.headerDropMenu} fas fa-bars col-2 text-center`}
                   onClick={mainNavigationOnClick}>
-                    </span>
+                    </i>
 
             {/*HeaderLogo & HeaderButton*/}
-            <div className={`${styleFrom.headerLogo} col-5 col-lg-3`}>
+            <div className={`${style.headerLogo} col-8 col-lg-3`}>
             </div>
-            <div className='col-2 offset-3 col-lg-5 offset-lg-4 row'>
+            <div className={`${style.arrowButton} col-2`}>
+                <i className="fas fa-arrow-down"/>
+            </div>
+            <div className={`${style.lostFoundButtons} col-2 col-lg-5 offset-lg-4 row`}>
                 <div className={`${style.lostPetButton} col-lg-5 offset-lg-1 d-flex align-items-center`}>
                     <i className='fas fa-search pr-2'/>
                     <span>I lost my pet</span>

@@ -8,9 +8,7 @@ import {connect} from "react-redux";
 const MainLost = (props) => {
 
     const createPostLost = (post, index) => {
-        return (<div className={`${style.lostPostContainer} container mt-lg-4 mx-lg-3 `}>
-            <PostLost index={index} key={post.id}/>
-        </div>)
+        return <PostLost index={index} key={post.id}/>
     };
     return (
         <div className='col-lg-8 pt-lg-4 container '>

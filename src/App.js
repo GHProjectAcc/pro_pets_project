@@ -12,6 +12,7 @@ import NewPostMatched from "./components/NewPostMatched";
 import Profile from "./components/Profile";
 import LostPage from "./components/Lost";
 import AllPostsMatched from "./components/AllPostsMatched";
+import Favorites from "./components/Favorites";
 
 
 class App extends React.Component {
@@ -40,6 +41,7 @@ class App extends React.Component {
                     <Route exact path='/profile' component={Profile}/>
                     <Route exact path='/lost' component={LostPage}/>
                     <Route exact path='/found' component={LostPage}/>
+                    <Route exact path='/favorites' component={Favorites}/>
                 </Switch>
                 {/*{this.props.currentUser.username*/}
                 {/*    ? <button onClick={this.handleClick}>Log Out</button>*/}

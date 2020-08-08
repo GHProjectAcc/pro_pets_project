@@ -99,7 +99,7 @@ a:hover {
     background: #84B6A3 0 0 no-repeat padding-box;
 }
 
-.navButtonOn span, i, .navButtonOff span, i {
+.navButtonOn span, .navButtonOn i, .navButtonOff span,.navButtonOff i {
     font-family: Medium, Montserrat, sans-serif;
     font-size: 1em;
     color: #84B6A3;
@@ -110,7 +110,7 @@ a:hover {
     color: #84B6A3;
 }
 
-.navButtonOff span, i {
+.navButtonOff span, .navButtonOff i {
     color: #FFFFFF;
 }
 

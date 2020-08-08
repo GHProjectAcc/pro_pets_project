@@ -3,7 +3,7 @@ import style from "../../../../css_modules/lostPage.module.css";
 
 const MainInputLocation = (props) => {
     return (
-        <div className='col-12'>
+        <div className='col-12 mb-3'>
             <input className={`${style.locationButton} d-inline-block pl-3 ml-1 mr-2 mt-3`}
                    placeholder='Location'
                    type='text'/>

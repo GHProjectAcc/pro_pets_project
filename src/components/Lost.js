@@ -12,19 +12,18 @@ import RightColorSide from "./Pages/HomePage/RightColorSideHome";
 
 
 const LostPage = (props) => {
-    const small = useMediaQuery({query: '(maxWidth: 767px'});
-    const medium = useMediaQuery({query: '(minWidth: 768px'});
+    const smallMedium = useMediaQuery({maxWidth: 991.98});
+    /* const medium = useMediaQuery({query: '(minWidth: 768px'});*/
     /*  console.log(store.getState())*/
     /*useEffect(() => {
         props.fetchPostsLostFeed();
         console.log(store.getState())
     });*/
-
     return (
         <div className={`${style.page} container`}>
             <HeaderLostFound/>
             <div className='row h-100'>
-                {(small || medium) ? <NavigationSmall/> : <Navigation/>}
+                {smallMedium ? <NavigationSmall/> : <Navigation/>}
                 <MainLost/>
                 <RightColorSide/>
             </div>
