@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import style from "../../../../css_modules/addPost.module.css";
-import {CLOUDINARY_UPLOAD_PRESET} from "../../../../constants/baseUrl";
+import {CLOUDINARY_UPLOAD_PRESET} from "../../../../constants/constans";
 import {uploadImageFetch} from "../../../../redux/actions/UploadImagesActions";
 import {connect} from "react-redux";
 

@@ -1,0 +1,98 @@
+
+
+.dropMenu {
+    background: #84b6a3 0 0 no-repeat padding-box;
+    position: absolute;
+    display: block;
+    min-height: 100vh;
+    z-index: 9999;
+    left: 0;
+    box-shadow: 5px 0 10px -5px black;
+}
+
+.menu {
+    background: #84b6a3 0 0 no-repeat padding-box;
+    min-height: 100vh;
+}
+
+.noDisplay {
+    display: none;
+}
+
+.navButtonOn, .navButtonOff, .avatarOn, .avatarOff {
+    height: 2.3em;
+    text-align: left;
+    border-radius: 0 17px 17px 0;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+}
+
+.avatarOn, .avatarOff {
+    height: 4em;
+    align-items: center;
+}
+
+.noDecoration:hover {
+    text-decoration: none;
+}
+
+.navButtonOn span, .navButtonOff span {
+    font: 16px Montserrat;
+    font-weight: 500;
+    color: #84B6A3;
+}
+
+.navButtonOff span {
+    color: #FFFFFF;
+}
+
+.navButtonOn i {
+    font-size: 16px;
+    color: #84b6a3;
+}
+
+.navButtonOff i {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.navButtonOff, .avatarOff {
+    background: #84b6a3 0 0 no-repeat padding-box;
+}
+
+.line {
+    border-bottom: 1px solid #FFFFFF;
+    opacity: 0.37;
+}
+
+.avatar {
+    height: 2.8em;
+    width: 2.8em;
+    border-radius: 100px;
+    opacity: 1;
+}
+
+.nameOn, .nameOff {
+    text-align: left;
+    font: 14px Montserrat;
+    letter-spacing: 0;
+    color: #84B6A3;
+    opacity: 1;
+}
+
+.nameOff {
+    color: #FFFFFF;
+}
+
+.transparentSide {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+}
+
+a:hover {
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgb(35, 141, 86);
+}
+

@@ -73,7 +73,6 @@ const PostContentContainer = (props) => {
 };
 
 function mapStateToProps(state, ownProps) {
-    console.log(ownProps);
     const index = ownProps.index;
     return {
         post: state.postsLost[index]

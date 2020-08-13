@@ -1,0 +1,15 @@
+.pagination {
+    min-width: 15px;
+}
+
+.boxNumber {
+    background-color: #e7d5e7;
+    border: 2px solid #FF6F61;
+    min-width: 20px;
+    min-height:20px;
+}
+
+.boxNumber span {
+    font: 15px Montserrat;
+    color: #75B29A;
+}

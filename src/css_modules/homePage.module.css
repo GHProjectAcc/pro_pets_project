@@ -99,7 +99,7 @@ a:hover {
     background: #84B6A3 0 0 no-repeat padding-box;
 }
 
-.navButtonOn span, .navButtonOn i, .navButtonOff span,.navButtonOff i {
+.navButtonOn span, .navButtonOn i, .navButtonOff span, .navButtonOff i {
     font-family: Medium, Montserrat, sans-serif;
     font-size: 1em;
     color: #84B6A3;
@@ -140,11 +140,6 @@ a:hover {
     color: #FFFFFF;
 }
 
-
-.targeting {
-    background: #84B6A3 0 0 no-repeat padding-box;
-    opacity: 1;
-}
 
 .post {
     background: #FFFFFF 0 0 no-repeat padding-box;
@@ -224,23 +219,20 @@ a:hover {
     color: #FFE18B;
 }
 
-.pic1, .pic2, .pic3 {
+
+.targeting {
+    background: #84B6A3 0 0 no-repeat padding-box;
     opacity: 1;
-    height: 219px;
-    background: transparent url('../images/home_img/targetingPic1Small.png') no-repeat;
-    background-size: contain;
-
+}
+.targeting img {
+    opacity: 1;
+    max-width: 13em;
+    height: auto;
 }
 
-.pic2 {
-    height: 284px;
-    background-image: url('../images/home_img/targetingPic2Small.png');
-}
 
-.pic3 {
-    background-image: url('../images/home_img/targetingPic3Small.png');
-    height: 98px;
-}
+
+
 
 .downMenu {
     background: #75B29A 0 0 no-repeat padding-box;
@@ -269,11 +261,6 @@ a:hover {
 }
 
 
-@media (max-width: 1200px) {
-    .pic1, .pic2, .pic3 {
-        display: none;
-    }
-}
 
 @media (max-width: 768px) {
     .headerButton {

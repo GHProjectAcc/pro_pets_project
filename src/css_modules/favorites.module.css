@@ -1,56 +1,64 @@
+.container {
+    min-width: 100%;
+}
+
+.containerFixed {
+    min-width: 100%;
+    position: fixed;
+}
+
 .headerLogo {
     background: transparent url("../images/home_img/logoProPetsWhiteSmall.png") no-repeat center padding-box;
+    height: 2.2em;
 }
-.test {
-  min-width: 100%;
-}
+
 .header {
-    background: #84b6a3 0 0 no-repeat padding-box;
+    background: #669885 0 0 no-repeat padding-box;
     box-shadow: 0 3px 6px #00000029;
     opacity: 1;
-    color: white;
+    color: #FFFFFF;
     height: 4.38em;
 }
 
-.header i{
+.header i {
     font-size: 1.5em;
-}
-
-.post{
-    box-shadow: 0 3px 6px #00000029;
-}
-
-.authorAvatar{
-    border: 1px solid #FFFFFF;
-    height: 2.3em;
-    width: auto;
-    border-radius: 100px;
-}
-
-.authorName{
-    display: flex;
-    align-items: center;
-    text-align: left;
-    font: 16px Montserrat;
-    font-weight: 600;
-    line-height: 0.9em;
-    letter-spacing: 0;
-    color: #84B6A3;
     opacity: 1;
 }
 
-.timeStamp{
-    text-align: left;
-    font: Medium Montserrat, serif;
-    font-size: 12px;
-    color: #BABABA;
+.addPostButton {
+    background: #84B6A3 0 0 no-repeat padding-box;
+    height: 2.2em;
+    max-width: 9em;
+    border-radius: 20px;
+    opacity: 1;
+    color: #FFFFFF;
 }
 
-.post div p{
-    text-align: left;
-    font: 12px Montserrat;
-    font-weight: 500;
-    line-height: 1.5em;
-    letter-spacing: 0;
-    opacity: 1;
+.addPostButton i {
+    font-size: medium;
 }
+
+.addPostButton span {
+    font: 14px Montserrat;
+}
+
+
+@media (min-width: 768px) {
+    .headerLogo {
+        margin-top: 5px;
+        background: transparent url("../images/home_img/headerLogoForLarge.png") no-repeat left padding-box;
+
+    }
+
+    .header {
+        background: #FFFFFF 0 0 no-repeat padding-box;
+        color: #84b6a3;
+    }
+}
+@media  (min-width: 1200px) {
+    .addPostButton {
+        min-width: 12em;
+    }
+
+}
+

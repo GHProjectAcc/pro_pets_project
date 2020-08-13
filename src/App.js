@@ -41,7 +41,7 @@ class App extends React.Component {
                     <Route exact path='/profile' component={Profile}/>
                     <Route exact path='/lost' component={LostPage}/>
                     <Route exact path='/found' component={LostPage}/>
-                    <Route exact path='/favorites' component={Favorites}/>
+                    <Route exact path={['/favorites', '/favorites/:pageNumber']} component={Favorites}/>
                 </Switch>
                 {/*{this.props.currentUser.username*/}
                 {/*    ? <button onClick={this.handleClick}>Log Out</button>*/}

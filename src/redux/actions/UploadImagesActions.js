@@ -1,5 +1,5 @@
 import {getFeed} from "./PostFeedActions";
-import {CLOUDINARY_URL} from "../../constants/baseUrl";
+import {CLOUDINARY_URL} from "../../constants/constans";
 import axios from "axios";
 import {store} from "../ProPetsStore";
 
