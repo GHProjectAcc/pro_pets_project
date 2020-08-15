@@ -42,7 +42,7 @@ class Navigation extends React.Component {
                 </Link>
 
                 {/* favorites button*/}
-                <Link to='/favorites'
+                <Link to='/favorites/'
                       className={`${path.includes('/favorites') ? style.navButtonOn : style.navButtonOff} 
                 d-flex align-items-center mt-3 mb-lg-5`}
                     /*onClick={() => {

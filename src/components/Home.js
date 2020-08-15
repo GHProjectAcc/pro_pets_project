@@ -5,21 +5,11 @@ import AdRightColumn from "./Pages/HomePage/RightColorSideHome";
 import NavigationSmall from "./Pages/HomePage/NavigationSmallHome";
 import MainHome from "./Pages/HomePage/MainHome";
 import style from "../css_modules/homePage.module.css";
+import Menu from "./Menu";
 
 
-class Home extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            avatar: 'https://www.gravatar.com/avatar/0',
-            name: 'Kuzya',
-            avatarAuthor: require('../images/home_img/logoKuzya.png'),
-            time: '2h',
-            posts: [],
-            favorites: false,
-            activePage: 0
-        }
-    }
+const Home =(props) => {
+
 
     editFavorites = () => {
         this.setState({
@@ -27,21 +17,18 @@ class Home extends React.Component {
         });
     };
 
-    componentDidMount() {
 
-    }
 
-    render() {
+
         return (
             <div className={`${style.page} container`}>
                 <Header/>
                 <div className='row '>
-                    {window.matchMedia('(max-width: 768px)').matches ? <NavigationSmall/> : <Navigation/>}
+                    {window.matchMedia('(max-width: 768px)').matches ? <NavigationSmall/> : <Menu/>}
                     <MainHome/>
                     <AdRightColumn/>
                 </div>
             </div>);
-    }
-}
+};
 
 export default Home;

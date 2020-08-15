@@ -1,5 +1,6 @@
-import {LOGIN_USER, REGISTRATION_USER, LOGOUT_USER} from "../actions/UserAuthorizationActions";
+import {REGISTRATION_USER, LOGOUT_USER} from "../actions/UserAuthorizationActions";
 import {UPDATE_NAME, UPDATE_PHONE} from "../actions/EditUserActions";
+import {LOGIN_USER} from "../actions/UserLoginActions";
 
 function userReducer(user = {}, action) {
     switch (action.type) {

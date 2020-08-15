@@ -16,6 +16,15 @@ import Favorites from "./components/Favorites";
 
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pageNumber: 1,
+            dropMenu: false
+        }
+    }
+
+
     componentDidMount = () => {
         this.props.getProfileFetch()
     };
@@ -34,13 +43,15 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path={["/signup", '/']} component={Registration}/>
                     <Route exact path="/signin" component={LoginPage}/>
-                    <Route exact path={['/home', '/home/:page']} component={Home}/>
+                   {/* <Route exact path={['/home', '/home/:pageNumber']} component={Home}/>*/}
+                    <Route exact path={['/', '/home', '/home/:name']} render={(props) =>
+                        (<Home {...props} changeHero={this.props.changeHero} hero={this.props.hero}/>)}/>
                     <Route exact path='/addpost' component={AddPost}/>
                     <Route exact path='/new_matched' component={NewPostMatched}/>
-                    <Route exact path='/allPostsMatched' component={AllPostsMatched}/>
+                   {/* <Route exact path='/allPostsMatched' component={AllPostsMatched}/>*/}
                     <Route exact path='/profile' component={Profile}/>
-                    <Route exact path='/lost' component={LostPage}/>
-                    <Route exact path='/found' component={LostPage}/>
+                    <Route exact path={['/lost', '/lost/:pageNumber']} component={LostPage}/>
+                    <Route exact path={['/found', '/found/:pageNumber']} component={LostPage}/>
                     <Route exact path={['/favorites', '/favorites/:pageNumber']} component={Favorites}/>
                 </Switch>
                 {/*{this.props.currentUser.username*/}

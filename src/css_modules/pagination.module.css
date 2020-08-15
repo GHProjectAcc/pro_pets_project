@@ -1,15 +1,31 @@
 .pagination {
-    min-width: 15px;
+    min-height: 3em;
 }
 
-.boxNumber {
-    background-color: #e7d5e7;
-    border: 2px solid #FF6F61;
-    min-width: 20px;
-    min-height:20px;
+.pagination i {
+    font-size: 1.5em;
+    color: #669885;
 }
 
-.boxNumber span {
-    font: 15px Montserrat;
+.boxNumberOff, .boxNumberOn {
+    border-radius: 100%;
+    background-color: #FFFFFF;
+    border: 1px solid #669885;
+    min-width: 2.1em;
+    min-height: 2.1em;
+}
+
+.boxNumberOn {
+    background-color: #75B29A;
+}
+
+.boxNumberOff span, .boxNumberOn span {
+    font: 16px Montserrat;
+    font-weight: 700;
     color: #75B29A;
 }
+.boxNumberOn span {
+    color: #FFFFFF;
+}
+
+

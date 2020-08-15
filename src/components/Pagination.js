@@ -24,15 +24,17 @@ const Pagination = (props) => {
 
 
         return (
-            <div className={`${style.pagination}`}>
-                <i className='fas fa-chevron-left' onClick={prevRow}/>
+            <div className={`${style.pagination} mx-2 my-3 d-flex justify-content-center align-items-center`}>
+                <i className='fas fa-chevron-left mr-3' onClick={prevRow}/>
                 {numbers.slice(count, count + 5).map((num, index) => {
                     return <BoxNumber index={index}
                                       key={index}
                                       value={num}
+                                      setPageNumber={props.setPageNumber}
+                                      pageNumber={props.pageNumber}
                     />
                 })}
-                <i className='fas fa-chevron-right' onClick={nextRow}/>
+                <i className='fas fa-chevron-right ml-3' onClick={nextRow}/>
             </div>
         );
     }

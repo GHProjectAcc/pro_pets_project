@@ -24,14 +24,13 @@ const Post = (props) => {
     };
 
     return (
-
         <div className={`${style.post} row no-gutters mb-2 mx-1 ml-md-5 mr-md-2 mx-lg-1 pt-3 pr-3 `}>
-            <div className='col-2 pl-2 pr-0 text-center'>
+            <div className='col-2 pl-2 pr-0 text-center '>
                 <img className={`${style.authorAvatar}`}
                      src={require('../../../images/home_img/logoKuzya.png')}
                      alt=''/>
             </div>
-            <div className={`${style.authorName} col-10 col-md-10`}>
+            <div className={`${style.authorName} col-9 pl-2`}>
                 <div>
                           <span className='d-block'>
                         John Krasnozhon
@@ -52,7 +51,7 @@ const Post = (props) => {
                 <img src={images[count]} alt=''/>
             </div>
 
-            <div className='col-11 col-md-10 offset-md-1 mt-2'>
+            <div className='col-11 col-md-10 offset-md-1 mt-2 pl-2'>
                 <p>Pictures, abstract symbols, materials, and colors are among the ingredients with which a
                     designer
                     or engineer works. To design is to discover relationships and to make arrangements and

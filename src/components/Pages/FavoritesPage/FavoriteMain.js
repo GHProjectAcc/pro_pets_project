@@ -15,10 +15,17 @@ const Main = (props) => {
 
     return (
         <div className='row'>
-            {smallMedium ? <DropMenu display={props.dropMenu}/> : <Menu display={props.dropMenu}/>}
+            {smallMedium ?
+                <DropMenu display={props.dropMenu}
+                          pageNumber={props.pageNumber}/>
+                :
+                <Menu display={props.dropMenu}
+                      pageNumber={props.pageNumber}/>}
+
             <div className='col-12 col-lg-8 col-xl-6 ml-lg-0 pt-3 px-lg-2'>
                 {props.posts.map(createPostFavorites)}
-                <Pagination pageNumber={props.pageNumber}/>
+                <Pagination pageNumber={props.pageNumber}
+                            setPageNumber={props.setPageNumber}/>
             </div>
             <RightColorSide/>
         </div>

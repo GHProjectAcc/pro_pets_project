@@ -4,6 +4,7 @@ import Header from "./Header";
 import Main from "./Pages/FavoritesPage/FavoriteMain";
 import Pagination from "./Pagination";
 import {connect} from "react-redux";
+import {getFavoritesPosts, getFavoritesPostsPage} from "../redux/actions/FavoritesPostsActions";
 
 
 const Favorites = (props) => {
@@ -19,27 +20,28 @@ const Favorites = (props) => {
     const showDropMenu = () => {
         setDropMenu(!dropMenu);
     };
-    const pageNum = props.match.params.pageNumber || '1';
+    /* const pageNum = props.match.params.pageNumber || '1';*/
 
     useEffect(() => {
+        props.getFavoritesPostsPage(pageNumber);
+    }, [pageNumber]);
 
-    });
 
     return (
         <div className={`${dropMenu ? style.containerFixed : style.container} container border-dark px-lg-0`}>
             <Header showDropMenu={showDropMenu}/>
             <Main dropMenu={dropMenu}
                   cnangePage={changePage}
-                  pageNumber={pageNum}/>
-
+                  pageNumber={pageNumber}
+                  setPageNumber={setPageNumber}/>
         </div>
     );
 };
 
-/*function mapStateToProps(state) {
+function mapDispatchToProps(dispatch) {
     return {
-post:
+        getFavoritesPostsPage: pageNumber => dispatch(getFavoritesPostsPage(pageNumber))
     }
-}*/
+}
 
-export default Favorites;
+export default connect(null, mapDispatchToProps)(Favorites);

@@ -1,18 +1,17 @@
-import React from "react";
 import axios from "axios";
+import history from "../../history";
+
+export const LOGIN_USER = 'LOGIN_USER';
+
+const loginUser = user => ({
+    type: LOGIN_USER,
+    payload: user
+});
 
 
-
-class AllPostsMatched extends React.Component {
-    state = {
-        login: "tigran1000@gmail.com",
-        password: "777"
-    };
-
-
-    componentDidMount() {
-        const authData = window.btoa(this.state.login + ':' + this.state.password);
-        console.log(authData);
+export const userLoginFetch = authData => {
+    console.log(authData);
+    return dispatch => {
         axios({
             url: `https://propets-gateway-service.herokuapp.com/account/v1/sign_in`,
             method: "POST",
@@ -25,21 +24,11 @@ class AllPostsMatched extends React.Component {
             console.log(token);
             localStorage.setItem("token", JSON.stringify(token));
         }).then(function (response) {
-            console.log(response.data);
+            dispatch(loginUser(response.data));
+            history.push('home');
         }).catch(function (err) {
             console.log('fuck');
             console.log(err);
         })
     }
-
-
-    render() {
-        return (
-            <div>
-                <span>Bla bla bla</span>
-            </div>
-        );
-    }
-}
-
-export default AllPostsMatched;
+};

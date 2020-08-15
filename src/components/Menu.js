@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 const Menu = (props) => {
     const path = window.location.pathname;
-
+    console.log(props.pageNumber);
     return (
         <div className={`${style.menu} col-lg-3 pr-3`}>
             <Link to='/home'
@@ -31,8 +31,8 @@ const Menu = (props) => {
                 <span>Services</span>
             </Link>
 
-            <Link to='/favorites'
-                  className={`${path.includes('/favorites') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-5`}>
+            <Link to={`/favorites/${props.pageNumber}`}
+                  className={`${path.includes(`/favorites`) ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-5`}>
                 <i className='fas fa-star ml-5  mr-3'/>
                 <span>Favorites</span>
             </Link>

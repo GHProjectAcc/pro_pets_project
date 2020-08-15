@@ -1,6 +1,7 @@
 import history from "../../history";
+import axios from "axios";
 
-export const LOGIN_USER = 'LOGIN_USER';
+
 export const REGISTRATION_USER = 'REGISTRATION_USER';
 export const LOGOUT_USER = 'LOGOUT_USER';
 
@@ -10,48 +11,13 @@ export const registrationUser = userObj => ({
     payload: userObj
 });
 
-const loginUser = user => ({
-    type: LOGIN_USER,
-    payload: user
-});
+
 
 export const logoutUser = () => ({
     type: 'LOGOUT_USER'
 });
 
-export const userLoginFetch = authData => {
-    console.log(authData)
-    return dispatch => {
-        return fetch("https://propets-accounting-service.herokuapp.com/account/v1/sign_in", {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-                'Authorization': `Basic ${authData}`,
-            },
-        }).then(function (response) {
-            if (response.status !== 200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                alert(response.status + ' ');
-                return Promise.reject();
-            }
-            return response;
-        }).then(function (response) {
-            let token = response.headers.get('X-token');
-            console.log(token);
-            localStorage.setItem("token", JSON.stringify(token));
-            return response;
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
 
-                dispatch(loginUser(data));
-                history.push('home');
-
-            })
-    }
-};
 
 export const userPostFetch = user => {
     return dispatch => {
@@ -101,7 +67,7 @@ export const getProfileFetch = () => {
                         //
                         localStorage.removeItem("token")
                     } else {
-                        return {type: LOGIN_USER, payload: data};
+                      /*  return {type: LOGIN_USER, payload: data};*/
                     }
                 })
         }

@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {userLoginFetch} from '../redux/actions/UserAuthorizationActions';
+import {userLoginFetch} from '../redux/actions/UserLoginActions';
 
 class Login extends Component {
     state = {
         username: "",
         password: ""
-    }
+    };
 
     handleChange = event => {
         this.setState({
             [event.target.name]: event.target.value
         });
-    }
+    };
 
     handleSubmit = event => {
         event.preventDefault();
@@ -48,7 +48,7 @@ class Login extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-    userLoginFetch: userInfo => dispatch(userLoginFetch(userInfo))
+    userLoginFetch: user => dispatch(userLoginFetch(user))
 });
 
 export default connect(null, mapDispatchToProps)(Login);
