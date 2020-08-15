@@ -5,35 +5,52 @@ import Main from "./Pages/FavoritesPage/FavoriteMain";
 import Pagination from "./Pagination";
 import {connect} from "react-redux";
 import {getFavoritesPosts, getFavoritesPostsPage} from "../redux/actions/FavoritesPostsActions";
+import DropMenu from "./Pages/FavoritesPage/DropMenu";
+import Menu from "./Menu";
+import {useMediaQuery} from "react-responsive/src";
+import Post from "./Pages/FavoritesPage/FavoritePost";
+import RightColorSide from "./Pages/HomePage/RightColorSideHome";
+import Home from "./Home";
 
 
 const Favorites = (props) => {
-
-
-    const [dropMenu, setDropMenu] = useState(false);
+    const smallMedium = useMediaQuery({maxWidth: 991.98});
     const [pageNumber, setPageNumber] = useState(1);
 
-    const changePage = (page) => {
-        /*  setPage(page);*/
+    const createPostFavorites = (post, index) => {
+        return <Post key={post.id} index={index}/>
     };
 
-    const showDropMenu = () => {
-        setDropMenu(!dropMenu);
+    const changePage = (page) => {
+        setPageNumber(page);
+        console.log(pageNumber)
     };
+
     /* const pageNum = props.match.params.pageNumber || '1';*/
 
     useEffect(() => {
         props.getFavoritesPostsPage(pageNumber);
+        props.setPath('/favorites')
     }, [pageNumber]);
 
 
     return (
-        <div className={`${dropMenu ? style.containerFixed : style.container} container border-dark px-lg-0`}>
-            <Header showDropMenu={showDropMenu}/>
-            <Main dropMenu={dropMenu}
-                  cnangePage={changePage}
-                  pageNumber={pageNumber}
-                  setPageNumber={setPageNumber}/>
+        <div className='row'>
+            {smallMedium ?
+                <DropMenu display={props.dropMenu}
+                          pageNumber={pageNumber}
+                          />
+                :
+                <Menu display={props.dropMenu}
+                      pageNumber={pageNumber}
+
+                />}
+            <div className='col-12 col-lg-8 col-xl-6 ml-lg-0 pt-3 px-lg-2'>
+                {props.posts.map(createPostFavorites)}
+                <Pagination changePage={changePage}
+                            pageNumber={pageNumber}/>
+            </div>
+            <RightColorSide/>
         </div>
     );
 };
@@ -44,4 +61,10 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(null, mapDispatchToProps)(Favorites);
+function mapStateToProps(state) {
+    return {
+        posts: state.posts
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Favorites);

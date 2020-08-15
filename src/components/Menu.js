@@ -1,25 +1,27 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import style from "../css_modules/dropMenu.module.css";
 import {Link} from "react-router-dom";
 
 const Menu = (props) => {
+    const initialPageNumber = 1;
     const path = window.location.pathname;
-    console.log(props.pageNumber);
+
+
     return (
         <div className={`${style.menu} col-lg-3 pr-3`}>
-            <Link to='/home'
+            <Link to={`/home/${initialPageNumber}`}
                   className={`${path.includes('/home') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mt-4 mb-2`}>
                 <i className='fas fa-home ml-5 mr-3'/>
                 <span>Home</span>
             </Link>
 
-            <Link to='/lost'
+            <Link to={`/lost/${initialPageNumber}`}
                   className={`${path.includes('/lost') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-2`}>
                 <i className='fas fa-search  ml-5 mr-3'/>
                 <span>Lost</span>
             </Link>
 
-            <Link to='/found'
+            <Link to={`/found/${initialPageNumber}`}
                   className={`${path.includes('/found') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-2`}>
                 <i className='fas fa-paw  ml-5 mr-3'/>
                 <span>Found</span>
@@ -31,7 +33,7 @@ const Menu = (props) => {
                 <span>Services</span>
             </Link>
 
-            <Link to={`/favorites/${props.pageNumber}`}
+            <Link to={`/favorites/${initialPageNumber}`}
                   className={`${path.includes(`/favorites`) ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-5`}>
                 <i className='fas fa-star ml-5  mr-3'/>
                 <span>Favorites</span>

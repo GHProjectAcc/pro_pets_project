@@ -1,3 +1,4 @@
+/*
 import React from "react";
 import DropMenu from "./DropMenu";
 import Menu from "../../Menu";
@@ -21,13 +22,9 @@ const Main = (props) => {
                 :
                 <Menu display={props.dropMenu}
                       pageNumber={props.pageNumber}/>}
-
             <div className='col-12 col-lg-8 col-xl-6 ml-lg-0 pt-3 px-lg-2'>
                 {props.posts.map(createPostFavorites)}
-                <Pagination pageNumber={props.pageNumber}
-                            setPageNumber={props.setPageNumber}/>
             </div>
-            <RightColorSide/>
         </div>
     )
 };
@@ -38,4 +35,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(Main);
+export default connect(mapStateToProps)(Main);*/

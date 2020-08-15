@@ -42,16 +42,6 @@ const HeaderLostFound = (props) => {
 
 };
 
-function mapStateToProps(state) {
-    return {
-        changeState: state.displayChange.display
-    };
-}
 
-function mapDispatchToProps(dispatch) {
-    return {
-        display: changeState => dispatch(display(changeState))
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderLostFound);
+export default HeaderLostFound;

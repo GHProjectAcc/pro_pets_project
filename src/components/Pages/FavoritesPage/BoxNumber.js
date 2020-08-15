@@ -5,7 +5,7 @@ const BoxNumber = (props) => {
     const [displayButton, setDisplayButton] = useState(true);
 
     const handleClick = () => {
-        props.setPageNumber(props.value);
+        props.changePage(props.value);
         setDisplayButton(!displayButton);
     };
 

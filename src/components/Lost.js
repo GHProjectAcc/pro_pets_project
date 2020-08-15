@@ -9,6 +9,7 @@ import {fetchPostLostFeed} from "../redux/actions/PostLostActions";
 import {connect} from "react-redux";
 import {store} from "../redux/ProPetsStore";
 import RightColorSide from "./Pages/HomePage/RightColorSideHome";
+import Menu from "./Menu";
 
 
 const LostPage = (props) => {
@@ -19,14 +20,14 @@ const LostPage = (props) => {
         props.fetchPostsLostFeed();
         console.log(store.getState())
     });*/
+    useEffect(() => {
+        props.setPath('/lost')
+    });
     return (
-        <div className={`${style.page} container`}>
-            <HeaderLostFound/>
-            <div className='row h-100'>
-                {smallMedium ? <NavigationSmall/> : <Navigation/>}
-                <MainLost/>
-                <RightColorSide/>
-            </div>
+        <div className='row h-100'>
+            {smallMedium ? <NavigationSmall/> : <Menu/>}
+            <MainLost/>
+            <RightColorSide/>
         </div>
     );
 

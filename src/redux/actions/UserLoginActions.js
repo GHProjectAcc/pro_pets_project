@@ -25,7 +25,7 @@ export const userLoginFetch = authData => {
             localStorage.setItem("token", JSON.stringify(token));
         }).then(function (response) {
             dispatch(loginUser(response.data));
-            history.push('home');
+            history.push('home/1');
         }).catch(function (err) {
             console.log('fuck');
             console.log(err);

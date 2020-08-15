@@ -30,7 +30,7 @@ const Pagination = (props) => {
                     return <BoxNumber index={index}
                                       key={index}
                                       value={num}
-                                      setPageNumber={props.setPageNumber}
+                                      changePage={props.changePage}
                                       pageNumber={props.pageNumber}
                     />
                 })}
