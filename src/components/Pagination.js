@@ -32,6 +32,7 @@ const Pagination = (props) => {
                                       value={num}
                                       changePage={props.changePage}
                                       pageNumber={props.pageNumber}
+                                      setPageNumber={props.setPageNumber}
                     />
                 })}
                 <i className='fas fa-chevron-right ml-3' onClick={nextRow}/>

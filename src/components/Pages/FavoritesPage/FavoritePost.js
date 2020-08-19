@@ -22,7 +22,7 @@ const Post = (props) => {
     const prevImage = () => {
         count - 1 < 0 ? setCount(3) : setCount(count - 1);
     };
-
+console.log(props.post)
     return (
         <div className={`${style.post} row no-gutters mb-2 mx-1 ml-md-5 mr-md-2 mx-lg-1 pt-3 pr-3 `}>
             <div className='col-2 pl-2 pr-0 text-center '>
@@ -33,7 +33,7 @@ const Post = (props) => {
             <div className={`${style.authorName} col-9 pl-2`}>
                 <div>
                           <span className='d-block'>
-                        John Krasnozhon
+                              {props.post.authorData.authorName}
                     </span>
                     <span className={`${style.timeStamp} d-block`}>
                         2h
@@ -80,8 +80,9 @@ const Post = (props) => {
 
 function mapStateToProps(state, ownProps) {
     const index = ownProps.index;
+    console.log(index)
     return {
-        post: state.posts[index]
+        post: state.posts.posts[index]
     }
 }
 

@@ -5,8 +5,6 @@ import {Link} from "react-router-dom";
 const Menu = (props) => {
     const initialPageNumber = 1;
     const path = window.location.pathname;
-
-
     return (
         <div className={`${style.menu} col-lg-3 pr-3`}>
             <Link to={`/home/${initialPageNumber}`}

@@ -7,12 +7,24 @@ import MainHome from "./Pages/HomePage/MainHome";
 import style from "../css_modules/homePage.module.css";
 import Menu from "./Menu";
 import {useMediaQuery} from "react-responsive/src";
-import DropMenu from "./Pages/FavoritesPage/DropMenu";
+import DropMenu from "./DropMenu";
+import Post from "./Pages/HomePage/PostComponents/PostHome";
+import Pagination from "./Pagination";
+
 
 
 const Home = (props) => {
-    const smallMedium = useMediaQuery({maxWidth: 991.98});
     const [pageNumber, setPageNumber] = useState(1);
+
+    const createPostFavorites = (post, index) => {
+        return <Post key={post.id} index={index}/>
+    };
+
+    const changePage = (page) => {
+        setPageNumber(page);
+    };
+
+
 
     /*editFavorites = () => {
         this.setState({
@@ -21,18 +33,17 @@ const Home = (props) => {
     };*/
     useEffect(() => {
         props.setPath('/home')
-    });
+    },);
 
     return (
-        <div className='row '>
-            {smallMedium ?
-                <DropMenu display={props.dropMenu}
-                          pageNumber={pageNumber}/>
-                :
-                <Menu display={props.dropMenu}
-                      pageNumber={pageNumber}/>}
-            <MainHome/>
+
+
+        <div className='col-12 col-lg-8 col-xl-6 ml-lg-0 pt-3 px-lg-2'>
+            {props.posts.map(createPostFavorites)}
+            <Pagination changePage={changePage}
+                        pageNumber={pageNumber}/>
         </div>
+
     );
 };
 

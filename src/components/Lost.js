@@ -20,14 +20,15 @@ const LostPage = (props) => {
         props.fetchPostsLostFeed();
         console.log(store.getState())
     });*/
+    /*const path = props.path;*/
     useEffect(() => {
         props.setPath('/lost')
-    });
+    }, [props]);
+
     return (
-        <div className='row h-100'>
-            {smallMedium ? <NavigationSmall/> : <Menu/>}
+
+        <div className='col-lg-8 pt-lg-4 container '>
             <MainLost/>
-            <RightColorSide/>
         </div>
     );
 

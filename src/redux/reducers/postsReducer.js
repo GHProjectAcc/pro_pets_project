@@ -1,11 +1,11 @@
-import {POST_FEED} from "../actions/PostFeedActions";
+import {FAVORITES_POSTS} from "../actions/FavoritesPostsActions";
 
-function postsReducer(posts = {}, action) {
+function postsReducer(state = [], action) {
     switch (action.type) {
-        case POST_FEED:
-            return {...posts, posts: action.payload};
+        case FAVORITES_POSTS:
+            return {...state.posts, posts: action.payload};
         default:
-            return posts;
+            return state;
     }
 }
 

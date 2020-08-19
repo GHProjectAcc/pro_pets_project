@@ -30,7 +30,6 @@ const PostAuthorData = (props) => {
 
 function mapStateToProps(state, ownProps) {
     const index = ownProps.index;
-    console.log(ownProps);
     return {
         post: state.postsLost[index]
     }
