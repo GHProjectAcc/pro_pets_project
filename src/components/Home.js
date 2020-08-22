@@ -10,10 +10,13 @@ import {useMediaQuery} from "react-responsive/src";
 import DropMenu from "./DropMenu";
 import Post from "./Pages/HomePage/PostComponents/PostHome";
 import Pagination from "./Pagination";
-
+import {store} from "../redux/ProPetsStore";
+import {connect} from "react-redux";
 
 
 const Home = (props) => {
+
+
     const [pageNumber, setPageNumber] = useState(1);
 
     const createPostFavorites = (post, index) => {
@@ -25,16 +28,16 @@ const Home = (props) => {
     };
 
 
-
     /*editFavorites = () => {
         this.setState({
             favorites: !this.state.favorites
         });
     };*/
     useEffect(() => {
-        props.setPath('/home')
+        console.log(store.getState());
+       /* props.setPath('/home')*/
     },);
-
+    console.log(store.getState());
     return (
 
 
@@ -47,4 +50,10 @@ const Home = (props) => {
     );
 };
 
-export default Home;
+function mapStateToProps(state) {
+    return {
+        posts: state.postsFavorites.posts
+    }
+}
+
+export default connect(mapStateToProps)(Home);

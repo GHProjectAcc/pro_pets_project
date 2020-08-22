@@ -4,16 +4,11 @@ import {rootReducer} from "./reducers";
 
 const initialState = {
     user: {
-        avatarAuthor: require('../images/home_img/logoKuzya.png'),
-        name: 'Tom Hardi',
-        time: '2h',
-        display: false,
-        favorites: false,
-        email: 'someEmail@gmail.com',
-        fblink: 'https://www.facebook.com/profile.php?id=100007757115574',
-        phone: '056-750-25-43',
+        user: {}
     },
-    posts: {posts: []},
+    postsFavorites: {
+        posts: []
+    },
     postsLost: [{
         id: "5f1b35e3c3129c5934a65dfb",
         type: "cat",

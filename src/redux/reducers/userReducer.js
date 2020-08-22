@@ -1,21 +1,24 @@
 import {REGISTRATION_USER, LOGOUT_USER} from "../actions/UserAuthorizationActions";
 import {UPDATE_NAME, UPDATE_PHONE} from "../actions/EditUserActions";
 import {LOGIN_USER} from "../actions/UserLoginActions";
+import {USER_INFO} from "../actions/UserInformationActions";
 
-function userReducer(user = {}, action) {
+function userReducer(state = {}, action) {
     switch (action.type) {
         case LOGIN_USER:
-            return {...user, user: action.payload};
+            return {...state.user, user: action.payload};
         case REGISTRATION_USER:
-            return {...user, user: action.payload};
+            return {...state, user: action.payload};
         case LOGOUT_USER:
-            return {...user, user: {}};
+            return {...state, user: {}};
+        case USER_INFO:
+            return {...state.user, user: action.payload};
         case UPDATE_PHONE:
-            return {...user, phone: action.payload};
+            return {...state, phone: action.payload};
         case UPDATE_NAME:
-            return {...user, name: action.payload};
+            return {...state, name: action.payload};
         default:
-            return user;
+            return state;
     }
 }
 

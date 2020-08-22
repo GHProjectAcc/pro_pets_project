@@ -1,31 +1,31 @@
 import axios from "axios";
 import history from "../../history";
+import {getFavoritesPosts} from "./FavoritesPostsActions";
 
-export const FAVORITES_POSTS = 'FAVORITES_POSTS';
+export const USER_INFO = 'USER_INFO';
 
-export const getFavoritesPosts = posts => ({
-    type: FAVORITES_POSTS,
-    payload: posts
+export const userInfo = user => ({
+    type: USER_INFO,
+    payload: user
 });
 
-export const getFavoritesPostsPage = (pageNumber) => {
+export const getUserInformationFetch = (token) => {
     return dispatch => {
         const token = JSON.parse(localStorage.getItem('token'));
-        if (token) {
+        console.log(token)
+        console.log('in fetch getUser')
             axios({
-                url: `https://propets-gateway-service.herokuapp.com/message/v1/post/favorites/?page=${pageNumber - 1}`,
+                url: `https://propets-gateway-service.herokuapp.com/account/v1/user/refresh_page`,
                 method: "GET",
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
             }).then(function (response) {
                 console.log(response.data);
-                dispatch(getFavoritesPosts(response.data));
-                history.push(`/favorites/${pageNumber}`)
+                dispatch(userInfo(response.data));
             }).catch(function (err) {
                 console.log('fuck');
                 console.log(err);
             });
         }
-    }
 };

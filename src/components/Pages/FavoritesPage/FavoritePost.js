@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import style from "../../../css_modules/postFavorites.module.css";
+import styleFromHome from "../../../css_modules/homePage.module.css";
 import {connect} from "react-redux";
 
 const Post = (props) => {
@@ -11,20 +12,40 @@ const Post = (props) => {
     ];
 
     const [postOnView, setPostOnView] = useState(false);
+    const [count, setCount] = useState(0);
+
+    const dateFormat = (date) => {
+        let currentDate = Date.now();
+        let day = 86400000;
+        let month = 2592000000;
+        if (currentDate - Date.parse(date) < day) {
+            let hours = (currentDate - Date.parse(date)) / 3600000;
+            return <span>{Math.round(hours)} h</span>;
+        }
+        if (currentDate - Date.parse(date) < month) {
+            let days = (currentDate - Date.parse(date)) / day;
+            return <span>{Math.round(days)} d</span>;
+        }
+        if (currentDate - Date.parse(date) > month) {
+            let newDate = date.slice(0, 10);
+            return <span>{newDate}</span>;
+        }
+    };
+
     const showPost = () => {
         setPostOnView(!postOnView);
     };
 
-    const [count, setCount] = useState(0);
     const nextImage = () => {
         count + 1 < 4 ? setCount(count + 1) : setCount(0);
     };
     const prevImage = () => {
         count - 1 < 0 ? setCount(3) : setCount(count - 1);
     };
-console.log(props.post)
+
+
     return (
-        <div className={`${style.post} row no-gutters mb-2 mx-1 ml-md-5 mr-md-2 mx-lg-1 pt-3 pr-3 `}>
+        <div className={`${style.post} row no-gutters mb-2 mx-1 ml-md-5 mr-md-2 mx-lg-1 pt-3 px-2`}>
             <div className='col-2 pl-2 pr-0 text-center '>
                 <img className={`${style.authorAvatar}`}
                      src={require('../../../images/home_img/logoKuzya.png')}
@@ -36,7 +57,7 @@ console.log(props.post)
                               {props.post.authorData.authorName}
                     </span>
                     <span className={`${style.timeStamp} d-block`}>
-                        2h
+                        {dateFormat(props.post.dateOfPublish)}
                     </span>
                 </div>
             </div>
@@ -52,24 +73,20 @@ console.log(props.post)
             </div>
 
             <div className='col-11 col-md-10 offset-md-1 mt-2 pl-2'>
-                <p>Pictures, abstract symbols, materials, and colors are among the ingredients with which a
-                    designer
-                    or engineer works. To design is to discover relationships and to make arrangements and
-                    rearrangements among these ingredients.
-                    {/*   {props.post.description.length > 100 && !postOnView
-                            ?
-                            <span>
-                            {props.post.description.substring(0, 100)}
-                                <span className={`${styleFromHome.moreTextButton} `}
-                                      onClick={showPost}> ...more
+                <p>{props.post.text.length > 100 && !postOnView
+                    ?
+                    <span>
+                            {props.post.text.substring(0, 100)}
+                        <span className={`${styleFromHome.moreTextButton} `}
+                              onClick={showPost}> ...more
                             </span>
                           </span>
-                            :
-                            props.post.description
-                        }
-                        <i className={`${!postOnView ? styleFromHome.noDisplay : styleFromHome.collapseText} fas fa-angle-double-left pl-2`}
-                           onClick={showPost}/> */}
-                    <span onClick={showPost}> ...more </span></p>
+                    :
+                    props.post.text
+                }
+                    <i className={`${!postOnView ? styleFromHome.noDisplay : styleFromHome.collapseText} fas fa-angle-double-left pl-2`}
+                       onClick={showPost}/>
+                </p>
             </div>
             <div className='col-1 mb-2 pr-0 pl-0 pb-1 d-flex justify-content-end align-items-end'>
                 <i className="fas fa-star"/>
@@ -80,9 +97,8 @@ console.log(props.post)
 
 function mapStateToProps(state, ownProps) {
     const index = ownProps.index;
-    console.log(index)
     return {
-        post: state.posts.posts[index]
+        post: state.postsFavorites.posts[index]
     }
 }
 

@@ -1,6 +1,6 @@
 import {FAVORITES_POSTS} from "../actions/FavoritesPostsActions";
 
-function postsReducer(state = [], action) {
+function postsFavoritesReducer(state = [], action) {
     switch (action.type) {
         case FAVORITES_POSTS:
             return {...state.posts, posts: action.payload};
@@ -9,4 +9,4 @@ function postsReducer(state = [], action) {
     }
 }
 
-export default postsReducer;
+export default postsFavoritesReducer;

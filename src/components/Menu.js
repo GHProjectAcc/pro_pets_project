@@ -1,10 +1,22 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import style from "../css_modules/dropMenu.module.css";
 import {Link} from "react-router-dom";
+import {connect} from "react-redux";
+import {getUserInformationFetch} from "../redux/actions/UserInformationActions";
 
 const Menu = (props) => {
     const initialPageNumber = 1;
     const path = window.location.pathname;
+    console.log(props.user);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            props.getUser()
+        };
+        fetchData();
+
+    }, []);
+    const token = JSON.parse(localStorage.getItem('token'));
     return (
         <div className={`${style.menu} col-lg-3 pr-3`}>
             <Link to={`/home/${initialPageNumber}`}
@@ -69,7 +81,7 @@ const Menu = (props) => {
                      src={require('../images/home_img/logoKuzya.png')}
                      alt=''/>
                 <div className={`${path.includes('/profile') ? style.nameOn : style.nameOff}`}>
-                    <span className={`${style.noDecoration} pr-2`}>Yura Krasnozhon</span>
+                    <span className={`${style.noDecoration} pr-2`}>{props.user.name}</span>
                 </div>
             </Link>
 
@@ -85,5 +97,15 @@ const Menu = (props) => {
     );
 };
 
+function mapStateToProps(state) {
+    return {
+        user: state.user.user
+    }
+}
 
-export default Menu;
+const mapDispatchToProps = dispatch => ({
+    getUser: () => dispatch(getUserInformationFetch())
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Menu);
