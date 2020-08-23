@@ -22,7 +22,7 @@ const App = (props) => {
 
     const smallMedium = useMediaQuery({maxWidth: 991.98});
     const [dropMenu, setDropMenu] = useState(false);
-    const [path, setPath] = useState('home');
+    //const [path, setPath] = useState('home');
     const brHistory = createBrowserHistory();
 
     const showDropMenu = () => {
@@ -32,6 +32,8 @@ const App = (props) => {
     useEffect(() => {
 
     });
+    const path = window.location.pathname;
+    console.log(path);
 
     const token = JSON.parse(localStorage.getItem('token'));
     return (
@@ -47,11 +49,13 @@ const App = (props) => {
                             {smallMedium
                                 ?
                                 <DropMenu display={dropMenu}
-                                          showDropMenu={showDropMenu}/>
+                                          showDropMenu={showDropMenu}
+                                          path={path}/>
                                 :
-                                <Menu display={dropMenu}/>}
+                                <Menu display={dropMenu}
+                                      path={path}/>}
 
-                            <Route exact path={['/home', '/home/:pageNumber']} component={Home}/> {/*render={(props) =>
+                            <Route exact path={['/', '/home', '/home/:pageNumber']} component={Home}/> {/*render={(props) =>
                                 (<Home {...props}
                                        dropMenu={dropMenu}
                                        showDropMenu={showDropMenu}
@@ -66,18 +70,15 @@ const App = (props) => {
                                 (<LostPage {...props}
                                            dropMenu={dropMenu}
                                            showDropMenu={showDropMenu}
-                                           setPath={setPath}
                                            path={path}/>)}/>
                             <Route exact path={['/lost', '/lost/:pageNumber']} render={(props) =>
                                 (<LostPage {...props}
                                            dropMenu={dropMenu}
-                                           showDropMenu={showDropMenu}
-                                           setPath={setPath}/>)}/>
+                                           showDropMenu={showDropMenu}/>)}/>
                             <Route exact path={['/favorites', '/favorites/:pageNumber']} render={(props) =>
                                 (<Favorites {...props}
                                             dropMenu={dropMenu}
                                             showDropMenu={showDropMenu}
-                                            setPath={setPath}
                                             path={path}
                                             history={brHistory}/>)
                             }/>
@@ -88,7 +89,7 @@ const App = (props) => {
                 :
                 <React.Fragment>
                     <Route exact path={"/signup"} component={Registration}/>
-                    <Route exact path={["/signin", '/']} component={LoginPage}/>
+                    <Route exact path={["/", "/signin",]} component={LoginPage}/>
                 </React.Fragment>
             }
 

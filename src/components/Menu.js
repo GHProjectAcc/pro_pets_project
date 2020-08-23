@@ -6,45 +6,46 @@ import {getUserInformationFetch} from "../redux/actions/UserInformationActions";
 
 const Menu = (props) => {
     const initialPageNumber = 1;
-    const path = window.location.pathname;
-    console.log(props.user);
+/*    const path = window.location.pathname;
+    console.log(path);
+    console.log(path.includes(`/favorites`));
+    console.log(path.includes(`/home`));*/
 
     useEffect(() => {
         const fetchData = async () => {
             props.getUser()
         };
         fetchData();
-
     }, []);
-    const token = JSON.parse(localStorage.getItem('token'));
+
     return (
         <div className={`${style.menu} col-lg-3 pr-3`}>
             <Link to={`/home/${initialPageNumber}`}
-                  className={`${path.includes('/home') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mt-4 mb-2`}>
+                  className={`${props.path.includes('/home') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mt-4 mb-2`}>
                 <i className='fas fa-home ml-5 mr-3'/>
                 <span>Home</span>
             </Link>
 
             <Link to={`/lost/${initialPageNumber}`}
-                  className={`${path.includes('/lost') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-2`}>
+                  className={`${props.path.includes('/lost') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-2`}>
                 <i className='fas fa-search  ml-5 mr-3'/>
                 <span>Lost</span>
             </Link>
 
             <Link to={`/found/${initialPageNumber}`}
-                  className={`${path.includes('/found') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-2`}>
+                  className={`${props.path.includes('/found') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-2`}>
                 <i className='fas fa-paw  ml-5 mr-3'/>
                 <span>Found</span>
             </Link>
 
             <Link to='/services'
-                  className={`${path.includes('/services') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-2`}>
+                  className={`${props.path.includes('/services') ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-2`}>
                 <i className='fas fa-bullhorn ml-5  mr-3'/>
                 <span>Services</span>
             </Link>
 
             <Link to={`/favorites/${initialPageNumber}`}
-                  className={`${path.includes(`/favorites`) ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-5`}>
+                  className={`${props.path.includes(`/favorites`) ? style.navButtonOn : style.navButtonOff} d-flex align-items-center mb-5`}>
                 <i className='fas fa-star ml-5  mr-3'/>
                 <span>Favorites</span>
             </Link>
@@ -76,11 +77,11 @@ const Menu = (props) => {
             <div className={`${style.line} mt-lg-3 mb-lg-1 ml-lg-5`}/>
 
             <Link to='/profile'
-                  className={`${path.includes('/profile') ? style.avatarOn : style.avatarOff} d-flex my-5`}>
+                  className={`${props.path.includes('/profile') ? style.avatarOn : style.avatarOff} d-flex my-5`}>
                 <img className={`${style.avatar} ml-4 ml-md-5 mr-3`}
                      src={require('../images/home_img/logoKuzya.png')}
                      alt=''/>
-                <div className={`${path.includes('/profile') ? style.nameOn : style.nameOff}`}>
+                <div className={`${props.path.includes('/profile') ? style.nameOn : style.nameOff}`}>
                     <span className={`${style.noDecoration} pr-2`}>{props.user.name}</span>
                 </div>
             </Link>

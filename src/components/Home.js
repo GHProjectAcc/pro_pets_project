@@ -1,21 +1,12 @@
 import React, {useEffect, useState} from "react";
-import Navigation from "./Pages/HomePage/NavigationHome";
-import Header from "./Pages/HomePage/Header";
-import AdRightColumn from "./Pages/HomePage/RightColorSideHome";
-import NavigationSmall from "./Pages/HomePage/NavigationSmallHome";
-import MainHome from "./Pages/HomePage/MainHome";
-import style from "../css_modules/homePage.module.css";
-import Menu from "./Menu";
-import {useMediaQuery} from "react-responsive/src";
-import DropMenu from "./DropMenu";
 import Post from "./Pages/HomePage/PostComponents/PostHome";
 import Pagination from "./Pagination";
-import {store} from "../redux/ProPetsStore";
 import {connect} from "react-redux";
+import {getHomePostsPage} from "../redux/actions/HomePostsActions";
+import {withRouter} from "react-router-dom";
 
 
 const Home = (props) => {
-
 
     const [pageNumber, setPageNumber] = useState(1);
 
@@ -34,10 +25,14 @@ const Home = (props) => {
         });
     };*/
     useEffect(() => {
-        console.log(store.getState());
-       /* props.setPath('/home')*/
-    },);
-    console.log(store.getState());
+        const fetchData = async () => {
+            props.getPostsFeed(pageNumber)
+        };
+        fetchData();
+    }, [pageNumber]);
+
+    let path = window.location.pathname;
+
     return (
 
 
@@ -49,11 +44,14 @@ const Home = (props) => {
 
     );
 };
+const mapDispatchToProps = dispatch => ({
+    getPostsFeed: pageNumber => dispatch(getHomePostsPage(pageNumber))
+});
 
 function mapStateToProps(state) {
     return {
-        posts: state.postsFavorites.posts
+        posts: state.postsHome.posts
     }
 }
 
-export default connect(mapStateToProps)(Home);
+export default  withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));

@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {getFavoritesPostsPage} from "../redux/actions/FavoritesPostsActions";
 import Post from "./Pages/FavoritesPage/FavoritePost";
 import {store} from "../redux/ProPetsStore";
+import {withRouter} from "react-router-dom";
 
 
 const Favorites = (props) => {
@@ -24,7 +25,6 @@ const Favorites = (props) => {
         };
         fetchData();
     }, [pageNumber]);
-
 
     console.log(store.getState());
     return (
@@ -47,4 +47,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Favorites));

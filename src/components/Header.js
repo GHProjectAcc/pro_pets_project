@@ -4,7 +4,8 @@ import style1 from "../css_modules/lostPageHeader.module.css";
 
 const Header = (props) => {
 
-
+    const path = window.location.pathname;
+    console.log(path);
     return (
         <div className='row'>
             <div className={`${style.header} col-12`}>
@@ -18,7 +19,7 @@ const Header = (props) => {
                     <div className='offset-3 col-2 d-flex d-md-none justify-content-center align-items-center'>
                         <i className="fas fa-plus"/>
                     </div>
-                    {props.path.includes('lost')
+                    {path.includes('lost')
                         ?
                         <div className={`${style1.lostFoundButtons} col-2 col-lg-5 offset-lg-4 row`}>
                             <div className={`${style1.lostPetButton} col-lg-5 offset-lg-1 d-flex align-items-center`}>

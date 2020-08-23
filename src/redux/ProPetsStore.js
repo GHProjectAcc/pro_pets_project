@@ -9,6 +9,9 @@ const initialState = {
     postsFavorites: {
         posts: []
     },
+    postsHome: {
+        posts: []
+    },
     postsLost: [{
         id: "5f1b35e3c3129c5934a65dfb",
         type: "cat",
