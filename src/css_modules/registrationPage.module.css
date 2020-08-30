@@ -1,5 +1,5 @@
 .loginPage {
-    background: url("../images/startpage_img/startPageBackGround.png");
+    background: url("../images/startPage_img/startPageBackGround.png");
     width: 1387px;
     display: flex;
     margin: 0 auto;
@@ -18,7 +18,7 @@
 
 .loginLogo {
     display: inline-block;
-    background: transparent url('../images/startpage_img/Page2Logo.png') 0 0 no-repeat padding-box;
+    background: transparent url('../images/startPage_img/Page2Logo.png') 0 0 no-repeat padding-box;
     opacity: 1;
     margin-left: 13px;
     margin-top: 16px;
@@ -224,7 +224,7 @@
     left: 12px;
     width: 18px;
     height: 20px;
-    background: transparent url('../images/startpage_img/.png') 0 0 no-repeat padding-box;
+    background: transparent url('../images/startPage_img/.png') 0 0 no-repeat padding-box;
     opacity: 1;
 }
 .forgotPassword {

@@ -16,6 +16,7 @@ import Menu from "./components/Menu";
 import {useMediaQuery} from "react-responsive/src";
 import {getFavoritesPostsPage} from "./redux/actions/FavoritesPostsActions";
 import {createBrowserHistory} from 'history';
+import StartPage from "./components/StartPage";
 
 
 const App = (props) => {
@@ -23,7 +24,7 @@ const App = (props) => {
     const smallMedium = useMediaQuery({maxWidth: 991.98});
     const [dropMenu, setDropMenu] = useState(false);
     //const [path, setPath] = useState('home');
-    const brHistory = createBrowserHistory();
+
 
     const showDropMenu = () => {
         setDropMenu(!dropMenu)
@@ -52,14 +53,12 @@ const App = (props) => {
                                           showDropMenu={showDropMenu}
                                           path={path}/>
                                 :
-                                <Menu display={dropMenu}
-                                      path={path}/>}
+                                <Menu path={path}/>}
 
-                            <Route exact path={['/', '/home', '/home/:pageNumber']} component={Home}/> {/*render={(props) =>
+                            <Route exact path={['/', '/home', '/home/:pageNumber']} render={(props) =>
                                 (<Home {...props}
                                        dropMenu={dropMenu}
-                                       showDropMenu={showDropMenu}
-                                       setPath={setPath}/>)}/>*/}
+                                       showDropMenu={showDropMenu}/>)}/>
                             <Route exact path='/addpost' component={AddPost}/>
                             <Route exact path='/new_matched' component={NewPostMatched}/>
                             <Route exact path='/profile' render={(props) => (
@@ -80,7 +79,7 @@ const App = (props) => {
                                             dropMenu={dropMenu}
                                             showDropMenu={showDropMenu}
                                             path={path}
-                                            history={brHistory}/>)
+                                />)
                             }/>
                             <RightColorSide/>
                         </div>
@@ -88,6 +87,7 @@ const App = (props) => {
                 </React.Fragment>
                 :
                 <React.Fragment>
+                    <Route exact path={"/startpage"} component={StartPage}/>
                     <Route exact path={"/signup"} component={Registration}/>
                     <Route exact path={["/", "/signin",]} component={LoginPage}/>
                 </React.Fragment>

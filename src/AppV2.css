@@ -23,7 +23,7 @@
     display: flex;
     width: 10em;
     height: 33px;
-    background: transparent url('images/startpage_img/logoProPetsWhiteSmall.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/logoProPetsWhiteSmall.png') 0 0 no-repeat padding-box;
 
 }
 
@@ -80,7 +80,7 @@ main {
 .image {
     width: 485px;
     height: 596px;
-    background: transparent url('images/startpage_img/Image 2.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/puppyStartPage.png') 0 0 no-repeat padding-box;
     opacity: 1;
 }
 
@@ -146,7 +146,7 @@ main {
     left: 463px;
     width: 79px;
     height: 80px;
-    background: transparent url('images/startpage_img/Group 11.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/Group 11.png') 0 0 no-repeat padding-box;
     border-width: 0;
     opacity: 1;
 }
@@ -241,7 +241,7 @@ main {
     left: 113px;
     width: 480px;
     height: 322px;
-    background: transparent url('images/startpage_img/8347.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/8347.png') 0 0 no-repeat padding-box;
     opacity: 1;
 }
 
@@ -328,7 +328,7 @@ main {
     left: 1064px;
     width: 114px;
     height: 106px;
-    background: transparent url('images/startpage_img/.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/.png') 0 0 no-repeat padding-box;
     opacity: 1;
 }
 
@@ -359,7 +359,7 @@ main {
     left: 151px;
     width: 201px;
     height: 47px;
-    background: transparent url('images/startpage_img/Group 87.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/Group 87.png') 0 0 no-repeat padding-box;
     opacity: 1;
 }
 
@@ -394,37 +394,37 @@ main {
     left: 919px;
     width: 16px;
     height: 16px;
-    background: transparent url('images/startpage_img/.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/.png') 0 0 no-repeat padding-box;
     opacity: 1;
 }
 
 .hotelsIcon {
     left: 1055px;
     width: 18px;
-    background: transparent url('images/startpage_img/.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/.png') 0 0 no-repeat padding-box;
 }
 
 .walkingIcon {
     top: 1618px;
     left: 1057px;
     width: 10px;
-    background: transparent url('images/startpage_img/.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/.png') 0 0 no-repeat padding-box;
 }
 
 .fosteringIcon {
     top: 1646px;
     left: 1055px;
-    background: transparent url('images/startpage_img/.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/.png') 0 0 no-repeat padding-box;
 }
 
 .foundIcon {
     top: 1618px;
-    background: transparent url('images/startpage_img/.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/.png') 0 0 no-repeat padding-box;
 }
 
 .vetIcon {
     top: 1646px;
-    background: transparent url('images/startpage_img/.png') 0 0 no-repeat padding-box;
+    background: transparent url('images/startPage_img/.png') 0 0 no-repeat padding-box;
 
 }
 

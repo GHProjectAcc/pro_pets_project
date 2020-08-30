@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import style from '../css_modules/pagination.module.css'
-import {MAX_COUNT} from "../constants/constans";
 import BoxNumber from "./Pages/FavoritesPage/BoxNumber";
 
 const Pagination = (props) => {
